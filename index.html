@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yesferal Apps</title>
+    <style>
+        body {
+          font-family: Arial;
+          background: #f5f5f5;
+          padding: 40px;
+          text-align: center;
+        }
+        .container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 20px;
+        }
+        .app {
+          background: white;
+          padding: 20px;
+          border-radius: 16px;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        img {
+          width: 100px;
+          border-radius: 20px;
+        }
+        .btn {
+          display: block;
+          margin: 8px 0;
+          padding: 10px;
+          border-radius: 8px;
+          text-decoration: none;
+          color: white;
+        }
+        .play { background: #34a853; }
+        .appstore { background: #000; }
+    </style>
+</head>
+<body>
+
+<h1>My Apps</h1>
+
+<div class="container">
+
+    <!-- APP 1 -->
+    <div class="app">
+        <img src="tumatch.png" alt="">
+        <h3>TuMatch</h3>
+
+        <a class="btn play"
+           href="https://play.google.com/store/apps/details?id=com.yesferal.tumatch">
+            Google Play
+        </a>
+    </div>
+
+    <!-- APP 2 -->
+    <div class="app">
+        <img src="chalkbet.png" alt="">
+        <h3>ChalkBet</h3>
+
+        <a class="btn play" href="https://play.google.com/store/apps/details?id=com.yesferal.bet">Google Play</a>
+        <a class="btn appstore" href="https://apps.apple.com/ie/app/chalkbet/id6462945031">App Store</a>
+    </div>
+
+    <div class="app">
+        <img src="hornsapp.png" alt="">
+        <h3>HornsApp</h3>
+
+        <a class="btn play" href="https://play.google.com/store/apps/details?id=com.yesferal.hornsapp">Google Play</a>
+        <!-- No App Store button -->
+    </div>
+
+    <!-- APP 4 -->
+    <div class="app">
+        <img src="muvin.png" alt="">
+        <h3>Muvin</h3>
+
+        <a class="btn play" href="https://play.google.com/store/apps/details?id=com.yesferal.muvin">Google Play</a>
+    </div>
+
+</div>
+
+</body>
+</html>
