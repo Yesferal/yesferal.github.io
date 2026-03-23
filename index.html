@@ -1,78 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- SEO -->
-    <title>Yesferal Apps | Mobile Apps Developer</title>
-    <meta name="description" content="Explore mobile apps developed by Yesferal. Available on Google Play and App Store.">
+    <title>Yesferal Apps | Mobile Developer</title>
+    <meta name="description" content="Discover high-quality mobile apps by Yesferal. Available on Android and iOS."/>
 
-    <!-- Open Graph (for sharing) -->
-    <meta property="og:title" content="Yesferal Apps">
-    <meta property="og:description" content="Discover my mobile apps on Android and iOS">
-    <meta property="og:type" content="website">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Yesferal Apps"/>
+    <meta property="og:description" content="Explore my apps on Google Play and App Store"/>
+    <meta property="og:type" content="website"/>
 
     <style>
         body {
           margin: 0;
           font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-          background: #0f172a;
-          color: #e2e8f0;
+          background: linear-gradient(180deg, #020617, #0f172a);
+          color: white;
         }
 
         header {
           text-align: center;
-          padding: 60px 20px;
+          padding: 80px 20px 40px;
+          animation: fadeIn 1s ease;
         }
 
         header h1 {
-          font-size: 2.5rem;
+          font-size: 3rem;
           margin-bottom: 10px;
         }
 
         header p {
           color: #94a3b8;
-          font-size: 1.1rem;
+          font-size: 1.2rem;
         }
 
         .container {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-          gap: 24px;
-          padding: 20px 40px 60px;
+          gap: 30px;
+          padding: 40px;
         }
 
         .app {
-          background: #1e293b;
-          border-radius: 20px;
+          background: rgba(255,255,255,0.05);
+          border-radius: 24px;
           padding: 20px;
           text-align: center;
-          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          backdrop-filter: blur(10px);
+          transition: all 0.3s ease;
+          opacity: 0;
+          transform: translateY(30px);
+        }
+
+        .app.visible {
+          opacity: 1;
+          transform: translateY(0);
         }
 
         .app:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+          transform: translateY(-8px) scale(1.02);
         }
 
         .app img {
           width: 90px;
-          border-radius: 20px;
-          margin-bottom: 10px;
+          border-radius: 22px;
         }
 
         .app h3 {
-          margin: 10px 0;
+          margin: 12px 0;
         }
 
         .btn {
           display: block;
-          margin: 8px 0;
-          padding: 10px;
-          border-radius: 10px;
+          margin: 10px 0;
+          padding: 12px;
+          border-radius: 12px;
           text-decoration: none;
-          font-weight: 500;
+          font-weight: 600;
+          transition: 0.2s;
         }
 
         .play {
@@ -80,30 +88,37 @@
           color: black;
         }
 
+        .play:hover {
+          background: #16a34a;
+        }
+
         .appstore {
-          background: #e2e8f0;
+          background: white;
           color: black;
+        }
+
+        .appstore:hover {
+          background: #e2e8f0;
         }
 
         footer {
           text-align: center;
-          padding: 20px;
+          padding: 30px;
           color: #64748b;
-          font-size: 0.9rem;
         }
 
-        footer a {
-          color: #94a3b8;
-          text-decoration: none;
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(-20px); }
+          to { opacity: 1; transform: translateY(0); }
         }
-
     </style>
 </head>
+
 <body>
 
 <header>
     <h1>Yesferal Apps</h1>
-    <p>Building mobile experiences for Android & iOS</p>
+    <p>Beautiful & functional mobile apps for Android and iOS</p>
 </header>
 
 <div class="container">
@@ -149,8 +164,21 @@
 </div>
 
 <footer>
-    © 2026 Yesferal · All rights reserved.
+    © 2026 Yesferal · Built with ⚡ · All rights reserved.
 </footer>
+
+<script>
+    // Scroll animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('.app').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
