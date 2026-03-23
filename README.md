@@ -1,6 +1,9 @@
 # Yesferal Page
 
-## Setup Custom Domain
+## Setup app-ads.txt file
+We need to set up the txt file in order to make ads work propperly
+
+### Setup Custom Domain
 First, we have to set up the yesferal.github.io page:
  - We go to Settings → Pages (GitHub Pages)
  - Under Source:
@@ -25,7 +28,20 @@ After that we:
   - Set the Custom domain (yesferal.com)
   - Enable HTTPS
     - Check Enforce HTTPS
-## Setup AdMobs
+
+### Update Google Console Website
+Steps to change the developer website
+  - Go to Google Play Console
+  - Select your app
+  - In the left menu, go to:
+    - Grow Users → 
+    - Store presence → 
+    - Store settings
+  - Find the Website field 
+  - Replace it with your new domain (https://yesferal.com/)
+  - Click Save and Publish
+
+### Setup AdMobs
 Create a file:
 ```
 app-ads.txt
