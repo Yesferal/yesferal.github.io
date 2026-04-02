@@ -67,9 +67,9 @@
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
       if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        window.location.href = "https://play.google.com/store/apps/details?id=com.yesferal.tumatch";
-      } else if (/android/i.test(userAgent)) {
         window.location.href = "https://apps.apple.com/pe/app/tumatchapp/id6760830809";
+      } else if (/android/i.test(userAgent)) {
+        window.location.href = "https://play.google.com/store/apps/details?id=com.yesferal.tumatch";
       } else {
         document.getElementById("stores").style.display = "block";
       }
