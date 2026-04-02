@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>TuMatch</title>
+
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(180deg, #020617, #0f172a);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 24px;
+      padding: 30px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      animation: fadeIn 0.8s ease;
+    }
+  </style>
+
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+
+<body>
+
+  <div class="card">
+    <img src="../images/tumatch.png" style="width:80px; border-radius:20px; margin-bottom:15px;">
+    <h1>🇵🇪 ¿Qué candidato coincide contigo?</h1>
+    <p>Descúbrelo en menos de 2 minutos</p>
+
+    <a class="btn play" onclick="goToStore()">
+      Descubrir mi candidato
+    </a>
+
+    <div id="stores" style="display:none; margin-top:15px;">
+      <p>Elige tu dispositivo</p>
+
+      <a class="btn store-btn"
+        href="https://play.google.com/store/apps/details?id=com.yesferal.tumatch">
+        Google Play
+      </a>
+
+      <a class="btn store-btn"
+        href="https://apps.apple.com/pe/app/tumatchapp/id6760830809">
+        App Store
+      </a>
+
+    </div>
+  </div>
+
+  <script>
+    function goToStore() {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        window.location.href = "https://play.google.com/store/apps/details?id=com.yesferal.tumatch";
+      } else if (/android/i.test(userAgent)) {
+        window.location.href = "https://apps.apple.com/pe/app/tumatchapp/id6760830809";
+      } else {
+        document.getElementById("stores").style.display = "block";
+      }
+    }
+
+    function showStores() {
+      document.getElementById("stores").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
