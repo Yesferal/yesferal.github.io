@@ -5,22 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- SEO -->
-    <title>Yesferal Apps | Mobile Developer</title>
-    <meta name="description" content="Discover high-quality mobile apps by Yesferal. Available on Android and iOS."/>
+    <title>Yesferal | Mobile Engineer</title>
+    <meta name="description" content="I build iOS and Android apps. I write about what I learn along the way."/>
+    <link rel="canonical" href="https://yesferal.com/"/>
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Yesferal Apps"/>
-    <meta property="og:description" content="Explore my apps on Google Play and App Store"/>
+    <meta property="og:title" content="Yesferal | Mobile Engineer"/>
+    <meta property="og:description" content="I build iOS and Android apps. I write about what I learn along the way."/>
     <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://yesferal.com/"/>
+    <meta property="og:image" content="https://yesferal.com/images/hornsapp.png"/>
 
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
+<nav class="nav">
+    <a class="nav-brand" href="/">Yesferal</a>
+    <div class="nav-links">
+        <a class="active" href="/">Apps</a>
+        <a href="/articles/">Articles</a>
+    </div>
+</nav>
+
 <header>
     <h1>Yesferal Apps</h1>
-    <p>Beautiful & functional mobile apps for Android and iOS</p>
+    <p class="lead">I build iOS and Android apps. I write about what I learn along the way.</p>
 </header>
 
 <div class="container">
@@ -39,7 +50,7 @@
 
     <!-- APP 2 -->
     <div class="app">
-        <img src="images/chalkbet.png" alt="">
+        <img src="images/chalkbet.png" alt="ChalkBet">
         <h3>ChalkBet</h3>
 
         <a class="btn play" href="https://play.google.com/store/apps/details?id=com.yesferal.bet">Google Play</a>
@@ -48,7 +59,7 @@
 
 
     <div class="app">
-        <img src="images/hornsapp.png" alt="">
+        <img src="images/hornsapp.png" alt="HornsApp">
         <h3>HornsApp</h3>
 
         <a class="btn play" href="https://play.google.com/store/apps/details?id=com.yesferal.hornsapp">Google Play</a>
@@ -57,7 +68,7 @@
 
     <!-- APP 4 -->
     <div class="app">
-        <img src="images/muvin.png" alt="">
+        <img src="images/muvin.png" alt="Muvin">
         <h3>Muvin</h3>
 
         <a class="btn play" href="https://play.google.com/store/apps/details?id=com.yesferal.muvin">Google Play</a>
@@ -66,8 +77,33 @@
 
 </div>
 
+<section class="section">
+    <div class="section-heading">
+        <h2>Articles</h2>
+        <a href="/articles/">All articles →</a>
+    </div>
+
+    <div class="article-grid">
+        <a class="article-card" href="/articles/content-driven-ui-swiftui/">
+            <p class="meta">Sep 1, 2026 · 5 min · iOS</p>
+            <h3>Content-driven UI on iOS: JSON to SwiftUI</h3>
+            <p>How HornsApp and Muvin use JSON for the home screen — shared with Android, white-label ready.</p>
+            <div class="tags">
+                <span class="tag">SwiftUI</span>
+                <span class="tag">KMP</span>
+                <span class="tag">JSON</span>
+            </div>
+        </a>
+    </div>
+</section>
+
 <footer>
-    © 2026 Yesferal · Built with ⚡ · All rights reserved.
+    <div class="footer-links">
+        <a href="https://www.linkedin.com/in/yesferal-cueva" rel="me">LinkedIn</a>
+        <a href="https://github.com/Yesferal" rel="me">GitHub</a>
+        <a href="/articles/">Articles</a>
+    </div>
+    © 2026 Yesferal · All rights reserved.
 </footer>
 
 <script>

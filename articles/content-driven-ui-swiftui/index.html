@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Content-driven UI on iOS: JSON to SwiftUI | Yesferal</title>
+    <meta name="description" content="How HornsApp and Muvin turn JSON into SwiftUI — content-driven layouts, shared JSON on iOS and Android, KMP core, and a Router."/>
+    <meta name="author" content="Yesferal Cueva"/>
+    <link rel="canonical" href="https://yesferal.com/articles/content-driven-ui-swiftui/"/>
+
+    <meta property="og:title" content="Content-driven UI on iOS: JSON to SwiftUI"/>
+    <meta property="og:description" content="Content-driven layouts with JSON, white-label apps, and one render file shared between iOS and Android."/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="https://yesferal.com/articles/content-driven-ui-swiftui/"/>
+    <meta property="og:image" content="https://yesferal.com/images/hornsapp.png"/>
+    <meta property="article:published_time" content="2026-09-01"/>
+    <meta property="article:author" content="Yesferal Cueva"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Content-driven UI on iOS: JSON to SwiftUI"/>
+    <meta name="twitter:description" content="Content-driven layouts with JSON, white-label apps, and one render file shared between iOS and Android."/>
+    <meta name="twitter:image" content="https://yesferal.com/images/hornsapp.png"/>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Content-driven UI on iOS: JSON to SwiftUI",
+      "description": "Content-driven layouts with JSON, white-label apps, and one render file shared between iOS and Android.",
+      "datePublished": "2026-09-01",
+      "author": {
+        "@type": "Person",
+        "name": "Yesferal Cueva",
+        "url": "https://yesferal.com/",
+        "sameAs": [
+          "https://www.linkedin.com/in/yesferal-cueva",
+          "https://github.com/Yesferal"
+        ]
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Yesferal Cueva"
+      },
+      "mainEntityOfPage": "https://yesferal.com/articles/content-driven-ui-swiftui/",
+      "image": "https://yesferal.com/images/hornsapp.png"
+    }
+    </script>
+
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+
+<nav class="nav">
+    <a class="nav-brand" href="/">Yesferal</a>
+    <div class="nav-links">
+        <a href="/">Apps</a>
+        <a class="active" href="/articles/">Articles</a>
+    </div>
+</nav>
+
+<article class="article-wrap">
+    <a class="crumb" href="/articles/">← Articles</a>
+
+    <header>
+        <h1>Content-driven UI on iOS: JSON to SwiftUI</h1>
+        <p class="byline">Yesferal Cueva · Sep 1, 2026 · 5 min read</p>
+        <div class="tags">
+            <span class="tag">SwiftUI</span>
+            <span class="tag">Kotlin Multiplatform</span>
+            <span class="tag">Architecture</span>
+        </div>
+    </header>
+
+    <div class="article-body">
+        <p>HornsApp and Muvin are event apps I maintain on Android and iOS. On iOS, the home screen layout comes from a JSON file: it lists the sections and their order, instead of hardcoding everything in SwiftUI.</p>
+
+        <p>Android already works this way. This post explains how the same content-driven approach fits on iOS. It is an overview — later articles will cover each part in more detail.</p>
+
+        <h2>Why do this?</h2>
+
+        <p>Three reasons drove the design.</p>
+
+        <p><strong>One JSON contract, two native apps.</strong> HornsApp already has an Android client. iOS and Android read the same render format. Change the home layout once and both apps speak the same language — SwiftUI on one side, Jetpack Compose on the other.</p>
+
+        <p><strong>White-label without rewriting UI.</strong> HornsApp and Muvin are two products built from the same codebase. Each app ships its own <code>app_render.json</code>: different sections, different order, same SwiftUI views underneath. New brand? New JSON file. Not a new app rewrite.</p>
+
+        <p><strong>Ship layout changes faster.</strong> Want a carousel up top and an “Upcoming” block below? Edit JSON. SwiftUI still owns pixels, fonts, and animations. The JSON file only decides <em>what</em> goes on screen.</p>
+
+        <h2>1. JSON describes the layout</h2>
+
+        <p>A home screen document is a list of blocks. Each block has a <code>key</code> that maps to a UI element:</p>
+
+        <pre><code>{
+  "views": [
+    { "key": "ROW_VIEW", "children": { "key": "CAROUSEL_CARD_VIEW" } },
+    { "key": "COLUMN_VIEW", "data": { "title": "Upcoming" } }
+  ]
+}</code></pre>
+
+        <p>HornsApp and Muvin can ship different files with the same keys. A row becomes a carousel. A column becomes a titled list. Swap the file, change the screen — no SwiftUI rewrite.</p>
+
+        <h2>2. KMP core reads the JSON</h2>
+
+        <p>Both platforms share a Kotlin Multiplatform library. It loads the render document and exposes typed models — <code>ScreenRender</code>, <code>ViewRender</code>, navigation keys.</p>
+
+        <p>Android has used this for years. iOS plugs into the same models instead of inventing a second JSON schema. Parsing stays out of the view layer on both sides.</p>
+
+        <h2>3. SwiftUI renders the UI elements</h2>
+
+        <p>On iOS, a mapper turns each <code>ViewRender</code> into something SwiftUI understands:</p>
+
+        <pre><code>enum ViewData {
+    case carousel(...)
+    case title(title: String, route: Route?)
+    case seeMore(...)
+}</code></pre>
+
+        <p>One <code>render(_:)</code> function switches on that enum and draws the right component. Look and feel stay native. Structure comes from JSON.</p>
+
+        <h2>4. Router handles navigation</h2>
+
+        <p>JSON can attach a navigation key to a section — “go to Upcoming”, “open this link”. A small <code>Router</code> decides the action:</p>
+
+        <pre><code>router.navigate(to: .upcoming)    // switch tab
+router.navigate(to: .details(...)) // push screen</code></pre>
+
+        <p>Views do not push screens themselves. They hand off to the router. Tab switches and stack pushes live in one place — same pattern Android already uses.</p>
+
+        <h2>The flow in one line</h2>
+
+        <div class="diagram">
+            <pre>app_render.json → KMP core → ViewData mapper → SwiftUI → Router</pre>
+        </div>
+
+        <p>JSON for layout. KMP for shared models. SwiftUI for native UI. Router for navigation. Two app targets, two JSON files, one architecture.</p>
+
+        <div class="callout">
+            <p>Coming next: the JSON-to-SwiftUI mapper, shared navigation with Android, and how white-label targets reuse the same SwiftUI code.</p>
+        </div>
+
+        <p>I build native iOS and Android apps from Peru and share notes like this as I ship. If mobile architecture is your thing too, <a href="https://www.linkedin.com/in/yesferal-cueva">let's connect on LinkedIn</a>.</p>
+    </div>
+
+    <div class="article-footer">
+        <p>Next up: a deeper look at the JSON-to-SwiftUI mapper.</p>
+        <div class="share-row">
+            <a class="share-btn linkedin"
+               href="https://www.linkedin.com/sharing/share-offsite/?url=https://yesferal.com/articles/content-driven-ui-swiftui/"
+               target="_blank" rel="noopener">Share on LinkedIn</a>
+            <a class="share-btn" href="/articles/">More articles</a>
+        </div>
+    </div>
+</article>
+
+<footer>
+    <div class="footer-links">
+        <a href="https://www.linkedin.com/in/yesferal-cueva" rel="me">LinkedIn</a>
+        <a href="https://github.com/Yesferal" rel="me">GitHub</a>
+        <a href="/">Apps</a>
+    </div>
+    © 2026 Yesferal · All rights reserved.
+</footer>
+
+</body>
+</html>
