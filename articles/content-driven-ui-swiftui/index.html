@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title>Content-driven UI on iOS: JSON to SwiftUI | Yesferal</title>
-    <meta name="description" content="How HornsApp and Muvin turn JSON into SwiftUI — content-driven layouts, shared JSON on iOS and Android, KMP core, and a Router."/>
+    <meta name="description" content="How HornsApp and Muvin separate structure from presentation — shared contract on iOS and Android, native SwiftUI, and centralized navigation."/>
     <meta name="author" content="Yesferal Cueva"/>
     <link rel="canonical" href="https://yesferal.com/articles/content-driven-ui-swiftui/"/>
 
     <meta property="og:title" content="Content-driven UI on iOS: JSON to SwiftUI"/>
-    <meta property="og:description" content="Content-driven layouts with JSON, white-label apps, and one render file shared between iOS and Android."/>
+    <meta property="og:description" content="Structure from data, presentation in native UI — how we share the same contract on iOS and Android."/>
     <meta property="og:type" content="article"/>
     <meta property="og:url" content="https://yesferal.com/articles/content-driven-ui-swiftui/"/>
     <meta property="og:image" content="https://yesferal.com/images/hornsapp.png"/>
@@ -19,7 +19,7 @@
 
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="Content-driven UI on iOS: JSON to SwiftUI"/>
-    <meta name="twitter:description" content="Content-driven layouts with JSON, white-label apps, and one render file shared between iOS and Android."/>
+    <meta name="twitter:description" content="Structure from data, presentation in native UI — how we share the same contract on iOS and Android."/>
     <meta name="twitter:image" content="https://yesferal.com/images/hornsapp.png"/>
 
     <script type="application/ld+json">
@@ -27,7 +27,7 @@
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       "headline": "Content-driven UI on iOS: JSON to SwiftUI",
-      "description": "Content-driven layouts with JSON, white-label apps, and one render file shared between iOS and Android.",
+      "description": "Separating structure from presentation across iOS and Android — content-driven layouts, shared contracts, native rendering.",
       "datePublished": "2026-09-01",
       "author": {
         "@type": "Person",
@@ -74,77 +74,88 @@
     </header>
 
     <div class="article-body">
-        <p>HornsApp and Muvin are event apps I maintain on Android and iOS. On iOS, the home screen layout comes from a JSON file: it lists the sections and their order, instead of hardcoding everything in SwiftUI.</p>
+        <p>HornsApp and Muvin are event apps on Android and iOS. We have two brands and two platforms, and the home screen changes often. If we hardcode the layout in SwiftUI, we duplicate structure in every variant and we risk falling out of sync with Android.</p>
 
-        <p>Android already works this way. This post explains how the same content-driven approach fits on iOS. It is an overview — later articles will cover each part in more detail.</p>
+        <p>The main idea is simple: <strong>structure comes from data, and presentation stays native.</strong> A content configuration file describes what appears on screen and in what order. Each platform renders it with its own UI tools. This post is an overview. Later articles will go deeper into each part.</p>
 
-        <h2>Why do this?</h2>
+        <h2>What drove the design</h2>
 
-        <p>Three reasons drove the design.</p>
+        <p>Three constraints shaped how we built this.</p>
 
-        <p><strong>One JSON contract, two native apps.</strong> HornsApp already has an Android client. iOS and Android read the same render format. Change the home layout once and both apps speak the same language — SwiftUI on one side, Jetpack Compose on the other.</p>
+        <p><strong>Same contract on both platforms.</strong> Android already uses a content-driven model. On iOS we follow the same render contract instead of creating a second schema. One definition of the home screen, two native apps.</p>
 
-        <p><strong>White-label without rewriting UI.</strong> HornsApp and Muvin are two products built from the same codebase. Each app ships its own <code>app_render.json</code>: different sections, different order, same SwiftUI views underneath. New brand? New JSON file. Not a new app rewrite.</p>
+        <p><strong>White-label without rewriting the UI.</strong> HornsApp and Muvin share the same codebase but not the same home screen. Each brand has its own content configuration: different sections, different order, same UI components underneath. A new brand means a new config file, not a new fork of the app.</p>
 
-        <p><strong>Ship layout changes faster.</strong> Want a carousel up top and an “Upcoming” block below? Edit JSON. SwiftUI still owns pixels, fonts, and animations. The JSON file only decides <em>what</em> goes on screen.</p>
+        <p><strong>Faster layout changes.</strong> We should be able to move a carousel, add a section, or reorder blocks without redeploying presentation code. That is a configuration change. Colors, fonts, and animations stay in SwiftUI.</p>
 
-        <h2>1. JSON describes the layout</h2>
-
-        <p>A home screen document is a list of blocks. Each block has a <code>key</code> that maps to a UI element:</p>
-
-        <pre><code>{
-  "views": [
-    { "key": "ROW_VIEW", "children": { "key": "CAROUSEL_CARD_VIEW" } },
-    { "key": "COLUMN_VIEW", "data": { "title": "Upcoming" } }
-  ]
-}</code></pre>
-
-        <p>HornsApp and Muvin can ship different files with the same keys. A row becomes a carousel. A column becomes a titled list. Swap the file, change the screen — no SwiftUI rewrite.</p>
-
-        <h2>2. KMP core reads the JSON</h2>
-
-        <p>Both platforms share a Kotlin Multiplatform library. It loads the render document and exposes typed models — <code>ScreenRender</code>, <code>ViewRender</code>, navigation keys.</p>
-
-        <p>Android has used this for years. iOS plugs into the same models instead of inventing a second JSON schema. Parsing stays out of the view layer on both sides.</p>
-
-        <h2>3. SwiftUI renders the UI elements</h2>
-
-        <p>On iOS, a mapper turns each <code>ViewRender</code> into something SwiftUI understands:</p>
-
-        <pre><code>enum ViewData {
-    case carousel(...)
-    case title(title: String, route: Route?)
-    case seeMore(...)
-}</code></pre>
-
-        <p>One <code>render(_:)</code> function switches on that enum and draws the right component. Look and feel stay native. Structure comes from JSON.</p>
-
-        <h2>4. Router handles navigation</h2>
-
-        <p>JSON can attach a navigation key to a section — “go to Upcoming”, “open this link”. A small <code>Router</code> decides the action:</p>
-
-        <pre><code>router.navigate(to: .upcoming)    // switch tab
-router.navigate(to: .details(...)) // push screen</code></pre>
-
-        <p>Views do not push screens themselves. They hand off to the router. Tab switches and stack pushes live in one place — same pattern Android already uses.</p>
-
-        <h2>The flow in one line</h2>
+        <h2>How the layers work</h2>
 
         <div class="diagram">
-            <pre>app_render.json → KMP core → ViewData mapper → SwiftUI → Router</pre>
+            <pre>┌─────────────────────────────────────────┐
+│  Content configuration (per brand)      │
+│  Which sections exist, and in what order  │
+├─────────────────────────────────────────┤
+│  Shared layer (Kotlin Multiplatform)    │
+│  Screen definition, navigation targets    │
+├─────────────────────────────────────────┤
+│  Native presentation (SwiftUI)          │
+│  Look, feel, platform behavior          │
+├─────────────────────────────────────────┤
+│  Navigation (Router)                    │
+│  Tab switches, pushed screens, links    │
+└─────────────────────────────────────────┘</pre>
         </div>
 
-        <p>JSON for layout. KMP for shared models. SwiftUI for native UI. Router for navigation. Two app targets, two JSON files, one architecture.</p>
+        <p>Each layer has one job. The design is about what can cross a boundary — and what should not.</p>
+
+        <h2>Structure vs presentation</h2>
+
+        <p>The content layer defines <em>what</em> is on screen: a carousel, a titled list, a call-to-action block. It does not define fonts, colors, or spacing. That belongs to presentation.</p>
+
+        <p>HornsApp and Muvin each have their own configuration. They use the same section types but with different composition. The presentation layer maps each section type to a native component. Views do not parse raw JSON.</p>
+
+        <p>That separation is intentional. Views render. They do not read configuration files.</p>
+
+        <h2>Shared layer between iOS and Android</h2>
+
+        <p>A Kotlin Multiplatform library owns the screen definition: section types, navigation targets, and the shape of the render document. Android has used this for years. On iOS we use the same contract instead of maintaining a second source of truth.</p>
+
+        <p>This layer is not UI. It is what both platforms use to answer the same question: what should this screen contain? Parsing, validation, and domain models live here.</p>
+
+        <h2>SwiftUI as the presentation layer</h2>
+
+        <p>SwiftUI handles everything the user sees and interacts with. On iOS, we translate the shared contract into a typed presentation model — a set of section types that the view layer understands.</p>
+
+        <p>The look and feel stay fully native. Animations, accessibility, and platform conventions do not belong in a configuration file. Structure comes from data. The user experience comes from SwiftUI.</p>
+
+        <h2>Navigation in one place</h2>
+
+        <p>The configuration can say where to go: open Upcoming, open a URL. But describing a destination is not the same as navigating to it. A dedicated navigation layer turns that into action — switch a tab, push a detail screen, or open an in-app browser.</p>
+
+        <p>Views do not navigate on their own. They pass the target to the router, and the router decides. Tab switches and pushed screens live in one place, similar to Android. This keeps navigation easier to follow as the home screen grows.</p>
+
+        <h2>Principles we follow</h2>
+
+        <ul>
+            <li><strong>Structure is data.</strong> Screen composition lives in configuration, not in view code.</li>
+            <li><strong>Presentation is native.</strong> Each platform renders with its own tools and conventions.</li>
+            <li><strong>The contract is shared.</strong> iOS and Android read the same screen definition.</li>
+            <li><strong>Navigation is centralized.</strong> Views pass targets; one layer handles the rest.</li>
+        </ul>
+
+        <h2>What we gain</h2>
+
+        <p>We invest a bit more structure upfront, but we gain flexibility over time: two brands, two platforms, one way to describe a home screen. Mappers, routers, and platform adapters are implementation details. They can change without rewriting the overall design.</p>
 
         <div class="callout">
-            <p>Coming next: the JSON-to-SwiftUI mapper, shared navigation with Android, and how white-label targets reuse the same SwiftUI code.</p>
+            <p>Coming next: how the presentation mapping works, how navigation is shared with Android, and how white-label apps reuse the same SwiftUI base.</p>
         </div>
 
         <p>I build native iOS and Android apps from Peru and share notes like this as I ship. If mobile architecture is your thing too, <a href="https://www.linkedin.com/in/yesferal-cueva">let's connect on LinkedIn</a>.</p>
     </div>
 
     <div class="article-footer">
-        <p>Next up: a deeper look at the JSON-to-SwiftUI mapper.</p>
+        <p>Next up: from shared contract to SwiftUI — how the mapping layer works.</p>
         <div class="share-row">
             <a class="share-btn linkedin"
                href="https://www.linkedin.com/sharing/share-offsite/?url=https://yesferal.com/articles/content-driven-ui-swiftui/"
