@@ -93,6 +93,12 @@
 
         <p>The main idea is simple: <strong>structure comes from data, and presentation stays native.</strong> A content configuration file describes what appears on screen and in what order. Each platform renders it with its own UI tools. This post is an overview. Later articles will go deeper into each part.</p>
 
+        <h2>The problem we were avoiding</h2>
+
+        <p>Before this approach, changing the home screen was slow and easy to get wrong. Reordering a section meant editing SwiftUI in several places. HornsApp and Muvin could drift apart, and iOS could fall out of sync with Android without us noticing right away.</p>
+
+        <p>We wanted layout changes to be a configuration update — not a hunt through view code on every platform and every brand.</p>
+
         <h2>What drove the design</h2>
 
         <p>Three constraints shaped how we built this.</p>
