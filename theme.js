@@ -20,36 +20,24 @@
 
   function initCarousels() {
     document.querySelectorAll("[data-carousel]").forEach((carousel) => {
-      const track = carousel.querySelector(".carousel-track");
+      const viewport = carousel.querySelector(".carousel-viewport");
       const prev = carousel.querySelector("[data-carousel-prev]");
       const next = carousel.querySelector("[data-carousel-next]");
-      if (!track || !prev || !next) return;
+      if (!viewport || !prev || !next) return;
 
       const scrollAmount = () => {
-        const card = track.querySelector(".carousel-item");
+        const card = viewport.querySelector(".carousel-item");
         return card ? card.offsetWidth + 24 : 300;
       };
 
       prev.addEventListener("click", () => {
-        track.scrollBy({ left: -scrollAmount(), behavior: "smooth" });
+        viewport.scrollBy({ left: -scrollAmount(), behavior: "smooth" });
       });
 
       next.addEventListener("click", () => {
-        track.scrollBy({ left: scrollAmount(), behavior: "smooth" });
+        viewport.scrollBy({ left: scrollAmount(), behavior: "smooth" });
       });
     });
-  }
-
-  function initScrollAnimation() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    });
-
-    document.querySelectorAll(".carousel-item").forEach((el) => observer.observe(el));
   }
 
   applyTheme(getPreferredTheme());
@@ -63,5 +51,4 @@
   }
 
   initCarousels();
-  initScrollAnimation();
 })();

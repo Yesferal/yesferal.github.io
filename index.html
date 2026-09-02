@@ -63,15 +63,38 @@
     <div class="nav-actions">
         <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
         <div class="nav-links">
-            <a class="active" href="#apps">Apps</a>
+            <a href="#apps">Apps</a>
             <a href="#articles">Articles</a>
+            <a href="#about">About</a>
         </div>
     </div>
 </nav>
 
-<header>
-    <h1>Yesferal</h1>
-    <p class="lead">I build iOS and Android apps. I write about what I learn along the way.</p>
+<header class="hero">
+    <div class="hero-content">
+        <p class="hero-label">Mobile software lab</p>
+        <h1>Yesferal</h1>
+        <p class="lead">I build iOS and Android apps. I write about what I learn along the way.</p>
+        <div class="hero-pills">
+            <span class="hero-pill">iOS</span>
+            <span class="hero-pill">Android</span>
+            <span class="hero-pill">KMP</span>
+            <span class="hero-pill">Flutter</span>
+        </div>
+        <div class="hero-actions">
+            <a class="hero-btn hero-btn-primary" href="#apps">View apps</a>
+            <a class="hero-btn hero-btn-secondary" href="#articles">Read articles</a>
+        </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+        <div class="hero-orbit">
+            <img class="hero-app hero-app-main" src="images/hornsapp.png" alt="">
+            <img class="hero-app hero-app-a" src="images/tumatch.png" alt="">
+            <img class="hero-app hero-app-b" src="images/chalkbet.png" alt="">
+            <img class="hero-app hero-app-c" src="images/muvin.png" alt="">
+        </div>
+    </div>
 </header>
 
 <section class="section" id="apps">
@@ -119,7 +142,7 @@
 <section class="section" id="articles">
     <div class="section-heading">
         <h2>Articles</h2>
-        <a href="/articles/">All articles →</a>
+        <a href="/articles/#coming-soon">Coming soon →</a>
     </div>
 
     <div class="carousel" data-carousel>
@@ -144,11 +167,39 @@
     </div>
 </section>
 
+<section class="section about-section" id="about">
+    <div class="about-grid">
+        <div class="about-copy">
+            <h2>About</h2>
+            <p>Senior Mobile Software Engineer with 9+ years of experience building Android and iOS applications. Strong background in Kotlin, Dart, Swift, Flutter, Clean Architecture, MVVM, and CI/CD.</p>
+            <p>Experienced working with international teams and large modular codebases, with a focus on scalable architecture, maintainability, and delivering reliable mobile products. I also build independent apps and explore new technologies through Yesferal.</p>
+            <p>If you want to connect, LinkedIn is the best place to reach me.</p>
+            <div class="about-links">
+                <a class="about-link" href="https://www.linkedin.com/in/yesferal-cueva" rel="me">LinkedIn</a>
+                <a class="about-link" href="https://github.com/Yesferal" rel="me">GitHub</a>
+            </div>
+        </div>
+        <div class="about-card">
+            <p class="about-card-label">Focus</p>
+            <ul class="about-list">
+                <li>Native iOS &amp; Android</li>
+                <li>Flutter &amp; Kotlin Multiplatform</li>
+                <li>Node.js &amp; MongoDB</li>
+                <li>Clean Architecture &amp; MVVM</li>
+                <li>CI/CD &amp; modular codebases</li>
+            </ul>
+            <p class="about-card-label">Availability</p>
+            <p class="about-location">Remote · Open to US &amp; Europe</p>
+        </div>
+    </div>
+</section>
+
 <footer>
     <div class="footer-links">
         <a href="https://www.linkedin.com/in/yesferal-cueva" rel="me">LinkedIn</a>
         <a href="https://github.com/Yesferal" rel="me">GitHub</a>
         <a href="/articles/">Articles</a>
+        <a href="/#about">About</a>
     </div>
     © 2026 Yesferal · All rights reserved.
 </footer>
