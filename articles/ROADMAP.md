@@ -6,6 +6,7 @@ Living list of topics for yesferal.com. One article per week when possible.
 
 - [x] Content-driven UI on iOS: JSON to SwiftUI
 - [x] HADA: a lightweight DI container for Kotlin (from [Medium, Dec 2020](https://yesferal.medium.com/hada-hornsapp-dependency-accessing-3aabe4904c46))
+- [x] MultiType RecyclerView adapters in Kotlin (from [Medium, Dec 2020](https://yesferal.medium.com/hornsapp-multitype-adapter-11be83ff9165))
 
 ## Series — HornsApp architecture (next)
 

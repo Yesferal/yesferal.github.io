@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <script>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const theme = stored || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+
+    <title>MultiType RecyclerView adapters in Kotlin | Yesferal</title>
+    <meta name="description" content="How HornsApp handled many cell types in one RecyclerView — models that know their layout, ViewHolder, and binding."/>
+    <meta name="author" content="Yesferal Cueva"/>
+    <link rel="canonical" href="https://yesferal.com/articles/multitype-adapter-recyclerview/"/>
+
+    <meta property="og:title" content="MultiType RecyclerView adapters in Kotlin"/>
+    <meta property="og:description" content="One adapter, many view types — co-locating layout, ViewHolder, and binding in HornsApp."/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="https://yesferal.com/articles/multitype-adapter-recyclerview/"/>
+    <meta property="og:image" content="https://yesferal.com/images/hornsapp.png"/>
+    <meta property="article:published_time" content="2026-09-02"/>
+    <meta property="article:author" content="Yesferal Cueva"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="MultiType RecyclerView adapters in Kotlin"/>
+    <meta name="twitter:description" content="One adapter, many view types — co-locating layout, ViewHolder, and binding in HornsApp."/>
+    <meta name="twitter:image" content="https://yesferal.com/images/hornsapp.png"/>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "MultiType RecyclerView adapters in Kotlin",
+      "description": "How HornsApp handled many cell types in one RecyclerView — models that know their layout, ViewHolder, and binding.",
+      "datePublished": "2026-09-02",
+      "author": {
+        "@type": "Person",
+        "name": "Yesferal Cueva",
+        "url": "https://yesferal.com/",
+        "sameAs": [
+          "https://www.linkedin.com/in/yesferal-cueva",
+          "https://github.com/Yesferal"
+        ]
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Yesferal Cueva"
+      },
+      "mainEntityOfPage": "https://yesferal.com/articles/multitype-adapter-recyclerview/",
+      "image": "https://yesferal.com/images/hornsapp.png"
+    }
+    </script>
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+
+<nav class="nav">
+    <a class="nav-brand" href="/">Yesferal</a>
+    <div class="nav-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <div class="nav-links">
+            <a href="/">Apps</a>
+            <a href="/#about">About</a>
+        </div>
+    </div>
+</nav>
+
+<article class="article-wrap">
+    <a class="crumb" href="/articles/">← Articles</a>
+
+    <header>
+        <h1>MultiType RecyclerView adapters in Kotlin</h1>
+        <p class="byline">Yesferal Cueva · Sep 2, 2026 · 5 min read</p>
+        <div class="tags">
+            <span class="tag">Kotlin</span>
+            <span class="tag">Android</span>
+            <span class="tag">RecyclerView</span>
+        </div>
+    </header>
+
+    <div class="article-body">
+        <p>HornsApp's home screen is not a single row repeated many times. It mixes section titles, event cards, carousels, and call-to-action blocks in one vertical list. That is a classic <strong>multi-type RecyclerView</strong> problem: one adapter, many cell layouts.</p>
+
+        <p>In 2020 I open-sourced a small library — <strong>MultiTypeAdapter</strong> — to handle this without a giant <code>when</code> block in one adapter class. This post revisits the idea: why it helped, how the pieces fit together, and what I would still recommend today. (The code later evolved on GitHub as <a href="https://github.com/Yesferal/DelegateAdapter" rel="noopener">DelegateAdapter</a>; the design is the same.)</p>
+
+        <h2>The problem we were solving</h2>
+
+        <p>The usual RecyclerView setup works well for one layout. As soon as the list grows heterogeneous, things get messy:</p>
+
+        <ul>
+            <li>One adapter class with a long <code>when (viewType)</code> chain</li>
+            <li>ViewHolder classes scattered across packages, far from the model they bind</li>
+            <li>Click handling duplicated or passed through awkward callbacks</li>
+        </ul>
+
+        <p>HornsApp's feed changed often. We wanted to add a new row type by adding a new model — not by editing a central adapter every time.</p>
+
+        <h2>The core idea</h2>
+
+        <p>Each list item is a model that implements <code>ViewHolderBinding</code>. The model declares three things in one place:</p>
+
+        <ul>
+            <li><strong>Layout</strong> — which XML resource to inflate</li>
+            <li><strong>ViewHolder</strong> — how to bind data to views</li>
+            <li><strong>Factory</strong> — how to create that ViewHolder when the adapter needs it</li>
+        </ul>
+
+        <p>The adapter stays generic. It inflates the right layout, creates the right ViewHolder, and binds the model. No central switch statement growing with every new section type.</p>
+
+        <div class="diagram">
+            <pre>┌─────────────────────────────────────────┐
+│  Activity / Fragment                    │
+│  MultiTypeAdapter + RecyclerView          │
+├─────────────────────────────────────────┤
+│  List of models (heterogeneous)         │
+│  TitleModel · MainCardModel · …         │
+├─────────────────────────────────────────┤
+│  Each model implements ViewHolderBinding│
+│  layout + ViewHolder + onCreate…        │
+└─────────────────────────────────────────┘</pre>
+        </div>
+
+        <h2>Setup in an Activity</h2>
+
+        <p>Initialize the adapter, attach it to a <code>RecyclerView</code>, then push models when your data is ready:</p>
+
+        <pre><code>multiTypeAdapter = MultiTypeAdapter()
+
+recyclerView.adapter = multiTypeAdapter
+recyclerView.layoutManager =
+    LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+
+multiTypeAdapter.setModels(
+    listOf(TitleModel(title = "Section #1"))
+)</code></pre>
+
+        <p>The constructor also accepts an optional listener (for clicks) and an initial list. Most of the time the defaults are enough until you need interaction.</p>
+
+        <h2>A simple row type</h2>
+
+        <p>A section title is a good minimal example. The model carries the data and owns its ViewHolder:</p>
+
+        <pre><code>data class TitleModel(
+    val title: String
+) : ViewHolderBinding {
+
+    override val layout: Int
+        get() = R.layout.item_title
+
+    override fun onCreateViewHolder(
+        itemView: View,
+        listener: ViewHolderBinding.Listener
+    ) = TitleViewHolder(itemView)
+
+    class TitleViewHolder(itemView: View)
+        : BaseViewHolder&lt;TitleModel&gt;(itemView) {
+
+        override fun bind(model: TitleModel) {
+            itemView.title.text = model.title
+        }
+    }
+}</code></pre>
+
+        <p>Adding a new row type means adding a new class like this — not opening the adapter and adding another branch.</p>
+
+        <h2>Clicks without spaghetti callbacks</h2>
+
+        <p>Interactive rows need to talk back to the screen. The pattern: define a listener interface that extends <code>ViewHolderBinding.Listener</code>, pass it into the adapter constructor, and cast it inside <code>onCreateViewHolder</code> when building the ViewHolder.</p>
+
+        <pre><code>class MainCardModel(
+    val title: String,
+    @DrawableRes val image: Int
+) : ViewHolderBinding {
+
+    interface CustomListener : ViewHolderBinding.Listener {
+        fun onClick(model: MainCardModel)
+    }
+
+    override fun onCreateViewHolder(
+        itemView: View,
+        listener: ViewHolderBinding.Listener
+    ) = MainViewHolder(itemView, listener as CustomListener)
+
+    // … layout, ViewHolder with itemView.setOnClickListener { … }
+}
+
+multiTypeAdapter = MultiTypeAdapter(
+    listener = object : MainCardModel.CustomListener {
+        override fun onClick(model: MainCardModel) {
+            // navigate, open detail, etc.
+        }
+    }
+)</code></pre>
+
+        <p>One listener object at the adapter level, typed per row where it matters. The Activity stays the place that decides what a click <em>does</em>; the ViewHolder only reports that it happened.</p>
+
+        <h2>One list, mixed types</h2>
+
+        <p>Once each model implements the contract, the feed is just a list:</p>
+
+        <pre><code>multiTypeAdapter.setModels(
+    listOf(
+        TitleModel(title = "Section #1"),
+        MainCardModel(
+            title = "Main Landscape",
+            image = R.drawable.image
+        )
+    )
+)</code></pre>
+
+        <p>That matches how product thinks about the screen — an ordered sequence of blocks — not as "view type 3 after view type 1."</p>
+
+        <h2>What we learned</h2>
+
+        <ul>
+            <li><strong>Co-locate what changes together.</strong> Layout, binding, and ViewHolder for a row belong in one unit.</li>
+            <li><strong>Keep the adapter agnostic.</strong> It should not know about HornsApp-specific sections — only about <code>ViewHolderBinding</code>.</li>
+            <li><strong>Composition beats inheritance.</strong> New row types are new models, not subclasses of a mega-adapter.</li>
+            <li><strong>This pattern has many names.</strong> Adapter delegates, multi-type lists, Epoxy — the goal is the same: scalable heterogeneous lists.</li>
+        </ul>
+
+        <p>Today I might reach for View Binding, Compose lazy lists, or a mature delegate library depending on the project. The HornsApp lesson still applies: <strong>make each row type self-contained</strong>, and keep the adapter thin.</p>
+
+        <h2>Try the demo</h2>
+
+        <p>The open-source library and an Android demo are on GitHub:</p>
+
+        <ul>
+            <li><a href="https://github.com/Yesferal/DelegateAdapter" rel="noopener">DelegateAdapter</a> — evolved from the original MultiType adapter</li>
+        </ul>
+
+        <p>I first wrote about this on <a href="https://yesferal.medium.com/hornsapp-multitype-adapter-11be83ff9165" rel="noopener">Medium in 2020</a>; this version is a shorter, updated read for the site.</p>
+
+        <p>I build native iOS and Android apps and share notes like this as I ship. If mobile architecture is your thing too, <a href="https://www.linkedin.com/in/yesferal-cueva">let's connect on LinkedIn</a>.</p>
+    </div>
+
+    <div class="article-footer">
+        <p>Also read: <a href="/articles/hada-kotlin-dependency-injection/">HADA — a lightweight DI container for Kotlin</a>.</p>
+        <div class="share-row">
+            <a class="share-btn linkedin"
+               href="https://www.linkedin.com/sharing/share-offsite/?url=https://yesferal.com/articles/multitype-adapter-recyclerview/"
+               target="_blank" rel="noopener">Share on LinkedIn</a>
+            <a class="share-btn" href="/articles/">More articles</a>
+        </div>
+    </div>
+</article>
+
+<footer>
+    <div class="footer-links">
+        <a href="https://www.linkedin.com/in/yesferal-cueva" rel="me">LinkedIn</a>
+        <a href="https://github.com/Yesferal" rel="me">GitHub</a>
+        <a href="/#about">About</a>
+    </div>
+    © 2026 Yesferal · All rights reserved.
+</footer>
+
+<script src="../../theme.js"></script>
+
+</body>
+</html>
