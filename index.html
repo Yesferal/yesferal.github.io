@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+    <script>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const theme = stored || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+
     <!-- SEO -->
     <title>Yesferal | Mobile Engineer</title>
     <meta name="description" content="I build iOS and Android apps. I write about what I learn along the way."/>
@@ -23,77 +31,87 @@
 
 <nav class="nav">
     <a class="nav-brand" href="/">Yesferal</a>
-    <div class="nav-links">
-        <a class="active" href="/">Apps</a>
-        <a href="/articles/">Articles</a>
+    <div class="nav-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <div class="nav-links">
+            <a class="active" href="#apps">Apps</a>
+            <a href="#articles">Articles</a>
+        </div>
     </div>
 </nav>
 
 <header>
-    <h1>Yesferal Apps</h1>
+    <h1>Yesferal</h1>
     <p class="lead">I build iOS and Android apps. I write about what I learn along the way.</p>
 </header>
 
-<div class="container">
-
-    <!-- APP 1 -->
-    <div class="app">
-        <img src="images/chalkbet.png" alt="ChalkBet">
-        <h3>ChalkBet</h3>
-
-        <a class="btn play" href="https://play.google.com/store/apps/details?id=com.yesferal.bet">Google Play</a>
-        <a class="btn appstore" href="https://apps.apple.com/ie/app/chalkbet/id6462945031">App Store</a>
+<section class="section" id="apps">
+    <div class="section-heading">
+        <h2>Apps</h2>
     </div>
 
-    <!-- APP 2 -->
-    <div class="app">
-        <img src="images/hornsapp.png" alt="HornsApp">
-        <h3>HornsApp</h3>
+    <div class="carousel" data-carousel>
+        <button type="button" class="carousel-btn carousel-btn-prev" data-carousel-prev aria-label="Previous apps">‹</button>
 
-        <a class="btn play" href="https://play.google.com/store/apps/details?id=com.yesferal.hornsapp">Google Play</a>
-        <!-- No App Store button -->
+        <div class="carousel-viewport">
+            <div class="carousel-track">
+                <div class="app carousel-item">
+                    <img src="images/chalkbet.png" alt="ChalkBet">
+                    <h3>ChalkBet</h3>
+                    <a class="btn play" href="https://play.google.com/store/apps/details?id=com.yesferal.bet">Google Play</a>
+                    <a class="btn appstore" href="https://apps.apple.com/ie/app/chalkbet/id6462945031">App Store</a>
+                </div>
+
+                <div class="app carousel-item">
+                    <img src="images/hornsapp.png" alt="HornsApp">
+                    <h3>HornsApp</h3>
+                    <a class="btn play" href="https://play.google.com/store/apps/details?id=com.yesferal.hornsapp">Google Play</a>
+                </div>
+
+                <div class="app carousel-item">
+                    <img src="images/muvin.png" alt="Muvin">
+                    <h3>Muvin</h3>
+                    <a class="btn play" href="https://play.google.com/store/apps/details?id=com.yesferal.muvin">Google Play</a>
+                </div>
+
+                <div class="app carousel-item">
+                    <img src="images/tumatch.png" alt="TuMatch">
+                    <h3>TuMatch</h3>
+                    <a class="btn play" href="https://play.google.com/store/apps/details?id=com.yesferal.tumatch">Google Play</a>
+                    <a class="btn appstore" href="https://apps.apple.com/pe/app/tumatchapp/id6760830809">App Store</a>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="carousel-btn carousel-btn-next" data-carousel-next aria-label="Next apps">›</button>
     </div>
+</section>
 
-    <!-- APP 3 -->
-    <div class="app">
-        <img src="images/muvin.png" alt="Muvin">
-        <h3>Muvin</h3>
-
-        <a class="btn play" href="https://play.google.com/store/apps/details?id=com.yesferal.muvin">Google Play</a>
-        <!-- No App Store button -->
-    </div>
-
-    <!-- APP 4 -->
-    <div class="app">
-        <img src="images/tumatch.png" alt="TuMatch">
-        <h3>TuMatch</h3>
-
-        <a class="btn play"
-           href="https://play.google.com/store/apps/details?id=com.yesferal.tumatch">
-            Google Play
-        </a>
-        <a class="btn appstore" href="https://apps.apple.com/pe/app/tumatchapp/id6760830809">App Store</a>
-    </div>
-
-</div>
-
-<section class="section">
+<section class="section" id="articles">
     <div class="section-heading">
         <h2>Articles</h2>
         <a href="/articles/">All articles →</a>
     </div>
 
-    <div class="article-grid">
-        <a class="article-card" href="/articles/content-driven-ui-swiftui/">
-            <p class="meta">Sep 1, 2026 · 5 min · iOS</p>
-            <h3>Content-driven UI on iOS: JSON to SwiftUI</h3>
-            <p>Structure from data, native SwiftUI — same contract on iOS and Android.</p>
-            <div class="tags">
-                <span class="tag">SwiftUI</span>
-                <span class="tag">KMP</span>
-                <span class="tag">Architecture</span>
+    <div class="carousel" data-carousel>
+        <button type="button" class="carousel-btn carousel-btn-prev" data-carousel-prev aria-label="Previous articles">‹</button>
+
+        <div class="carousel-viewport">
+            <div class="carousel-track">
+                <a class="article-card carousel-item" href="/articles/content-driven-ui-swiftui/">
+                    <p class="meta">Sep 1, 2026 · 5 min · iOS</p>
+                    <h3>Content-driven UI on iOS: JSON to SwiftUI</h3>
+                    <p>Structure from data, native SwiftUI — same contract on iOS and Android.</p>
+                    <div class="tags">
+                        <span class="tag">SwiftUI</span>
+                        <span class="tag">KMP</span>
+                        <span class="tag">Architecture</span>
+                    </div>
+                </a>
             </div>
-        </a>
+        </div>
+
+        <button type="button" class="carousel-btn carousel-btn-next" data-carousel-next aria-label="Next articles">›</button>
     </div>
 </section>
 
@@ -106,18 +124,7 @@
     © 2026 Yesferal · All rights reserved.
 </footer>
 
-<script>
-    // Scroll animation
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    });
-
-    document.querySelectorAll('.app').forEach(el => observer.observe(el));
-</script>
+<script src="theme.js"></script>
 
 </body>
 </html>

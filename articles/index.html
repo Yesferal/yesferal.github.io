@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+    <script>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const theme = stored || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+
     <title>Articles | Yesferal</title>
     <meta name="description" content="What I learn building iOS and Android apps — SwiftUI, Kotlin Multiplatform, and shipping in production."/>
     <link rel="canonical" href="https://yesferal.com/articles/"/>
@@ -21,9 +29,12 @@
 
 <nav class="nav">
     <a class="nav-brand" href="/">Yesferal</a>
-    <div class="nav-links">
-        <a href="/">Apps</a>
-        <a class="active" href="/articles/">Articles</a>
+    <div class="nav-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <div class="nav-links">
+            <a href="/">Apps</a>
+            <a class="active" href="/articles/">Articles</a>
+        </div>
     </div>
 </nav>
 
@@ -55,6 +66,8 @@
     </div>
     © 2026 Yesferal · All rights reserved.
 </footer>
+
+<script src="../theme.js"></script>
 
 </body>
 </html>

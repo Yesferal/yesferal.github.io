@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+    <script>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const theme = stored || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+
     <title>Content-driven UI on iOS: JSON to SwiftUI | Yesferal</title>
     <meta name="description" content="How HornsApp and Muvin separate structure from presentation — shared contract on iOS and Android, native SwiftUI, and centralized navigation."/>
     <meta name="author" content="Yesferal Cueva"/>
@@ -54,9 +62,12 @@
 
 <nav class="nav">
     <a class="nav-brand" href="/">Yesferal</a>
-    <div class="nav-links">
-        <a href="/">Apps</a>
-        <a class="active" href="/articles/">Articles</a>
+    <div class="nav-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <div class="nav-links">
+            <a href="/">Apps</a>
+            <a class="active" href="/articles/">Articles</a>
+        </div>
     </div>
 </nav>
 
@@ -173,6 +184,8 @@
     </div>
     © 2026 Yesferal · All rights reserved.
 </footer>
+
+<script src="../../theme.js"></script>
 
 </body>
 </html>
