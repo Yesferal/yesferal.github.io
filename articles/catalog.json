@@ -2,6 +2,15 @@
   "siteUrl": "https://yesferal.com",
   "published": [
     {
+      "slug": "github-pages-actions-cicd",
+      "title": "CI/CD for a static site on GitHub Pages",
+      "summary": "One catalog, Actions deploy, custom domain — static HTML without a heavy framework.",
+      "date": "2026-09-03",
+      "readMinutes": 5,
+      "platform": "Web",
+      "tags": ["CI/CD", "GitHub Actions", "Architecture"]
+    },
+    {
       "slug": "multitype-adapter-recyclerview",
       "title": "MultiType adapters in Kotlin",
       "summary": "One list, many cell types — models that own their layout, ViewHolder, and binding.",

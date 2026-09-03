@@ -15,6 +15,8 @@ python3 scripts/sync-articles.py --clean  # clear markers before commit
 
 See `catalog.json` → `published` (and the pages under `articles/<slug>/`).
 
+Latest: CI/CD for a static site on GitHub Pages (`github-pages-actions-cicd`).
+
 ## Series — HornsApp architecture (next)
 
 - [ ] From shared contract to SwiftUI — how the mapping layer works

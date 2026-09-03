@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <script>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const theme = stored || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+
+    <title>CI/CD for a static site on GitHub Pages | Yesferal</title>
+    <meta name="description" content="How to think about CI/CD for a static site: one source of truth, GitHub Actions, deploy artifacts, custom domains, and automation boundaries."/>
+    <meta name="author" content="Yesferal Cueva"/>
+    <link rel="canonical" href="https://yesferal.com/articles/github-pages-actions-cicd/"/>
+
+    <meta property="og:title" content="CI/CD for a static site on GitHub Pages"/>
+    <meta property="og:description" content="One source of truth, a build step, Actions deploy, and a custom domain — from a CI/CD architecture perspective."/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="https://yesferal.com/articles/github-pages-actions-cicd/"/>
+    <meta property="og:image" content="https://yesferal.com/images/hornsapp.png"/>
+    <meta property="article:published_time" content="2026-09-03"/>
+    <meta property="article:author" content="Yesferal Cueva"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="CI/CD for a static site on GitHub Pages"/>
+    <meta name="twitter:description" content="One source of truth, a build step, Actions deploy, and a custom domain — without a heavy framework."/>
+    <meta name="twitter:image" content="https://yesferal.com/images/hornsapp.png"/>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "CI/CD for a static site on GitHub Pages",
+      "description": "How to think about CI/CD for a static site: one source of truth, GitHub Actions, deploy artifacts, custom domains, and automation boundaries.",
+      "datePublished": "2026-09-03",
+      "author": {
+        "@type": "Person",
+        "name": "Yesferal Cueva",
+        "url": "https://yesferal.com/",
+        "sameAs": [
+          "https://www.linkedin.com/in/yesferal-cueva",
+          "https://github.com/Yesferal"
+        ]
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Yesferal Cueva"
+      },
+      "mainEntityOfPage": "https://yesferal.com/articles/github-pages-actions-cicd/",
+      "image": "https://yesferal.com/images/hornsapp.png"
+    }
+    </script>
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+
+<nav class="nav">
+    <a class="nav-brand" href="/">Yesferal</a>
+    <div class="nav-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <div class="nav-links">
+            <a href="/">Apps</a>
+            <a href="/#about">About</a>
+        </div>
+    </div>
+</nav>
+
+<article class="article-wrap">
+    <a class="crumb" href="/articles/">← Articles</a>
+
+    <header>
+        <h1>CI/CD for a static site on GitHub Pages</h1>
+        <p class="byline">Yesferal Cueva · Sep 3, 2026 · 5 min read</p>
+        <div class="tags">
+            <span class="tag">CI/CD</span>
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">Architecture</span>
+        </div>
+    </header>
+
+    <div class="article-body">
+        <p>CI/CD for a static site looks simple at first: push files to a branch and let the host publish them. That works while the site is small and mostly hand-maintained. The moment content starts repeating across pages, deployment stops being “just hosting” and becomes a consistency problem.</p>
+
+        <p>That is where architecture matters. The goal is not only to automate deployment. The goal is to define <strong>what humans edit, what the pipeline generates, and what artifact the server should publish</strong>.</p>
+
+        <h2>Why a clear deploy contract matters</h2>
+
+        <p>The hard part of CI/CD is rarely the button that deploys. It is knowing which files are inputs, which files are generated, and which files must reach production. Without that contract, teams rely on memory: “remember to update this,” “remember to run that script,” “remember to include this file.”</p>
+
+        <p>That works until it does not. The site may still go live, but the result can be incomplete or inconsistent. So the useful question is not only “how do we deploy?” It is “what does a correct release require?”</p>
+
+        <p>In practice, that usually means:</p>
+
+        <ul>
+            <li><strong>One source of truth</strong> for data that appears in more than one place.</li>
+            <li><strong>A build step</strong> that turns source into the final output.</li>
+            <li><strong>A repeatable pipeline</strong> that runs the same way in CI every time.</li>
+            <li><strong>A complete deploy artifact</strong> with everything the host needs to serve the site.</li>
+        </ul>
+
+        <h2>Two ways to ship on GitHub Pages</h2>
+
+        <p><strong>Deploy from a branch</strong> publishes whatever is in <code>main</code> (or <code>docs/</code>). It is fine for plain static files, but it assumes the repository already contains the final output.</p>
+
+        <p><strong>GitHub Actions</strong> adds an explicit build stage. The repository can keep sources, templates, and config; the workflow turns those into a deployable artifact.</p>
+
+        <p>The difference is architectural: branch deploys publish repository state, while Actions deploys publish <em>build output</em>. Once you care about derived files, validation, or automation, that distinction matters.</p>
+
+        <div class="diagram">
+            <pre>┌─────────────────────────────────────────┐
+│  Repo (source)                          │
+│  content · config · templates           │
+├─────────────────────────────────────────┤
+│  GitHub Actions                         │
+│  validate → build → package             │
+├─────────────────────────────────────────┤
+│  Deploy artifact                        │
+│  static HTML + assets + config          │
+├─────────────────────────────────────────┤
+│  Custom domain (CNAME + DNS)            │
+│  domain points to deployed artifact     │
+└─────────────────────────────────────────┘</pre>
+        </div>
+
+        <h2>One source of truth</h2>
+
+        <p>A good CI/CD pipeline starts by separating what people write from what the build should create. If a title, date, or slug appears in three places, it should live in one place and be reused during the build.</p>
+
+        <p>For a static site, that source can be a small JSON or YAML file. The pipeline reads it once and generates the repeated parts of the site automatically.</p>
+
+        <p>A simple way to think about it:</p>
+
+        <ul>
+            <li><strong>You write the source.</strong> The real pages, text, images, and the shared data file.</li>
+            <li><strong>The pipeline builds the rest.</strong> Listing pages, sitemap entries, and any other repeated sections that should stay in sync.</li>
+        </ul>
+
+        <p>If something is just a copy of data you already have, do not maintain it by hand. Let CI generate it.</p>
+
+        <h2>Why generate static HTML (not only JSON + JS)</h2>
+
+        <p>One option is to load JSON in the browser and render repeated sections with JavaScript. That is often fine for performance. The tradeoff is that the browser becomes part of the build process.</p>
+
+        <p>Generating HTML in CI moves that responsibility back to the pipeline. The response already contains the final markup, which is usually better for SEO, previews, caching behavior, and debugging. The architecture principle is simple: do as much deterministic work as possible before runtime.</p>
+
+        <h2>What the workflow does</h2>
+
+        <p>A good GitHub Actions workflow for a static site usually has four stages:</p>
+
+        <ol>
+            <li><strong>Checkout</strong> the repository.</li>
+            <li><strong>Validate and build</strong> generated files from the source data.</li>
+            <li><strong>Package</strong> only the files that belong in production.</li>
+            <li><strong>Deploy</strong> the artifact with the hosting provider's official action.</li>
+        </ol>
+
+        <p>That structure scales well. Today the build step might only generate article lists. Tomorrow it can lint metadata, fail on broken slugs, verify feeds, minify assets, or publish preview environments on pull requests.</p>
+
+        <p>The important point is that deployment becomes the last stage of a build contract, not the first place where source files happen to land.</p>
+
+        <h2>Custom domain and CNAME</h2>
+
+        <p>Custom domains are a good example of why deploy artifacts matter. DNS can be correct and the host can still behave incorrectly if the artifact is missing the file or config that binds the site to the domain.</p>
+
+        <p>On GitHub Pages, that usually means DNS records plus a <code>CNAME</code> file that must travel with the built site. If the workflow builds into an output folder, the custom domain file must be present there too.</p>
+
+        <p>This is why I like to think in terms of deployment artifacts instead of repository contents. The host only sees what you upload. If the artifact is complete, deployment is predictable.</p>
+
+        <h2>Automation boundaries</h2>
+
+        <p>Not everything belongs in CI, and not everything belongs in the repo as static output. A useful boundary is:</p>
+
+        <ul>
+            <li><strong>Humans own intent.</strong> They write pages, metadata, and configuration.</li>
+            <li><strong>The pipeline owns repetition.</strong> It expands templates, regenerates indexes, and packages artifacts.</li>
+            <li><strong>The host owns delivery.</strong> It serves the final files, TLS, and domain resolution.</li>
+        </ul>
+
+        <p>Once those boundaries are clear, debugging becomes easier too. A missing article card is a build issue. A broken domain is a deploy or DNS issue. A stale page is often cache invalidation. Good architecture makes failure modes easier to classify.</p>
+
+        <h2>Principles that carry well beyond static sites</h2>
+
+        <ul>
+            <li><strong>Single source of truth.</strong> Inputs should be authored once and reused by the pipeline.</li>
+            <li><strong>Separate build from publish.</strong> What developers edit is not always what production should serve.</li>
+            <li><strong>Prefer boring automation.</strong> A short script in CI beats tribal knowledge in a README alone.</li>
+            <li><strong>Keep the deploy artifact honest.</strong> Anything production needs must be in the uploaded output.</li>
+        </ul>
+
+        <p>Those principles apply to mobile release pipelines, backend deploys, static sites, and internal tools. The platform changes; the boundary design does not change that much.</p>
+
+        <h2>What we gained</h2>
+
+        <p>The payoff is not only convenience. It is confidence. Once CI owns validation, generation, packaging, and deploy, publishing becomes a repeatable system instead of a checklist someone might forget.</p>
+
+        <div class="callout">
+            <p>Start small: one source file, one build step, one deploy workflow. Then add checks where mistakes actually happen. Good CI/CD is usually not fancy. It is clear, repeatable, and boring in the best way.</p>
+        </div>
+
+        <p>I build native iOS and Android apps and share notes like this as I ship. If architecture, automation, or delivery pipelines are your thing too, <a href="https://www.linkedin.com/in/yesferal-cueva">let's connect on LinkedIn</a>.</p>
+    </div>
+
+    <div class="article-footer">
+        <p>Also read: <a href="/articles/hada-kotlin-dependency-injection/">HADA — DI in Kotlin</a> · <a href="/articles/content-driven-ui-swiftui/">Content-driven UI on iOS</a>.</p>
+        <div class="share-row">
+            <a class="share-btn linkedin"
+               href="https://www.linkedin.com/sharing/share-offsite/?url=https://yesferal.com/articles/github-pages-actions-cicd/"
+               target="_blank" rel="noopener">Share on LinkedIn</a>
+            <a class="share-btn" href="/articles/">More articles</a>
+        </div>
+    </div>
+</article>
+
+<footer>
+    <div class="footer-links">
+        <a href="https://www.linkedin.com/in/yesferal-cueva" rel="me">LinkedIn</a>
+        <a href="https://github.com/Yesferal" rel="me">GitHub</a>
+        <a href="/#about">About</a>
+    </div>
+    © 2026 Yesferal · All rights reserved.
+</footer>
+
+<script src="../../theme.js"></script>
+
+</body>
+</html>
