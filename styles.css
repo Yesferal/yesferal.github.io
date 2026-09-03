@@ -14,35 +14,52 @@ html {
   --bg-start: #020617;
   --bg-end: #0f172a;
   --text: #ffffff;
-  --text-muted: #94a3b8;
-  --text-subtle: #64748b;
+  --text-muted: #cbd5e1;
+  --text-subtle: #94a3b8;
   --card-bg: rgba(255, 255, 255, 0.05);
   --card-hover: rgba(255, 255, 255, 0.08);
-  --card-border: rgba(255, 255, 255, 0.06);
+  --card-border: rgba(255, 255, 255, 0.1);
   --nav-bg: rgba(2, 6, 23, 0.75);
-  --nav-border: rgba(255, 255, 255, 0.06);
-  --link: #38bdf8;
-  --tag-bg: rgba(56, 189, 248, 0.12);
-  --tag-text: #7dd3fc;
+  --nav-border: rgba(255, 255, 255, 0.08);
+  /* Accent: bright enough for text/links on dark surfaces */
+  --link: #7dd3fc;
+  --tag-bg: rgba(14, 165, 233, 0.18);
+  --tag-text: #e0f2fe;
   --code-bg: rgba(255, 255, 255, 0.08);
   --pre-bg: #010409;
   --pre-border: rgba(255, 255, 255, 0.08);
   --diagram-bg: rgba(255, 255, 255, 0.04);
-  --callout-bg: rgba(56, 189, 248, 0.08);
+  --callout-bg: rgba(14, 165, 233, 0.12);
   --callout-border: #38bdf8;
   --strong: #f8fafc;
   --body-text: #cbd5e1;
-  --btn-muted-bg: rgba(255, 255, 255, 0.1);
-  --btn-muted-hover: rgba(255, 255, 255, 0.18);
+  --btn-muted-bg: rgba(255, 255, 255, 0.08);
+  --btn-muted-hover: rgba(255, 255, 255, 0.14);
   --carousel-btn-bg: rgba(255, 255, 255, 0.08);
-  --carousel-btn-border: rgba(255, 255, 255, 0.1);
-  --footer-border: rgba(255, 255, 255, 0.08);
+  --carousel-btn-border: rgba(255, 255, 255, 0.12);
+  --footer-border: rgba(255, 255, 255, 0.1);
   --shadow: none;
   --theme-toggle-bg: rgba(255, 255, 255, 0.08);
-  --hero-glow: rgba(56, 189, 248, 0.15);
-  --hero-btn-primary-bg: #38bdf8;
-  --hero-btn-primary-text: #020617;
-  --hero-btn-secondary-bg: rgba(255, 255, 255, 0.08);
+  --hero-glow: rgba(14, 165, 233, 0.18);
+  /* Solid blue + white text (same pattern as light mode, WCAG AA) */
+  --btn-primary-bg: #0369a1;
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover: #075985;
+  --btn-secondary-bg: rgba(255, 255, 255, 0.06);
+  --btn-secondary-text: #f8fafc;
+  --btn-secondary-border: rgba(148, 163, 184, 0.4);
+  --btn-secondary-hover: rgba(255, 255, 255, 0.12);
+  --play-bg: #22c55e;
+  --play-text: #052e16;
+  --play-hover: #16a34a;
+  --appstore-bg: var(--btn-secondary-bg);
+  --appstore-text: var(--btn-secondary-text);
+  --appstore-border: var(--btn-secondary-border);
+  --appstore-hover: var(--btn-secondary-hover);
+  /* Aliases used by older rules */
+  --hero-btn-primary-bg: var(--btn-primary-bg);
+  --hero-btn-primary-text: var(--btn-primary-text);
+  --hero-btn-secondary-bg: var(--btn-secondary-bg);
 }
 
 [data-theme="light"] {
@@ -59,7 +76,7 @@ html {
   --nav-border: #e2e8f0;
   --link: #0369a1;
   --tag-bg: #e0f2fe;
-  --tag-text: #0369a1;
+  --tag-text: #0c4a6e;
   --code-bg: #f1f5f9;
   --pre-bg: #f8fafc;
   --pre-border: #e2e8f0;
@@ -76,9 +93,23 @@ html {
   --shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
   --theme-toggle-bg: #f1f5f9;
   --hero-glow: rgba(2, 132, 199, 0.12);
-  --hero-btn-primary-bg: #0284c7;
-  --hero-btn-primary-text: #ffffff;
-  --hero-btn-secondary-bg: #f1f5f9;
+  --btn-primary-bg: #0369a1;
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover: #075985;
+  --btn-secondary-bg: #f8fafc;
+  --btn-secondary-text: #0f172a;
+  --btn-secondary-border: #cbd5e1;
+  --btn-secondary-hover: #f1f5f9;
+  --play-bg: #16a34a;
+  --play-text: #ffffff;
+  --play-hover: #15803d;
+  --appstore-bg: #0f172a;
+  --appstore-text: #ffffff;
+  --appstore-border: transparent;
+  --appstore-hover: #1e293b;
+  --hero-btn-primary-bg: var(--btn-primary-bg);
+  --hero-btn-primary-text: var(--btn-primary-text);
+  --hero-btn-secondary-bg: var(--btn-secondary-bg);
 }
 
 body {
@@ -172,11 +203,11 @@ p {
 .hero-pill {
   padding: 6px 14px;
   border-radius: 999px;
-  border: 1px solid var(--card-border);
-  background: var(--card-bg);
+  border: none;
+  background: var(--tag-bg);
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--text-muted);
+  color: var(--tag-text);
 }
 
 .hero-actions {
@@ -192,27 +223,27 @@ p {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
 }
 
 .hero-btn-primary {
-  background: var(--hero-btn-primary-bg);
-  color: var(--hero-btn-primary-text);
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
 }
 
 .hero-btn-primary:hover {
-  filter: brightness(1.08);
+  background: var(--btn-primary-hover);
   transform: translateY(-1px);
 }
 
 .hero-btn-secondary {
-  background: var(--hero-btn-secondary-bg);
-  color: var(--text);
-  border: 1px solid var(--card-border);
+  background: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  border: 1px solid var(--btn-secondary-border);
 }
 
 .hero-btn-secondary:hover {
-  background: var(--btn-muted-hover);
+  background: var(--btn-secondary-hover);
 }
 
 .hero-visual {
@@ -309,15 +340,17 @@ p {
   display: inline-block;
   padding: 10px 18px;
   border-radius: 12px;
-  background: var(--hero-btn-primary-bg);
-  color: var(--hero-btn-primary-text);
+  background: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  border: 1px solid var(--btn-secondary-border);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 .about-link:hover {
-  filter: brightness(1.08);
+  background: var(--btn-secondary-hover);
 }
 
 .about-card {
@@ -376,21 +409,22 @@ p {
 }
 
 .play {
-  background: #22c55e;
-  color: black;
+  background: var(--play-bg);
+  color: var(--play-text);
 }
 
 .play:hover {
-  background: #16a34a;
+  background: var(--play-hover);
 }
 
 .appstore {
-  background: white;
-  color: black;
+  background: var(--appstore-bg);
+  color: var(--appstore-text);
+  border: 1px solid var(--appstore-border);
 }
 
 .appstore:hover {
-  background: #e2e8f0;
+  background: var(--appstore-hover);
 }
 
 .store-btn {
@@ -679,6 +713,7 @@ footer {
   color: var(--tag-text);
   font-size: 0.75rem;
   font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 /* Article page */
@@ -844,21 +879,23 @@ footer {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
-  background: var(--btn-muted-bg);
-  color: var(--text);
+  background: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  border: 1px solid var(--btn-secondary-border);
 }
 
 .share-btn:hover {
-  background: var(--btn-muted-hover);
+  background: var(--btn-secondary-hover);
 }
 
 .share-btn.linkedin {
-  background: #0a66c2;
-  color: white;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border-color: transparent;
 }
 
 .share-btn.linkedin:hover {
-  background: #004182;
+  background: var(--btn-primary-hover);
 }
 
 .footer-links {
