@@ -1,0 +1,70 @@
+{
+  "siteUrl": "https://yesferal.com",
+  "published": [
+    {
+      "slug": "multitype-adapter-recyclerview",
+      "title": "MultiType adapters in Kotlin",
+      "summary": "One list, many cell types — models that own their layout, ViewHolder, and binding.",
+      "date": "2026-09-02",
+      "readMinutes": 5,
+      "platform": "Android",
+      "tags": ["Kotlin", "Android", "RecyclerView"]
+    },
+    {
+      "slug": "hada-kotlin-dependency-injection",
+      "title": "HADA: a lightweight DI container for Kotlin",
+      "summary": "Why HornsApp needed a small container — Factory, Singleton, tags, and one place to wire the app.",
+      "date": "2026-09-02",
+      "readMinutes": 5,
+      "platform": "Android",
+      "tags": ["Kotlin", "Android", "Architecture"]
+    },
+    {
+      "slug": "content-driven-ui-swiftui",
+      "title": "Content-driven UI on iOS: JSON to SwiftUI",
+      "summary": "Structure from data, native SwiftUI — same contract on iOS and Android.",
+      "date": "2026-09-01",
+      "readMinutes": 5,
+      "platform": "iOS",
+      "tags": ["SwiftUI", "KMP", "Architecture"]
+    }
+  ],
+  "comingSoon": [
+    {
+      "title": "From shared contract to SwiftUI",
+      "summary": "How the mapping layer turns KMP models into SwiftUI views.",
+      "meta": "Coming soon · HornsApp series",
+      "tags": ["SwiftUI", "KMP"]
+    },
+    {
+      "title": "Navigation shared with Android",
+      "summary": "One navigation model, two native clients.",
+      "meta": "Coming soon · HornsApp series",
+      "tags": ["iOS", "Android"]
+    },
+    {
+      "title": "Jetpack Compose + UiState",
+      "summary": "Modern Android UI and unidirectional state flows.",
+      "meta": "Coming soon",
+      "tags": ["Compose", "MVI"]
+    },
+    {
+      "title": "SwiftUI + Observation",
+      "summary": "Less boilerplate than classic MVVM with `@Observable`.",
+      "meta": "Coming soon",
+      "tags": ["SwiftUI", "iOS"]
+    },
+    {
+      "title": "KMP in production",
+      "summary": "Modularization and shared boundaries that scale.",
+      "meta": "Coming soon",
+      "tags": ["KMP", "Architecture"]
+    },
+    {
+      "title": "CI/CD for mobile",
+      "summary": "Fastlane, GitHub Actions, and reliable releases.",
+      "meta": "Coming soon",
+      "tags": ["CI/CD", "Mobile"]
+    }
+  ]
+}

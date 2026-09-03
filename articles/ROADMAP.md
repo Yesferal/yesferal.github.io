@@ -2,11 +2,18 @@
 
 Living list of topics for yesferal.com. One article per week when possible.
 
+**Source of truth for the live site:** `articles/catalog.json`  
+
+Do not hand-edit article cards in `index.html` / `articles/index.html` / `sitemap.xml` — those marker regions stay empty in git. CI fills them on deploy.
+
+```bash
+python3 scripts/sync-articles.py          # local preview
+python3 scripts/sync-articles.py --clean  # clear markers before commit
+```
+
 ## Published
 
-- [x] Content-driven UI on iOS: JSON to SwiftUI
-- [x] HADA: a lightweight DI container for Kotlin (from [Medium, Dec 2020](https://yesferal.medium.com/hada-hornsapp-dependency-accessing-3aabe4904c46))
-- [x] MultiType RecyclerView adapters in Kotlin (from [Medium, Dec 2020](https://yesferal.medium.com/hornsapp-multitype-adapter-11be83ff9165))
+See `catalog.json` → `published` (and the pages under `articles/<slug>/`).
 
 ## Series — HornsApp architecture (next)
 
@@ -28,4 +35,4 @@ Topics to explore in depth — not replacing Clean Architecture / MVVM, but buil
 
 - Keep articles ~5 min read, architecture tone first.
 - Add code in series part 2+ (mapping, navigation).
-- Update `articles/index.html` coming-soon cards when order changes.
+- Update `catalog.json` (published + comingSoon) when order or copy changes — do not hand-edit the article cards in `index.html` / `articles/index.html`.
