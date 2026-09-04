@@ -13,12 +13,12 @@
     </script>
 
     <title>Content-driven UI on iOS: JSON to SwiftUI | Yesferal</title>
-    <meta name="description" content="How HornsApp and Muvin separate structure from presentation — shared contract on iOS and Android, native SwiftUI, and centralized navigation."/>
+    <meta name="description" content="A practical use case for content-driven UI: multi-platform home screens, white-label composition, shared contracts, and native SwiftUI."/>
     <meta name="author" content="Yesferal Cueva"/>
     <link rel="canonical" href="https://yesferal.com/articles/content-driven-ui-swiftui/"/>
 
     <meta property="og:title" content="Content-driven UI on iOS: JSON to SwiftUI"/>
-    <meta property="og:description" content="Structure from data, presentation in native UI — how we share the same contract on iOS and Android."/>
+    <meta property="og:description" content="Learn a reusable design: structure as data, native presentation, shared contracts across iOS and Android."/>
     <meta property="og:type" content="article"/>
     <meta property="og:url" content="https://yesferal.com/articles/content-driven-ui-swiftui/"/>
     <meta property="og:image" content="https://yesferal.com/images/hornsapp.png"/>
@@ -27,7 +27,7 @@
 
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="Content-driven UI on iOS: JSON to SwiftUI"/>
-    <meta name="twitter:description" content="Structure from data, presentation in native UI — how we share the same contract on iOS and Android."/>
+    <meta name="twitter:description" content="Learn a reusable design: structure as data, native presentation, shared contracts across iOS and Android."/>
     <meta name="twitter:image" content="https://yesferal.com/images/hornsapp.png"/>
 
     <script type="application/ld+json">
@@ -35,7 +35,7 @@
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       "headline": "Content-driven UI on iOS: JSON to SwiftUI",
-      "description": "Separating structure from presentation across iOS and Android — content-driven layouts, shared contracts, native rendering.",
+      "description": "A practical use case for content-driven UI: multi-platform home screens, white-label composition, shared contracts, and native SwiftUI.",
       "datePublished": "2026-09-01",
       "author": {
         "@type": "Person",
@@ -89,90 +89,116 @@
     </header>
 
     <div class="article-body">
-        <p>HornsApp and Muvin are event apps on Android and iOS. We have two brands and two platforms, and the home screen changes often. If we hardcode the layout in SwiftUI, we duplicate structure in every variant and we risk falling out of sync with Android.</p>
+        <p>In a multi-platform mobile product — iOS and Android, sometimes more than one brand — Clean Architecture and native UI still leave a practical problem: <strong>how do you change home-screen composition without rewriting SwiftUI and Android views every time</strong>, and without letting the two platforms drift apart?</p>
 
-        <p>The main idea is simple: <strong>structure comes from data, and presentation stays native.</strong> A content configuration file describes what appears on screen and in what order. Each platform renders it with its own UI tools. This post is an overview. Later articles will go deeper into each part.</p>
+        <p>That is what content-driven UI is for. Structure comes from data; presentation stays native. A configuration describes <em>what</em> appears and in what order; each platform renders it with its own toolkit. This post teaches the design with a concrete use case. That problem is what led me to ship a shared content/contract layer (including Kotlin Multiplatform) while building production event apps.</p>
 
-        <h2>The problem we were avoiding</h2>
+        <h2>A concrete scenario</h2>
 
-        <p>Before this approach, changing the home screen was slow and easy to get wrong. Reordering a section meant editing SwiftUI in several places. HornsApp and Muvin could drift apart, and iOS could fall out of sync with Android without us noticing right away.</p>
+        <p>Think of a home screen as an ordered list of section types, for example:</p>
 
-        <p>We wanted layout changes to be a configuration update — not a hunt through view code on every platform and every brand.</p>
+        <ul>
+            <li>a hero or featured carousel</li>
+            <li>a “upcoming” list with a title</li>
+            <li>a promotional card</li>
+            <li>a call-to-action block</li>
+        </ul>
 
-        <h2>What drove the design</h2>
+        <p>Brand A might show carousel → list → CTA. Brand B might show list → promo → carousel. Same section types, different composition. Same native components underneath.</p>
 
-        <p>Three constraints shaped how we built this.</p>
+        <p>Without a content-driven approach, that difference often becomes duplicated view code — or flavor forks and <code>#if brand</code> branches that are hard to keep honest across platforms.</p>
 
-        <p><strong>Same contract on both platforms.</strong> Android already uses a content-driven model. On iOS we follow the same render contract instead of creating a second schema. One definition of the home screen, two native apps.</p>
+        <h2>What you are trying to protect</h2>
 
-        <p><strong>White-label without rewriting the UI.</strong> HornsApp and Muvin share the same codebase but not the same home screen. Each brand has its own content configuration: different sections, different order, same UI components underneath. A new brand means a new config file, not a new fork of the app.</p>
+        <p>Three goals show up again and again in this scenario:</p>
 
-        <p><strong>Faster layout changes.</strong> We should be able to move a carousel, add a section, or reorder blocks without redeploying presentation code. That is a configuration change. Colors, fonts, and animations stay in SwiftUI.</p>
+        <p><strong>1. One contract for two platforms.</strong> Android and iOS should agree on what a “screen document” is: which section types exist, what payload each one carries, which navigation targets are allowed. If Android already models the home screen as data, iOS should not invent a second schema.</p>
 
-        <h2>How the layers work</h2>
+        <p><strong>2. White-label without rewriting UI.</strong> New brand ≈ new configuration, not a new app fork. Shared components stay shared; only composition changes.</p>
+
+        <p><strong>3. Structure changes without redeploying look-and-feel.</strong> Moving a section or swapping order should be a data/config change when possible. Fonts, colors, motion, and accessibility stay in SwiftUI (and the Android UI layer).</p>
+
+        <p>If your team is living through “small layout tickets that touch every client,” you are already in this use case.</p>
+
+        <h2>How to split the system</h2>
+
+        <p>A clear way to draw the boundaries:</p>
 
         <div class="diagram">
-            <pre>┌─────────────────────────────────────────┐
-│  Content configuration (per brand)      │
+            <pre>┌───────────────────────────────────────────┐
+│  Content configuration (per brand)        │
 │  Which sections exist, and in what order  │
-├─────────────────────────────────────────┤
-│  Shared layer (Kotlin Multiplatform)    │
+├───────────────────────────────────────────┤
+│  Shared layer (e.g. Kotlin Multiplatform) │
 │  Screen definition, navigation targets    │
-├─────────────────────────────────────────┤
-│  Native presentation (SwiftUI)          │
-│  Look, feel, platform behavior          │
-├─────────────────────────────────────────┤
-│  Navigation (Router)                    │
-│  Tab switches, pushed screens, links    │
-└─────────────────────────────────────────┘</pre>
+├───────────────────────────────────────────┤
+│  Native presentation (SwiftUI / Compose)  │
+│  Look, feel, platform behavior            │
+├───────────────────────────────────────────┤
+│  Navigation (Router)                      │
+│  Tab switches, pushed screens, links      │
+└───────────────────────────────────────────┘</pre>
         </div>
 
-        <p>Each layer has one job. The design is about what can cross a boundary — and what should not.</p>
+        <p>Read it top to bottom as a lesson: <strong>who owns structure, who owns meaning, who owns pixels, who owns movement between screens.</strong> Each layer should have one job. The design is about what can cross a boundary — and what should not.</p>
 
         <h2>Structure vs presentation</h2>
 
-        <p>The content layer defines <em>what</em> is on screen: a carousel, a titled list, a call-to-action block. It does not define fonts, colors, or spacing. That belongs to presentation.</p>
-
-        <p>HornsApp and Muvin each have their own configuration. They use the same section types but with different composition. The presentation layer maps each section type to a native component. Views do not parse raw JSON.</p>
-
-        <p>That separation is intentional. Views render. They do not read configuration files.</p>
-
-        <h2>Shared layer between iOS and Android</h2>
-
-        <p>A Kotlin Multiplatform library owns the screen definition: section types, navigation targets, and the shape of the render document. Android has used this for years. On iOS we use the same contract instead of maintaining a second source of truth.</p>
-
-        <p>This layer is not UI. It is what both platforms use to answer the same question: what should this screen contain? Parsing, validation, and domain models live here.</p>
-
-        <h2>SwiftUI as the presentation layer</h2>
-
-        <p>SwiftUI handles everything the user sees and interacts with. On iOS, we translate the shared contract into a typed presentation model — a set of section types that the view layer understands.</p>
-
-        <p>The look and feel stay fully native. Animations, accessibility, and platform conventions do not belong in a configuration file. Structure comes from data. The user experience comes from SwiftUI.</p>
-
-        <h2>Navigation in one place</h2>
-
-        <p>The configuration can say where to go: open Upcoming, open a URL. But describing a destination is not the same as navigating to it. A dedicated navigation layer turns that into action — switch a tab, push a detail screen, or open an in-app browser.</p>
-
-        <p>Views do not navigate on their own. They pass the target to the router, and the router decides. Tab switches and pushed screens live in one place, similar to Android. This keeps navigation easier to follow as the home screen grows.</p>
-
-        <h2>Principles we follow</h2>
+        <p>Teach this distinction early:</p>
 
         <ul>
-            <li><strong>Structure is data.</strong> Screen composition lives in configuration, not in view code.</li>
-            <li><strong>Presentation is native.</strong> Each platform renders with its own tools and conventions.</li>
-            <li><strong>The contract is shared.</strong> iOS and Android read the same screen definition.</li>
-            <li><strong>Navigation is centralized.</strong> Views pass targets; one layer handles the rest.</li>
+            <li><strong>Structure</strong> = “there is a carousel, then a titled list.”</li>
+            <li><strong>Presentation</strong> = “how that carousel looks and animates on iOS.”</li>
         </ul>
 
-        <h2>What we gain</h2>
+        <p>The content layer defines section <em>types</em> and order. It does not define fonts, spacing, or brand chrome. Different brands reuse the same types with different composition.</p>
 
-        <p>We invest a bit more structure upfront, but we gain flexibility over time: two brands, two platforms, one way to describe a home screen. Mappers, routers, and platform adapters are implementation details. They can change without rewriting the overall design.</p>
+        <p>On the UI side, map each section type to a native component. Views should render a typed model — they should not open a raw JSON file and decide layout policy themselves. That keeps presentation testable and keeps configuration boring (in a good way).</p>
+
+        <h2>Why a shared layer helps</h2>
+
+        <p>A shared module (Kotlin Multiplatform is one option) can own:</p>
+
+        <ul>
+            <li>section type definitions</li>
+            <li>navigation targets</li>
+            <li>the shape of the “render document”</li>
+        </ul>
+
+        <p>Both apps then ask the same question from the same place: <em>what should this screen contain?</em> Parsing and validation live here so you do not maintain two incompatible models. This layer is not UI — that is the whole point.</p>
+
+        <h2>SwiftUI’s job on iOS</h2>
+
+        <p>SwiftUI (or UIKit, if that is your stack) owns the experience: layout polish, accessibility, gestures, platform conventions. Translate the shared contract into a small set of presentation models the view layer understands.</p>
+
+        <p>Rule of thumb: <strong>if it is visual behavior, it is native. If it is composition of the screen, it is data.</strong></p>
+
+        <h2>Navigation as its own concern</h2>
+
+        <p>Configuration can say “open Upcoming” or “open this URL.” That is a <em>destination</em>, not a navigation implementation. A router turns destinations into actions: switch tab, push detail, open in-app browser.</p>
+
+        <p>Views report intent; they do not own the full navigation graph. As the home screen grows, that separation is what keeps the flow readable — the same idea many Android codebases already use with centralized navigation.</p>
+
+        <h2>Checklist you can take to your team</h2>
+
+        <ul>
+            <li><strong>Structure is data.</strong> Screen composition lives in configuration, not scattered in views.</li>
+            <li><strong>Presentation is native.</strong> Each platform keeps its own look and feel.</li>
+            <li><strong>The contract is shared.</strong> iOS and Android read one screen definition.</li>
+            <li><strong>Navigation is centralized.</strong> Views pass targets; one layer executes them.</li>
+        </ul>
+
+        <h2>What you gain (and what you trade)</h2>
+
+        <p>You pay a bit of upfront structure: contracts, mappers, a router. You gain a screen model that scales across platforms and brands without forking UI for every experiment.</p>
+
+        <p>If that sounds like a problem your team already has — multi-platform home screens, white-label variants, layout tickets that never stay in sync — this design is meant to be reusable. You can adopt the boundaries even if your stack differs (Compose on Android, a different shared module, or config that later comes from a server).</p>
 
         <div class="callout">
-            <p>Coming next: how the presentation mapping works, how navigation is shared with Android, and how white-label apps reuse the same SwiftUI base.</p>
+            <p>Next in the series: how the mapping layer turns shared models into SwiftUI views, how navigation can stay aligned with Android, and how one SwiftUI base supports more than one brand.</p>
         </div>
 
-        <p>I build native iOS and Android apps and share notes like this as I ship. If mobile architecture is your thing too, <a href="https://www.linkedin.com/in/yesferal-cueva">let's connect on LinkedIn</a>.</p>
+        <p>I build native iOS and Android apps and write about designs that survive real shipping. If this is a problem your team is facing, <a href="https://www.linkedin.com/in/yesferal-cueva">let's connect on LinkedIn</a>.</p>
     </div>
 
     <div class="article-footer">

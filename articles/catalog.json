@@ -4,7 +4,7 @@
     {
       "slug": "github-pages-actions-cicd",
       "title": "CI/CD for a static site on GitHub Pages",
-      "summary": "One catalog, Actions deploy, custom domain — static HTML without a heavy framework.",
+      "summary": "One source of truth, a build step, and a deploy artifact — CI/CD architecture for static sites.",
       "date": "2026-09-03",
       "readMinutes": 5,
       "platform": "Web",
@@ -22,7 +22,7 @@
     {
       "slug": "hada-kotlin-dependency-injection",
       "title": "HADA: a lightweight DI container for Kotlin",
-      "summary": "Why HornsApp needed a small container — Factory, Singleton, tags, and one place to wire the app.",
+      "summary": "Wire dependencies in one place — Factory, Singleton, tags, and a visible graph.",
       "date": "2026-09-02",
       "readMinutes": 5,
       "platform": "Android",
@@ -31,7 +31,7 @@
     {
       "slug": "content-driven-ui-swiftui",
       "title": "Content-driven UI on iOS: JSON to SwiftUI",
-      "summary": "Structure from data, native SwiftUI — same contract on iOS and Android.",
+      "summary": "A reusable design for multi-platform home screens: structure as data, native UI, shared contracts.",
       "date": "2026-09-01",
       "readMinutes": 5,
       "platform": "iOS",

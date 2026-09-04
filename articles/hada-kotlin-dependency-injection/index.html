@@ -13,12 +13,12 @@
     </script>
 
     <title>HADA: a lightweight DI container for Kotlin | Yesferal</title>
-    <meta name="description" content="Why HornsApp needed a small Kotlin dependency container — Factory, Singleton, tags, and wiring Clean Architecture in one place."/>
+    <meta name="description" content="Wire dependencies in one place with a small Kotlin container — Factory, Singleton, tags, and clear lifetimes."/>
     <meta name="author" content="Yesferal Cueva"/>
     <link rel="canonical" href="https://yesferal.com/articles/hada-kotlin-dependency-injection/"/>
 
     <meta property="og:title" content="HADA: a lightweight DI container for Kotlin"/>
-    <meta property="og:description" content="A small Kotlin container for JVM and Android — register dependencies once, resolve them anywhere."/>
+    <meta property="og:description" content="A small Kotlin DI container for JVM and Android — register once, resolve anywhere, keep the graph visible."/>
     <meta property="og:type" content="article"/>
     <meta property="og:url" content="https://yesferal.com/articles/hada-kotlin-dependency-injection/"/>
     <meta property="og:image" content="https://yesferal.com/images/hornsapp.png"/>
@@ -35,7 +35,7 @@
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       "headline": "HADA: a lightweight DI container for Kotlin",
-      "description": "Why HornsApp needed a small Kotlin dependency container — Factory, Singleton, tags, and wiring Clean Architecture in one place.",
+      "description": "Wire dependencies in one place with a small Kotlin container — Factory, Singleton, tags, and clear lifetimes.",
       "datePublished": "2026-09-02",
       "author": {
         "@type": "Person",
@@ -89,15 +89,15 @@
     </header>
 
     <div class="article-body">
-        <p>When I was building HornsApp on Android, the app grew modular quickly — repositories, presenters, network clients, local storage. Clean Architecture gave us clear layers, but we still needed a practical way to <strong>wire dependencies in one place</strong> without spreading constructors and singletons across the codebase.</p>
+        <p>In a modular Android app, Clean Architecture can give you clear layers — and still leave a practical problem: <strong>how do you wire repositories, presenters, and clients in one place</strong> without spreading constructors and singletons across the codebase?</p>
 
-        <p>That led to <strong>HADA</strong> — HornsApp Dependency Accessing — a small Kotlin container I open-sourced in 2020. This post revisits the idea in plain terms: why it existed, how it works, and when a minimal container is enough. (The library later evolved on GitHub as part of the HornsApp DI modules; the design stayed the same.)</p>
+        <p>That is what a small dependency container is for. This post is about the idea: register once, resolve where you need it, keep lifetimes explicit, and keep the tool small enough to understand. That problem is what led me to ship <strong>HADA</strong> — a lightweight Kotlin container — while building modular Android apps.</p>
 
-        <h2>The problem we were solving</h2>
+        <h2>Why this problem shows up</h2>
 
-        <p>In a modular Android app, almost every screen needs the same kinds of objects: a repository, a use case, maybe a presenter or ViewModel. Passing everything manually through constructors works at first, but it gets noisy fast — especially when modules should not know about each other's internals.</p>
+        <p>Almost every screen needs the same kinds of objects: a repository, a use case, maybe a presenter or ViewModel. Passing everything manually through constructors works at first, but it gets noisy fast — especially when modules should not know about each other's internals.</p>
 
-        <p>We wanted three things:</p>
+        <p>A useful container usually needs three things:</p>
 
         <ul>
             <li><strong>One registry</strong> where the app declares what it needs.</li>
@@ -105,25 +105,25 @@
             <li><strong>Easy testing</strong> — swap implementations without rewriting feature code.</li>
         </ul>
 
-        <p>Heavy DI frameworks can do all of that, but for HornsApp we preferred something tiny we could read in an afternoon and own completely. HADA was that layer.</p>
+        <p>Heavy DI frameworks can do all of that. Sometimes you also want something tiny you can read in an afternoon and own completely. That trade-off is the point of a minimal container.</p>
 
-        <h2>What HADA is</h2>
+        <h2>What a minimal container looks like</h2>
 
-        <p>HADA is a Kotlin <strong>service locator / DI container</strong> that runs on the JVM and on Android. You create a <code>Container</code>, register factories for the types you need, and resolve them when a class runs.</p>
+        <p>Think of it as a Kotlin <strong>service locator / DI container</strong> for the JVM and Android. You create a <code>Container</code>, register factories for the types you need, and resolve them when a class runs.</p>
 
         <p>The API stays small on purpose: <code>register</code> and <code>resolve</code>. No code generation, no annotation processors — just Kotlin.</p>
 
         <div class="diagram">
-            <pre>┌──────────────────────────────────────┐
-│  Application / entry point           │
-│  Creates Container, registers deps     │
-├──────────────────────────────────────┤
-│  Feature modules                       │
-│  resolve() repositories, presenters…   │
-├──────────────────────────────────────┤
-│  Tests                                 │
-│  Same API, fake registrations          │
-└──────────────────────────────────────┘</pre>
+            <pre>┌────────────────────────────────────────┐
+│  Application / entry point                │
+│  Creates Container, registers deps        │
+├───────────────────────────────────────────┤
+│  Feature modules                          │
+│  resolve deps (repositories, presenters…) │
+├───────────────────────────────────────────┤
+│  Tests                                    │
+│  Same API, fake registrations             │
+└───────────────────────────────────────────┘</pre>
         </div>
 
         <h2>Factory vs Singleton</h2>
@@ -137,7 +137,7 @@
         <p>Registering a simple chain looks like this:</p>
 
         <pre><code>container register Factory&lt;String&gt; {
-    "Message: Hada Container is our first option!"
+    "Message: container demo"
 }
 
 container register Singleton&lt;MainRepository&gt; {
@@ -148,18 +148,18 @@ container register Singleton&lt;MainRepository&gt; {
 
         <pre><code>private val mainRepository: MainRepository = container.resolve()</code></pre>
 
-        <p>The container builds the graph lazily: when you resolve <code>MainRepository</code>, HADA resolves its <code>String</code> dependency first.</p>
+        <p>The container builds the graph lazily: when you resolve <code>MainRepository</code>, it resolves the <code>String</code> dependency first.</p>
 
         <h2>Tags when types repeat</h2>
 
         <p>Sometimes you need more than one instance of the same type — two strings, two API base URLs, two caches. Tags solve that without inventing wrapper classes for everything.</p>
 
         <pre><code>container register Factory&lt;String&gt;(tag = "Title") {
-    "Title: Hada Container"
+    "Title"
 }
 
 container register Factory&lt;String&gt;(tag = "Description") {
-    "Description: This is a demo app."
+    "Description"
 }
 
 container register Singleton&lt;MainRepository&gt; {
@@ -182,29 +182,29 @@ container register Singleton&lt;MainRepository&gt; {
 // In an Activity:
 val container = (application as MyApp).container</code></pre>
 
-        <p>That pattern scales with modularization: each module registers its own bindings in one bootstrap step, and UI layers stay thin.</p>
+        <p>That pattern scales with modularization: each module can register its own bindings in one bootstrap step, and UI layers stay thin.</p>
 
-        <h2>What we learned</h2>
+        <h2>What to take away</h2>
 
         <ul>
-            <li><strong>Prefer tools you can read and debug.</strong> HADA was easy to troubleshoot because every registration is plain Kotlin — no generated code to hunt down.</li>
+            <li><strong>Prefer tools you can read and debug.</strong> Plain Kotlin registrations are easier to troubleshoot than generated graphs you cannot see.</li>
             <li><strong>Separate wiring from feature code.</strong> Screens ask for abstractions; the container decides implementations.</li>
-            <li><strong>Tags are underrated.</strong> They handle real-world cases where the type system alone is not enough.</li>
+            <li><strong>Tags are underrated.</strong> They handle real cases where the type system alone is not enough.</li>
             <li><strong>Containers are not architecture.</strong> Clean Architecture still defines layers; DI only connects them.</li>
         </ul>
 
-        <p>Today there are excellent options — Hilt, Koin, manual constructor injection in Compose. HADA was the right trade-off for HornsApp at the time. The lesson I still apply: <strong>match the tool to the size of the problem</strong>, and keep dependency graphs visible.</p>
+        <p>Today there are excellent options — Hilt, Koin, manual constructor injection in Compose. A small custom container was the right trade-off for some of my earlier apps. The lesson I still apply: <strong>match the tool to the size of the problem</strong>, and keep dependency graphs visible.</p>
 
         <h2>Try the demo</h2>
 
-        <p>The open-source modules and an Android demo live on GitHub:</p>
+        <p>If you want to see a concrete open-source version of this idea:</p>
 
         <ul>
             <li><a href="https://github.com/Yesferal/HornsApp-DI" rel="noopener">HornsApp-DI</a> — core Kotlin container</li>
             <li><a href="https://github.com/Yesferal/HornsApp-Android-DI" rel="noopener">HornsApp-Android-DI</a> — Android helpers and demo</li>
         </ul>
 
-        <p>I first wrote about HADA on <a href="https://yesferal.medium.com/hada-hornsapp-dependency-accessing-3aabe4904c46" rel="noopener">Medium in 2020</a>; this version is a shorter, updated read for the site.</p>
+        <p>I first wrote about HADA on <a href="https://yesferal.medium.com/hada-hornsapp-dependency-accessing-3aabe4904c46" rel="noopener">Medium in 2020</a>; this version is a shorter, architecture-focused update.</p>
 
         <p>I build native iOS and Android apps and share notes like this as I ship. If mobile architecture is your thing too, <a href="https://www.linkedin.com/in/yesferal-cueva">let's connect on LinkedIn</a>.</p>
     </div>

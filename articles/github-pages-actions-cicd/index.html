@@ -89,9 +89,9 @@
     </header>
 
     <div class="article-body">
-        <p>CI/CD for a static site looks simple at first: push files to a branch and let the host publish them. That works while the site is small and mostly hand-maintained. The moment content starts repeating across pages, deployment stops being “just hosting” and becomes a consistency problem.</p>
+        <p>In a static site (or any small product site), “just push HTML” works until the same titles and dates must appear in several places. The practical problem is: <strong>how do you keep lists, sitemaps, and deploy config consistent</strong> without relying on memory — “remember to update this page,” “remember to run that script”?</p>
 
-        <p>That is where architecture matters. The goal is not only to automate deployment. The goal is to define <strong>what humans edit, what the pipeline generates, and what artifact the server should publish</strong>.</p>
+        <p>That is what a small CI/CD contract is for: one source of truth, a build that generates the rest, and a deploy artifact the host can trust. This post is about that idea on GitHub Pages and Actions. That problem is what led me to add a catalog file, a sync script, and an Actions deploy workflow for my own site — the same boundaries you can reuse on other static projects.</p>
 
         <h2>Why a clear deploy contract matters</h2>
 
@@ -164,17 +164,9 @@
             <li><strong>Deploy</strong> the artifact with the hosting provider's official action.</li>
         </ol>
 
-        <p>That structure scales well. Today the build step might only generate article lists. Tomorrow it can lint metadata, fail on broken slugs, verify feeds, minify assets, or publish preview environments on pull requests.</p>
+        <p>That structure scales well. Today the build step might only generate repeated listing sections. Tomorrow it can lint metadata, fail on broken links, verify feeds, minify assets, or publish preview environments on pull requests.</p>
 
         <p>The important point is that deployment becomes the last stage of a build contract, not the first place where source files happen to land.</p>
-
-        <h2>Custom domain and CNAME</h2>
-
-        <p>Custom domains are a good example of why deploy artifacts matter. DNS can be correct and the host can still behave incorrectly if the artifact is missing the file or config that binds the site to the domain.</p>
-
-        <p>On GitHub Pages, that usually means DNS records plus a <code>CNAME</code> file that must travel with the built site. If the workflow builds into an output folder, the custom domain file must be present there too.</p>
-
-        <p>This is why I like to think in terms of deployment artifacts instead of repository contents. The host only sees what you upload. If the artifact is complete, deployment is predictable.</p>
 
         <h2>Automation boundaries</h2>
 
@@ -186,7 +178,7 @@
             <li><strong>The host owns delivery.</strong> It serves the final files, TLS, and domain resolution.</li>
         </ul>
 
-        <p>Once those boundaries are clear, debugging becomes easier too. A missing article card is a build issue. A broken domain is a deploy or DNS issue. A stale page is often cache invalidation. Good architecture makes failure modes easier to classify.</p>
+        <p>Once those boundaries are clear, debugging becomes easier too. Incomplete generated content is a build issue. A broken domain is a deploy or DNS issue. A stale page is often cache invalidation. Good architecture makes failure modes easier to classify.</p>
 
         <h2>Principles that carry well beyond static sites</h2>
 
