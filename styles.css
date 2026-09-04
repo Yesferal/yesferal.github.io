@@ -103,10 +103,10 @@ html {
   --play-bg: #16a34a;
   --play-text: #ffffff;
   --play-hover: #15803d;
-  --appstore-bg: #0f172a;
-  --appstore-text: #ffffff;
-  --appstore-border: transparent;
-  --appstore-hover: #1e293b;
+  --appstore-bg: var(--btn-secondary-bg);
+  --appstore-text: var(--btn-secondary-text);
+  --appstore-border: var(--btn-secondary-border);
+  --appstore-hover: var(--btn-secondary-hover);
   --hero-btn-primary-bg: var(--btn-primary-bg);
   --hero-btn-primary-text: var(--btn-primary-text);
   --hero-btn-secondary-bg: var(--btn-secondary-bg);
