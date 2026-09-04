@@ -24,6 +24,8 @@ Hosted on **GitHub Pages** via **GitHub Actions**.
 
 Edit **`articles/catalog.json`** only for published cards and coming-soon items.
 
+`homeLimit` (default `5`) controls how many latest articles appear on the homepage carousel. While you have fewer than that, the home link stays **Coming soon →**. Once you publish more than `homeLimit`, the carousel shows only the latest N and the link becomes **See all articles →**. `/articles/` always lists everything.
+
 Do **not** hand-edit article cards in:
 
 - `index.html` (carousel)

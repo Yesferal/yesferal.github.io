@@ -64,6 +64,20 @@ def published_sorted(catalog: dict) -> list[dict]:
     )
 
 
+def home_limit(catalog: dict) -> int:
+    limit = catalog.get("homeLimit", 5)
+    if not isinstance(limit, int) or limit < 1:
+        raise SystemExit("catalog.json homeLimit must be a positive integer")
+    return limit
+
+
+def render_home_cta(total: int, limit: int) -> str:
+    """Show 'See all' only once the homepage would hide articles."""
+    if total > limit:
+        return '        <a href="/articles/">See all articles →</a>'
+    return '        <a href="/articles/#coming-soon">Coming soon →</a>'
+
+
 def render_home_cards(articles: list[dict]) -> str:
     blocks = []
     for article in articles:
@@ -195,7 +209,10 @@ def write_if_changed(path: Path, content: str) -> bool:
 
 
 def apply_generated(home: str, articles_index: str, sitemap: str, catalog: dict, articles: list[dict], coming_soon: list[dict]) -> tuple[str, str, str]:
-    home = replace_marker(home, "carousel", render_home_cards(articles))
+    limit = home_limit(catalog)
+    home_articles = articles[:limit]
+    home = replace_marker(home, "carousel", render_home_cards(home_articles))
+    home = replace_marker(home, "home-cta", render_home_cta(len(articles), limit))
     articles_index = replace_marker(
         articles_index, "published", render_published_grid(articles)
     )
@@ -213,6 +230,9 @@ def apply_generated(home: str, articles_index: str, sitemap: str, catalog: dict,
 
 def apply_clean(home: str, articles_index: str, sitemap: str) -> tuple[str, str, str]:
     home = replace_marker(home, "carousel", "")
+    home = replace_marker(
+        home, "home-cta", '        <a href="/articles/#coming-soon">Coming soon →</a>'
+    )
     articles_index = replace_marker(articles_index, "published", "")
     articles_index = replace_marker(articles_index, "coming-soon", "")
     sitemap = replace_marker(sitemap, "urls", "")
@@ -229,7 +249,14 @@ def markers_are_empty(content: str, name: str) -> bool:
     match = pattern.search(content)
     if not match:
         raise SystemExit(f"Missing articles:{name} markers")
-    return match.group(1).strip() == ""
+    body = match.group(1).strip()
+    if name == "home-cta":
+        # Default CTA is allowed in the committed template.
+        return body in (
+            "",
+            '<a href="/articles/#coming-soon">Coming soon →</a>',
+        )
+    return body == ""
 
 
 def sync(*, clean: bool = False, check: bool = False) -> int:
@@ -245,6 +272,7 @@ def sync(*, clean: bool = False, check: bool = False) -> int:
         ok = True
         for path, name in (
             (HOME_PATH, "carousel"),
+            (HOME_PATH, "home-cta"),
             (ARTICLES_INDEX_PATH, "published"),
             (ARTICLES_INDEX_PATH, "coming-soon"),
             (SITEMAP_PATH, "urls"),
@@ -273,6 +301,9 @@ def sync(*, clean: bool = False, check: bool = False) -> int:
 
     if not changed:
         print("No file changes")
+    elif not clean:
+        limit = home_limit(catalog)
+        print(f"Homepage shows up to {limit} articles ({len(articles)} published)")
     return 0
 
 

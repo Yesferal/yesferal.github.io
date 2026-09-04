@@ -1,5 +1,6 @@
 {
   "siteUrl": "https://yesferal.com",
+  "homeLimit": 5,
   "published": [
     {
       "slug": "github-pages-actions-cicd",
