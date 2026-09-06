@@ -16,6 +16,7 @@ Hosted on **GitHub Pages** via **GitHub Actions**.
 | `sitemap.xml` | Sitemap (article URLs filled at deploy) |
 | `styles.css`, `theme.js` | Shared styles and light/dark theme |
 | `CNAME` | Custom domain (`yesferal.com`) |
+| `app-ads.txt` | AdMob / authorized sellers file |
 | `.github/workflows/deploy-pages.yml` | Build + deploy |
 
 ## Articles
@@ -99,7 +100,15 @@ Repo → **Settings** → **Pages** → **Build and deployment** → **Source**:
 
 Leave the `github-pages` environment as-is; the workflow uses it. Old entries under **Deployments** are history only — no need to turn them off.
 
-### Custom domain DNS (GoDaddy)
+## Site integrations (use cases)
+
+These public configs connect **yesferal.com** to DNS, ads, and store listings. Values below are meant to be public (DNS and `app-ads.txt` are crawlable by design).
+
+### Custom domain (DNS)
+
+**Use case:** Point `yesferal.com` / `www` at GitHub Pages.
+
+GoDaddy (or any DNS host):
 
 ```
 Type: A      Name: @     Value: 185.199.108.153
@@ -109,11 +118,13 @@ Type: A      Name: @     Value: 185.199.111.153
 Type: CNAME  Name: www   Value: yesferal.github.io
 ```
 
-Then set the custom domain in Pages settings and enable **Enforce HTTPS**.
+Also keep `CNAME` in the repo and **Enforce HTTPS** in Pages settings. The deploy artifact must include that `CNAME` file.
 
-## AdMob (`app-ads.txt`)
+### AdMob (`app-ads.txt`)
 
-Root file `app-ads.txt` must stay published at `https://yesferal.com/app-ads.txt`:
+**Use case:** Authorize Google to sell ads for apps that list this site as the developer website.
+
+Root file `app-ads.txt` must stay at `https://yesferal.com/app-ads.txt`:
 
 ```
 google.com, pub-2957187797569353, DIRECT, f08c47fec0942fa0
@@ -121,6 +132,8 @@ google.com, pub-2957187797569353, DIRECT, f08c47fec0942fa0
 
 (Value from the AdMob account.)
 
-## Google Play Console
+### Google Play Console
 
-Store listing website: **Grow users → Store presence → Store settings → Website** → `https://yesferal.com/`
+**Use case:** Set the Play Store “Website” / developer site so listings and `app-ads.txt` checks resolve to this domain.
+
+In Play Console: **Grow users → Store presence → Store settings → Website** → `https://yesferal.com/`

@@ -31,12 +31,12 @@
     },
     {
       "slug": "content-driven-ui-swiftui",
-      "title": "Content-driven UI on iOS: JSON to SwiftUI",
-      "summary": "A reusable design for multi-platform home screens: structure as data, native UI, shared contracts.",
+      "title": "Server-driven UI on iOS: JSON to SwiftUI",
+      "summary": "Server-driven composition, native UI — shared contracts across iOS and Android.",
       "date": "2026-09-01",
       "readMinutes": 5,
       "platform": "iOS",
-      "tags": ["SwiftUI", "KMP", "Architecture"]
+      "tags": ["SDUI", "SwiftUI", "KMP", "Architecture"]
     }
   ],
   "comingSoon": [
