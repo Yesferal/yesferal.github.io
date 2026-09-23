@@ -9,44 +9,67 @@
   color: var(--text);
 }
 
+/* Toolbar — follow site light/dark like homepage */
+.albums-page .nav {
+  min-height: 72px;
+  box-sizing: border-box;
+}
+
 .albums-wrap {
   max-width: 920px;
   margin: 0 auto;
   padding: 2rem 1.25rem 4rem;
 }
 
+/* Hero: each line centered on the page */
 .albums-hero {
-  margin-bottom: 1.75rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 2rem;
+  padding: 1.25rem 0 0;
 }
 
-.albums-kicker {
-    letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  color: #f87171;
-  margin: 0 0 0.5rem;
+.albums-hero-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 40rem;
 }
 
-.albums-hero h1 {
-    font-size: clamp(2.4rem, 6vw, 3.6rem);
+.albums-hero-stack h1 {
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.85rem;
   line-height: 1.05;
+  text-align: center;
 }
 
-.albums-lead,
-.albums-stats,
+.albums-hero-stack .albums-lead,
+.albums-hero-stack .albums-stats,
 .section-note {
   color: var(--text-muted);
-  max-width: 36rem;
+  margin: 0;
   line-height: 1.55;
-  margin: 0 0 0.5rem;
+  text-align: center;
+  font-size: 1.02rem;
+  width: 100%;
 }
 
-.albums-stats {
-  font-size: 0.95rem;
+.albums-hero-stack .albums-lead {
+  margin-bottom: 0.75rem;
+}
+
+.albums-hero-stack .albums-stats {
+  font-size: 0.9rem;
   color: var(--text-subtle);
+}
+
+.albums-wrap > .crumb {
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .year-rail {
@@ -208,6 +231,13 @@
   margin-bottom: 1rem;
   color: var(--link);
   text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .albums-page .nav {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 @media (max-width: 560px) {

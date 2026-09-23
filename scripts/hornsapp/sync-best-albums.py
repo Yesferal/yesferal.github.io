@@ -67,7 +67,7 @@ def page_shell(
         document.documentElement.setAttribute("data-theme", theme);
       }})();
     </script>
-    <title>{esc(title)} | Yesferal</title>
+    <title>{esc(title)} | HornsApp</title>
     <meta name="description" content="{esc(description)}"/>
     <link rel="canonical" href="{esc(canonical)}"/>
     <meta property="og:title" content="{esc(title)}"/>
@@ -79,32 +79,59 @@ def page_shell(
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/hornsapp/best/album/albums.css">
+    <link rel="stylesheet" href="/hornsapp/best/album/albums.css?v=7">
 </head>
 <body class="albums-page">
 <nav class="nav">
-    <a class="nav-brand" href="/">Yesferal</a>
+    <a class="nav-brand" href="/hornsapp/">HornsApp</a>
     <div class="nav-actions">
         <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
-        <div class="nav-links">
-            <a href="/hornsapp/best/album/">Best albums</a>
-            <a href="/">Apps</a>
-        </div>
     </div>
 </nav>
 {body}
 <footer>
-    <div class="footer-links">
-        <a href="https://play.google.com/store/apps/details?id=com.yesferal.hornsapp" rel="noopener">HornsApp on Play</a>
-        <a href="/hornsapp/best/album/">All years</a>
-        <a href="/">yesferal.com</a>
-    </div>
-    © 2026 Yesferal · Personal ranking
+    © 2026 Yesferal · HornsApp
 </footer>
 <script src="/theme.js"></script>
 </body>
 </html>
 """
+
+
+def build_index(data: dict) -> None:
+    years = data["years"]
+    total = sum(y["count"] for y in years)
+    cards = []
+    for y in years:
+        n = y["count"]
+        label = "1 album" if n == 1 else f"{n} albums"
+        cards.append(
+            f"""        <a class="year-card" href="/hornsapp/best/album/{y['year']}/">
+          <span class="year-card-year">{y['year']}</span>
+          <span class="year-card-meta">{label}</span>
+        </a>"""
+        )
+    body = f"""
+<main class="albums-wrap">
+  <div class="albums-hero">
+    <div class="albums-hero-stack">
+      <h1>Best albums</h1>
+      <p class="albums-lead">{esc(data.get('sourceNote') or '')}</p>
+      <p class="albums-stats">{len(years)} years · {total} albums</p>
+    </div>
+  </div>
+  <section class="year-grid" aria-label="Years">
+{chr(10).join(cards)}
+  </section>
+</main>
+"""
+    html_out = page_shell(
+        title="Best albums",
+        description="Personal best albums by year — top picks and bonus records.",
+        canonical="https://yesferal.com/hornsapp/best/album/",
+        body=body,
+    )
+    (ALBUM_ROOT / "index.html").write_text(html_out, encoding="utf-8")
 
 
 def year_nav(years: list[dict], current: int | None) -> str:
@@ -114,42 +141,6 @@ def year_nav(years: list[dict], current: int | None) -> str:
         cls = ' class="is-active"' if current == yr else ""
         links.append(f'<a href="/hornsapp/best/album/{yr}/"{cls}>{yr}</a>')
     return '<nav class="year-rail" aria-label="Years">' + "".join(links) + "</nav>"
-
-
-def build_index(data: dict) -> None:
-    years = data["years"]
-    total = sum(y["count"] for y in years)
-    cards = []
-    for y in years:
-        top_n = len(y.get("top") or [])
-        bonus_n = len(y.get("bonus") or [])
-        cards.append(
-            f"""        <a class="year-card" href="/hornsapp/best/album/{y['year']}/">
-          <span class="year-card-year">{y['year']}</span>
-          <span class="year-card-meta">{y['count']} albums · top {top_n}{f' · +{bonus_n} bonus' if bonus_n else ''}</span>
-        </a>"""
-        )
-    body = f"""
-<main class="albums-wrap">
-  <header class="albums-hero">
-    <p class="albums-kicker">HornsApp</p>
-    <h1>Best albums</h1>
-    <p class="albums-lead">{esc(data.get('sourceNote') or '')}</p>
-    <p class="albums-stats">{len(years)} years · {total} albums</p>
-  </header>
-  {year_nav(years, None)}
-  <section class="year-grid" aria-label="Years">
-{chr(10).join(cards)}
-  </section>
-</main>
-"""
-    html_out = page_shell(
-        title="HornsApp · Best albums",
-        description="Personal best albums by year — top picks and bonus records.",
-        canonical="https://yesferal.com/hornsapp/best/album/",
-        body=body,
-    )
-    (ALBUM_ROOT / "index.html").write_text(html_out, encoding="utf-8")
 
 
 def build_year(data: dict, year_block: dict) -> None:
@@ -189,11 +180,12 @@ def build_year(data: dict, year_block: dict) -> None:
     body = f"""
 <main class="albums-wrap">
   <a class="crumb" href="/hornsapp/best/album/">← All years</a>
-  <header class="albums-hero albums-hero-year">
-    <p class="albums-kicker">HornsApp · Best albums</p>
-    <h1>{year}</h1>
-    <p class="albums-lead">{year_block['count']} albums this year · main list capped at 6</p>
-  </header>
+  <div class="albums-hero albums-hero-year">
+    <div class="albums-hero-stack">
+      <h1>{year}</h1>
+      <p class="albums-lead">Top 6 are ranked; the rest are bonus albums we couldn’t leave behind for the impression they left.</p>
+    </div>
+  </div>
   {year_nav(years, year)}
   <section class="album-section">
     <h2>Top {len(top)}</h2>
@@ -209,7 +201,7 @@ def build_year(data: dict, year_block: dict) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "index.html").write_text(
         page_shell(
-            title=f"Best albums {year} · HornsApp",
+            title=f"Best albums {year}",
             description=f"Top albums of {year} — personal HornsApp ranking.",
             canonical=f"https://yesferal.com/hornsapp/best/album/{year}/",
             body=body,

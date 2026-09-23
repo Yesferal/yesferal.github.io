@@ -18,6 +18,14 @@
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
+  <script>
+    (function () {
+      const stored = localStorage.getItem("theme");
+      const theme = stored || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/app-landing.css">
 </head>
@@ -26,7 +34,9 @@
 
   <nav class="nav">
     <a class="nav-brand" href="/">Yesferal</a>
-    <div class="nav-actions" aria-hidden="true"></div>
+    <div class="nav-actions">
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
   </nav>
 
   <div class="app-landing-main">
@@ -46,5 +56,6 @@
   </main>
   </div>
 
+  <script src="/theme.js"></script>
 </body>
 </html>
