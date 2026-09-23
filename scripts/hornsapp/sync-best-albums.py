@@ -22,25 +22,28 @@ def esc(s: str) -> str:
 
 
 def album_row(a: dict, *, bonus: bool = False) -> str:
-    rank = a.get("rank") or "?"
-    rank_label = "B" if str(rank).upper() == "B" else str(rank)
     title = esc(a.get("title") or "")
     artist = esc(a.get("artist") or "")
     track = (a.get("track") or "").strip()
     genre = (a.get("genre") or "").strip()
-    have = bool(a.get("haveIt"))
     meta_bits = []
     if genre:
-        meta_bits.append(esc(genre))
+        meta_bits.append(f'<span class="album-genre">{esc(genre)}</span>')
     if track and track != "?":
-        meta_bits.append(f"pick: {esc(track)}")
-    meta = " · ".join(meta_bits)
-    have_badge = '<span class="album-have" title="In collection">owned</span>' if have else ""
+        # "Pick" = favorite track on the album (same sense as AllMusic track picks)
+        meta_bits.append(f'<span class="album-pick">Pick: <em>{esc(track)}</em></span>')
+    meta = "".join(meta_bits)
     kind = "bonus" if bonus else "top"
+    if bonus:
+        marker = '<span class="album-rank album-rank-bonus" aria-hidden="true">✦</span>'
+    else:
+        rank = a.get("rank") or "?"
+        rank_label = esc(str(rank))
+        marker = f'<span class="album-rank">{rank_label}</span>'
     return f"""          <li class="album-item album-{kind}">
-            <span class="album-rank">{esc(rank_label)}</span>
+            {marker}
             <div class="album-body">
-              <p class="album-title">{title}{have_badge}</p>
+              <p class="album-title">{title}</p>
               <p class="album-artist">{artist}</p>
               {f'<p class="album-meta">{meta}</p>' if meta else ''}
             </div>
@@ -79,7 +82,7 @@ def page_shell(
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/hornsapp/best/album/albums.css?v=7">
+    <link rel="stylesheet" href="/hornsapp/best/album/albums.css?v=12">
 </head>
 <body class="albums-page">
 <nav class="nav">
@@ -93,6 +96,22 @@ def page_shell(
     © 2026 Yesferal · HornsApp
 </footer>
 <script src="/theme.js"></script>
+<script>
+(function () {{
+  function centerActiveYear() {{
+    var rail = document.querySelector(".year-rail");
+    var active = rail && rail.querySelector("a.is-active");
+    if (!rail || !active) return;
+    var railRect = rail.getBoundingClientRect();
+    var activeRect = active.getBoundingClientRect();
+    var delta = (activeRect.left + activeRect.width / 2) - (railRect.left + railRect.width / 2);
+    rail.scrollLeft += delta;
+  }}
+  requestAnimationFrame(function () {{
+    requestAnimationFrame(centerActiveYear);
+  }});
+}})();
+</script>
 </body>
 </html>
 """
@@ -157,39 +176,70 @@ def build_year(data: dict, year_block: dict) -> None:
     if bonus:
         bonus_html = "\n".join(album_row(a, bonus=True) for a in bonus)
         bonus_section = f"""
-  <section class="album-section">
+  <section class="album-section album-section-bonus">
     <h2>Bonus</h2>
-    <p class="section-note">Ranks 7+ and <strong>B</strong> — extras beyond the main six.</p>
-    <ol class="album-list album-list-bonus">
+    <p class="section-note">Worth keeping for the impression they left — not quite enough to rank.</p>
+    <ul class="album-list album-list-bonus">
 {bonus_html}
-    </ol>
+    </ul>
   </section>"""
 
     pager = ['<div class="year-pager">']
     if prev_y:
-        pager.append(f'<a class="btn" href="/hornsapp/best/album/{prev_y}/">← {prev_y}</a>')
+        pager.append(f'<a class="btn store-btn" href="/hornsapp/best/album/{prev_y}/">← {prev_y}</a>')
     else:
         pager.append('<span></span>')
-    pager.append('<a class="btn" href="/hornsapp/best/album/">All years</a>')
+    pager.append('<a class="btn store-btn" href="/hornsapp/best/album/">All years</a>')
     if next_y:
-        pager.append(f'<a class="btn" href="/hornsapp/best/album/{next_y}/">{next_y} →</a>')
+        pager.append(f'<a class="btn store-btn" href="/hornsapp/best/album/{next_y}/">{next_y} →</a>')
     else:
         pager.append('<span></span>')
     pager.append("</div>")
 
+    # Hero: stats only — #1 is shown in the Album of the year card
+    ranked_n = len(top)
+    bonus_n = len(bonus)
+    if bonus_n:
+        stats = f"{ranked_n} ranked · {bonus_n} bonus"
+    else:
+        stats = f"{ranked_n} ranked" if ranked_n != 1 else "1 ranked"
+
+    # Featured #1 block (visual anchor)
+    featured = ""
+    if top:
+        first = top[0]
+        f_title = esc(first.get("title") or "")
+        f_artist = esc(first.get("artist") or "")
+        f_genre = (first.get("genre") or "").strip()
+        f_track = (first.get("track") or "").strip()
+        featured_meta = []
+        if f_genre:
+            featured_meta.append(esc(f_genre))
+        if f_track and f_track != "?":
+            featured_meta.append(f'Pick: <em>{esc(f_track)}</em>')
+        featured_meta_html = f'<p class="year-featured-meta">{" · ".join(featured_meta)}</p>' if featured_meta else ""
+        featured = f"""
+  <div class="year-featured">
+    <p class="year-featured-label">Album of the year</p>
+    <p class="year-featured-title">{f_title}</p>
+    <p class="year-featured-artist">{f_artist}</p>
+    {featured_meta_html}
+  </div>"""
+
     body = f"""
-<main class="albums-wrap">
+<main class="albums-wrap albums-wrap-year">
   <a class="crumb" href="/hornsapp/best/album/">← All years</a>
   <div class="albums-hero albums-hero-year">
     <div class="albums-hero-stack">
       <h1>{year}</h1>
-      <p class="albums-lead">Top 6 are ranked; the rest are bonus albums we couldn’t leave behind for the impression they left.</p>
+      <p class="albums-stats">{stats}</p>
     </div>
   </div>
   {year_nav(years, year)}
+{featured}
   <section class="album-section">
-    <h2>Top {len(top)}</h2>
-    <ol class="album-list">
+    <h2>Ranked</h2>
+    <ol class="album-list album-list-top">
 {top_html}
     </ol>
   </section>
