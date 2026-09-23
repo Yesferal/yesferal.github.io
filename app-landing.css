@@ -1,0 +1,175 @@
+/* Shared app landing (HornsApp, TuMatch, …) */
+
+@keyframes app-landing-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes app-landing-glow {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 0.85; }
+}
+
+.app-landing {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  color: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-landing .nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  /* Match homepage toolbar height (16px + 40px toggle + 16px) */
+  min-height: 72px;
+  box-sizing: border-box;
+  background: rgba(2, 6, 23, 0.75);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+}
+
+.app-landing .nav-brand {
+  color: #f8fafc;
+}
+
+.app-landing .nav-brand:hover {
+  color: #fff;
+}
+
+.app-landing-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+.app-landing::before {
+  content: "";
+  position: absolute;
+  inset: -20% 20% auto;
+  height: 55%;
+  pointer-events: none;
+  animation: app-landing-glow 5.5s ease-in-out infinite;
+}
+
+.app-landing-horns {
+  background:
+    radial-gradient(ellipse 70% 55% at 50% -5%, rgba(220, 38, 38, 0.35), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 85% 90%, rgba(127, 29, 29, 0.35), transparent 50%),
+    linear-gradient(165deg, #0a0a0b 0%, #1a0a0c 45%, #0f172a 100%);
+}
+
+.app-landing-horns::before {
+  background: radial-gradient(circle, rgba(248, 113, 113, 0.22), transparent 70%);
+}
+
+.app-landing-tumatch {
+  background:
+    radial-gradient(ellipse 70% 55% at 50% -5%, rgba(14, 165, 233, 0.28), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 15% 90%, rgba(234, 179, 8, 0.18), transparent 50%),
+    linear-gradient(165deg, #020617 0%, #0c1a2e 45%, #0f172a 100%);
+}
+
+.app-landing-tumatch::before {
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.2), transparent 70%);
+}
+
+.app-stage {
+  position: relative;
+  z-index: 1;
+  max-width: 26rem;
+  width: 100%;
+  text-align: center;
+  animation: app-landing-rise 0.75s ease both;
+}
+
+.app-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 22px;
+  margin: 0 auto 1.25rem;
+  display: block;
+  animation: app-landing-rise 0.75s ease 0.08s both;
+}
+
+.app-landing-horns .app-icon {
+  box-shadow: 0 12px 40px rgba(220, 38, 38, 0.35);
+}
+
+.app-landing-tumatch .app-icon {
+  box-shadow: 0 12px 40px rgba(14, 165, 233, 0.35);
+}
+
+.app-brand {
+  font-size: clamp(2.4rem, 8vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 0 0 0.75rem;
+  animation: app-landing-rise 0.75s ease 0.12s both;
+}
+
+.app-lead {
+  margin: 0 0 1.75rem;
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  animation: app-landing-rise 0.75s ease 0.18s both;
+}
+
+.app-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: stretch;
+  animation: app-landing-rise 0.75s ease 0.24s both;
+}
+
+.app-actions .btn {
+  width: 100%;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+.app-stores {
+  display: none;
+  margin-top: 0.25rem;
+}
+
+.app-stores p {
+  margin: 0 0 0.65rem;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.app-more {
+  margin-top: 0.85rem;
+  text-align: center;
+  font-size: 0.9rem;
+  animation: app-landing-rise 0.75s ease 0.28s both;
+}
+
+.app-more a {
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.app-landing-horns .app-more a:hover {
+  color: #f87171;
+}
+
+.app-landing-tumatch .app-more a:hover {
+  color: #38bdf8;
+}

@@ -5,82 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>TuMatch</title>
+  <meta name="description" content="TuMatch — descubre qué candidato coincide contigo."/>
+  <link rel="canonical" href="https://yesferal.com/tumatch/"/>
+
+  <meta property="og:title" content="TuMatch"/>
+  <meta property="og:description" content="Descubre qué candidato coincide contigo en menos de 2 minutos."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://yesferal.com/tumatch/"/>
+  <meta property="og:image" content="https://yesferal.com/images/tumatch.png"/>
 
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      background: linear-gradient(180deg, #020617, #0f172a);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.05);
-      border-radius: 24px;
-      padding: 30px;
-      max-width: 400px;
-      width: 90%;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      animation: fadeIn 0.8s ease;
-    }
-  </style>
-
-  <link rel="stylesheet" href="../styles.css">
-
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/app-landing.css">
 </head>
 
-<body>
+<body class="app-landing app-landing-tumatch">
 
-  <div class="card">
-    <img src="../images/tumatch.png" style="width:80px; border-radius:20px; margin-bottom:15px;">
-    <h1>🇵🇪 ¿Qué candidato coincide contigo?</h1>
-    <p>Descúbrelo en menos de 2 minutos</p>
+  <nav class="nav">
+    <a class="nav-brand" href="/">Yesferal</a>
+    <div class="nav-actions" aria-hidden="true"></div>
+  </nav>
 
-    <a class="btn play" onclick="goToStore()">
-      Descubrir mi candidato
-    </a>
+  <div class="app-landing-main">
+  <main class="app-stage">
+    <img class="app-icon" src="/images/tumatch.png" alt="TuMatch">
+    <h1 class="app-brand">TuMatch</h1>
+    <p class="app-lead">¿Qué candidato coincide contigo? Descúbrelo en menos de 2 minutos.</p>
 
-    <div id="stores" style="display:none; margin-top:15px;">
-      <p>Elige tu dispositivo</p>
-
-      <a class="btn store-btn"
-        href="https://play.google.com/store/apps/details?id=com.yesferal.tumatch">
-        Google Play
-      </a>
-
-      <a class="btn store-btn"
-        href="https://apps.apple.com/pe/app/tumatchapp/id6760830809">
-        App Store
-      </a>
-
+    <div class="app-actions">
+      <button type="button" class="btn play" id="primary-cta">
+        Descubrir mi candidato
+      </button>
+      <div class="app-stores" id="stores">
+        <p>Elige tu dispositivo</p>
+        <a class="btn play" href="https://play.google.com/store/apps/details?id=com.yesferal.tumatch">
+          Google Play
+        </a>
+        <a class="btn appstore" href="https://apps.apple.com/pe/app/tumatchapp/id6760830809">
+          App Store
+        </a>
+      </div>
     </div>
+  </main>
   </div>
 
   <script>
-    function goToStore() {
-      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    (function () {
+      var play = "https://play.google.com/store/apps/details?id=com.yesferal.tumatch";
+      var appStore = "https://apps.apple.com/pe/app/tumatchapp/id6760830809";
+      var ua = navigator.userAgent || navigator.vendor || window.opera || "";
+      var cta = document.getElementById("primary-cta");
+      var stores = document.getElementById("stores");
 
-      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        window.location.href = "https://apps.apple.com/pe/app/tumatchapp/id6760830809";
-      } else if (/android/i.test(userAgent)) {
-        window.location.href = "https://play.google.com/store/apps/details?id=com.yesferal.tumatch";
-      } else {
-        document.getElementById("stores").style.display = "block";
-      }
-    }
-
-    function showStores() {
-      document.getElementById("stores").style.display = "block";
-    }
+      cta.addEventListener("click", function () {
+        if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+          window.location.href = appStore;
+        } else if (/android/i.test(ua)) {
+          window.location.href = play;
+        } else {
+          stores.style.display = "block";
+          cta.style.display = "none";
+        }
+      });
+    })();
   </script>
 
 </body>
