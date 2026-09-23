@@ -178,7 +178,7 @@ def build_year(data: dict, year_block: dict) -> None:
         bonus_section = f"""
   <section class="album-section album-section-bonus">
     <h2>Bonus</h2>
-    <p class="section-note">Worth keeping for the impression they left — not quite enough to rank.</p>
+    <p class="section-note">Albums we love just as much — kept here as favorites beyond the ranked list.</p>
     <ul class="album-list album-list-bonus">
 {bonus_html}
     </ul>
