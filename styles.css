@@ -640,6 +640,16 @@ footer {
   color: var(--text);
 }
 
+.app-page-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.app-page-link:hover h3 {
+  color: var(--link);
+}
+
 /* Article cards */
 .article-grid {
   display: grid;
