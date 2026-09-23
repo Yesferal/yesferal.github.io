@@ -2,8 +2,8 @@
 """Sync article lists and sitemap from articles/catalog.json.
 
 Committed HTML/sitemap keep empty markers. CI fills them at deploy time.
-For local preview: python3 scripts/sync-articles.py
-Before commit:     python3 scripts/sync-articles.py --clean
+For local preview: python3 scripts/articles/sync.py
+Before commit:     python3 scripts/articles/sync.py --clean
 """
 
 from __future__ import annotations
@@ -15,7 +15,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CATALOG_PATH = ROOT / "articles" / "catalog.json"
 
 HOME_PATH = ROOT / "index.html"
@@ -282,7 +282,7 @@ def sync(*, clean: bool = False, check: bool = False) -> int:
                 print(f"NOT CLEAN: {path.relative_to(ROOT)} still has generated articles:{name} content")
                 ok = False
         if not ok:
-            print("Run: python3 scripts/sync-articles.py --clean")
+            print("Run: python3 scripts/articles/sync.py --clean")
             return 1
         print("Markers are empty (catalog is source of truth; CI fills at deploy)")
         return 0

@@ -3,13 +3,30 @@
   "homeLimit": 5,
   "published": [
     {
+      "slug": "agent-skills-content-ops",
+      "title": "AI agent skills as playbooks for recurring work",
+      "summary": "When live data behind the screens goes stale, encode the weekly job as a skill — same judgment every run.",
+      "date": "2026-09-22",
+      "readMinutes": 5,
+      "platform": "Web",
+      "tags": [
+        "AI",
+        "Agent skills",
+        "Playbooks"
+      ]
+    },
+    {
       "slug": "github-pages-actions-cicd",
       "title": "CI/CD for a static site on GitHub Pages",
       "summary": "One source of truth, a build step, and a deploy artifact — CI/CD architecture for static sites.",
       "date": "2026-09-03",
       "readMinutes": 5,
       "platform": "Web",
-      "tags": ["CI/CD", "GitHub Actions", "Architecture"]
+      "tags": [
+        "CI/CD",
+        "GitHub Actions",
+        "Architecture"
+      ]
     },
     {
       "slug": "multitype-adapter-recyclerview",
@@ -18,7 +35,11 @@
       "date": "2026-09-02",
       "readMinutes": 5,
       "platform": "Android",
-      "tags": ["Kotlin", "Android", "RecyclerView"]
+      "tags": [
+        "Kotlin",
+        "Android",
+        "RecyclerView"
+      ]
     },
     {
       "slug": "hada-kotlin-dependency-injection",
@@ -27,7 +48,11 @@
       "date": "2026-09-02",
       "readMinutes": 5,
       "platform": "Android",
-      "tags": ["Kotlin", "Android", "Architecture"]
+      "tags": [
+        "Kotlin",
+        "Android",
+        "Architecture"
+      ]
     },
     {
       "slug": "content-driven-ui-swiftui",
@@ -36,7 +61,12 @@
       "date": "2026-09-01",
       "readMinutes": 5,
       "platform": "iOS",
-      "tags": ["SDUI", "SwiftUI", "KMP", "Architecture"]
+      "tags": [
+        "SDUI",
+        "SwiftUI",
+        "KMP",
+        "Architecture"
+      ]
     }
   ],
   "comingSoon": [
@@ -44,37 +74,55 @@
       "title": "From shared contract to SwiftUI",
       "summary": "How the mapping layer turns KMP models into SwiftUI views.",
       "meta": "Coming soon · HornsApp series",
-      "tags": ["SwiftUI", "KMP"]
+      "tags": [
+        "SwiftUI",
+        "KMP"
+      ]
     },
     {
       "title": "Navigation shared with Android",
       "summary": "One navigation model, two native clients.",
       "meta": "Coming soon · HornsApp series",
-      "tags": ["iOS", "Android"]
+      "tags": [
+        "iOS",
+        "Android"
+      ]
     },
     {
       "title": "Jetpack Compose + UiState",
       "summary": "Modern Android UI and unidirectional state flows.",
       "meta": "Coming soon",
-      "tags": ["Compose", "MVI"]
+      "tags": [
+        "Compose",
+        "MVI"
+      ]
     },
     {
       "title": "SwiftUI + Observation",
       "summary": "Less boilerplate than classic MVVM with `@Observable`.",
       "meta": "Coming soon",
-      "tags": ["SwiftUI", "iOS"]
+      "tags": [
+        "SwiftUI",
+        "iOS"
+      ]
     },
     {
       "title": "KMP in production",
       "summary": "Modularization and shared boundaries that scale.",
       "meta": "Coming soon",
-      "tags": ["KMP", "Architecture"]
+      "tags": [
+        "KMP",
+        "Architecture"
+      ]
     },
     {
       "title": "CI/CD for mobile",
       "summary": "Fastlane, GitHub Actions, and reliable releases.",
       "meta": "Coming soon",
-      "tags": ["CI/CD", "Mobile"]
+      "tags": [
+        "CI/CD",
+        "Mobile"
+      ]
     }
   ]
 }

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <script>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const theme = stored || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+
+    <title>AI agent skills as playbooks for recurring work | Yesferal</title>
+    <meta name="description" content="When live data behind the screens goes stale, encode the weekly job as an agent skill — same judgment every run, clearer hand-offs."/>
+    <meta name="author" content="Yesferal Cueva"/>
+    <link rel="canonical" href="https://yesferal.com/articles/agent-skills-content-ops/"/>
+
+    <meta property="og:title" content="AI agent skills as playbooks for recurring work"/>
+    <meta property="og:description" content="Encode how your team actually runs a recurring job — not only which script to run."/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="https://yesferal.com/articles/agent-skills-content-ops/"/>
+    <meta property="og:image" content="https://yesferal.com/images/hornsapp.png"/>
+    <meta property="article:published_time" content="2026-09-22"/>
+    <meta property="article:author" content="Yesferal Cueva"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="AI agent skills as playbooks for recurring work"/>
+    <meta name="twitter:description" content="Encode how your team actually runs a recurring job — not only which script to run."/>
+    <meta name="twitter:image" content="https://yesferal.com/images/hornsapp.png"/>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "AI agent skills as playbooks for recurring work",
+      "description": "When live data behind the screens goes stale, encode the weekly job as an agent skill — same judgment every run, clearer hand-offs.",
+      "datePublished": "2026-09-22",
+      "author": {
+        "@type": "Person",
+        "name": "Yesferal Cueva",
+        "url": "https://yesferal.com/",
+        "sameAs": [
+          "https://www.linkedin.com/in/yesferal-cueva",
+          "https://github.com/Yesferal"
+        ]
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Yesferal Cueva"
+      },
+      "mainEntityOfPage": "https://yesferal.com/articles/agent-skills-content-ops/",
+      "image": "https://yesferal.com/images/hornsapp.png"
+    }
+    </script>
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+
+<nav class="nav">
+    <a class="nav-brand" href="/">Yesferal</a>
+    <div class="nav-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <div class="nav-links">
+            <a href="/">Apps</a>
+            <a href="/#about">About</a>
+        </div>
+    </div>
+</nav>
+
+<article class="article-wrap">
+    <a class="crumb" href="/articles/">← Articles</a>
+
+    <header>
+        <h1>AI agent skills as playbooks for recurring work</h1>
+        <p class="byline">Yesferal Cueva · Sep 22, 2026 · 5 min read</p>
+        <div class="tags">
+            <span class="tag">AI</span>
+            <span class="tag">Agent skills</span>
+            <span class="tag">Playbooks</span>
+        </div>
+    </header>
+
+    <div class="article-body">
+        <p>Many apps are only as good as the data people keep feeding them. Features can be solid and the UI polished — and the product still feels stale when the live data behind those screens stops getting updated. The hard part is rarely “add it once.” It is <strong>keeping it current every week</strong>: find what is new, skip what you already have, decide what is safe to ship, and apply changes without breaking production.</p>
+
+        <p>That work is repetitive, easy to get slightly wrong, and expensive to re-explain in chat. That is what an <strong>agent skill</strong> is for in this shape: a versioned playbook next to the repo that teaches an AI agent <em>how your team actually runs the job</em> — not only which script to run. I put this into practice for <a href="https://play.google.com/store/apps/details?id=com.yesferal.hornsapp" rel="noopener">HornsApp</a> and <a href="https://play.google.com/store/apps/details?id=com.yesferal.muvin" rel="noopener">Muvin</a>: a weekly skill that prepares a safe pack for review, then hands it to a human for the production write.</p>
+
+        <h2>A concrete scenario</h2>
+
+        <p>Imagine a small team whose app depends on live data behind the screens. Every week that data has to stay current. Each run you need to:</p>
+
+        <ul>
+            <li>discover what is new in a defined window</li>
+            <li>skip what is already done</li>
+            <li>decide what is solid enough to ship vs what still needs a human</li>
+            <li>verify outputs that will hit real clients — not “looks fine in a browser”</li>
+            <li>apply only this run’s changes — without rewriting production by accident</li>
+        </ul>
+
+        <p>None of that is hard once. It is hard <em>repeatedly</em>. Without a shared playbook, each run invents slightly different rules: different windows, soft duplicates, weak checks, and silent bad results that only show up later.</p>
+
+        <h2>What you are trying to protect</h2>
+
+        <p>Three goals show up again and again when you turn a recurring job into a skill:</p>
+
+        <p><strong>1. Same output, easy to invoke.</strong> Whoever runs the skill should get the same gates and a comparable result. Calling the playbook should be boring and reliable — not a fresh improvisation each time.</p>
+
+        <p><strong>2. A playbook you can improve.</strong> Rules in one place are easier to track, debug after a bad run, and refactor. Improvement is an edit to the playbook — not a new tribal version in someone’s head.</p>
+
+        <p><strong>3. One standard that gets smarter for everyone.</strong> Runs will still fail. Fix the skill once, and every later run — and every teammate — benefits. Without that, each person rediscovers the same issue alone.</p>
+
+        <p>If your team is living through “we know how to do this, we just keep rediscovering it in chat,” you are already in this use case.</p>
+
+        <h2>Why a script alone is not enough</h2>
+
+        <p>Scripts are great for deterministic steps: validate shape, convert formats, clear stale output. Recurring ops also need <em>judgment</em>: is this a duplicate? Is it solid enough to ship? Should the agent stop and ask instead of guessing?</p>
+
+        <p>An agent can help with that judgment — but only if the rules live somewhere durable. Chat memory is not a process. A <strong>project skill</strong> sits with the code: triggered on purpose, readable in review, updated when the product rules change.</p>
+
+        <h2>How to split the system</h2>
+
+        <p>A clear way to draw the boundaries:</p>
+
+        <div class="diagram">
+            <pre>┌───────────────────────────────────────────┐
+│  Shared context                           │
+│  What already exists / last known state   │
+├───────────────────────────────────────────┤
+│  Agent skill (ops playbook)               │
+│  Judgment · gates · when to stop          │
+├───────────────────────────────────────────┤
+│  Prepared output (this run only)          │
+│  Safe pack for human review               │
+├───────────────────────────────────────────┤
+│  Human write boundary                     │
+│  Approve → production · improve skill     │
+└───────────────────────────────────────────┘</pre>
+        </div>
+
+        <p>Read it top to bottom as four moves: <strong>shared context, judgment, prepared hand-off, human write + improve.</strong> The agent prepares; a person still commits the live change when that is the safer boundary.</p>
+
+        <h2>Encode judgment, not only steps</h2>
+
+        <p>A checklist of steps is useful — “scan, write files, hand off.” What usually breaks in production is the <em>judgment between</em> those steps: what counts as a duplicate, when something is ready vs still fuzzy, what “good enough” means for the live data behind the screens, and when the agent should stop and ask a human instead of guessing.</p>
+
+        <p>That judgment is the content worth putting in a skill. Not only the sequence of actions, but the decision rules:</p>
+
+        <ul>
+            <li><strong>What “done” means</strong> for this run — and what must stay out until it is solid.</li>
+            <li><strong>How to compare</strong> a new candidate against what you already have (so you do not rely on “looks familiar”).</li>
+            <li><strong>What to reject or park</strong> even if a source looks exciting.</li>
+            <li><strong>What to verify</strong> before treating an output as safe for clients or production.</li>
+            <li><strong>Where the human boundary is</strong> — prepare vs approve vs write to the live system.</li>
+        </ul>
+
+        <p>Steps tell the agent <em>what to do next</em>. Judgment tells it <em>how to choose</em>. That is the difference between “ask the AI to handle this” and “run our process the way we defined it.”</p>
+
+        <h2>What stays human</h2>
+
+        <p>Automation should shrink the boring surface area, not remove ownership. In this design the human still:</p>
+
+        <ul>
+            <li>decides when something is too ambiguous for the skill to finish alone</li>
+            <li>owns the irreversible step — promoting prepared output into production</li>
+            <li>reviews a bad run and updates the skill so the next one is better</li>
+            <li>changes the playbook when product judgment itself changes</li>
+        </ul>
+
+        <p>The skill makes those decisions rarer and clearer. It does not pretend the process can never be wrong.</p>
+
+        <h2>Checklist you can take to your team</h2>
+
+        <ul>
+            <li><strong>Name the recurring job.</strong> If you do it every week, it deserves a skill — not another chat thread.</li>
+            <li><strong>Start from shared context.</strong> The skill should know what “already done” looks like before it invents work.</li>
+            <li><strong>Encode judgment, not only steps.</strong> Decide what is ready, what waits, and what must not be guessed.</li>
+            <li><strong>Hand off prepared output.</strong> Prefer a safe pack for this run; do not make “replace everything” the happy path.</li>
+            <li><strong>Keep a human write boundary</strong> when production data is hard to undo — then improve the skill after a miss.</li>
+        </ul>
+
+        <h2>What you gain (and what you trade)</h2>
+
+        <p>You pay a bit of upfront writing: the skill has to capture real judgment, not slogans. You gain a process that is easy to invoke, reviewable in the repo, and improvable after each miss — less time rediscovering the same mistakes in chat, more time on the work that actually needs a human.</p>
+
+        <p>In <a href="https://play.google.com/store/apps/details?id=com.yesferal.hornsapp" rel="noopener">HornsApp</a> and <a href="https://play.google.com/store/apps/details?id=com.yesferal.muvin" rel="noopener">Muvin</a>, that meant turning the weekly job of keeping live data behind the screens current into a contract next to the code: same gates every run, clearer hand-offs, and a playbook that gets sharper when something goes wrong.</p>
+
+        <p>In practice that looked like four moves:</p>
+
+        <ul>
+            <li>Start from shared context — what already exists before inventing work.</li>
+            <li>Encode judgment in the skill — what is ready to ship, what should wait, and what must not be guessed.</li>
+            <li>Hand off prepared output — humans review and import; they should not rediscover the process.</li>
+            <li>Improve the skill after a miss — one standard gets better for every later run.</li>
+        </ul>
+
+        <div class="callout">
+            <p>Start with one painful recurring job. Write the judgment you already know. Put the skill next to the repo. Improve it the next time a run teaches you something.</p>
+        </div>
+
+        <p>I build native iOS and Android apps and write about designs that survive real shipping. If keeping live data current — or encoding that job as an agent skill — is a problem your team is facing, <a href="https://www.linkedin.com/in/yesferal-cueva">let's connect on LinkedIn</a>.</p>
+    </div>
+
+    <div class="article-footer">
+        <p>Also read: <a href="/articles/github-pages-actions-cicd/">CI/CD for a static site</a> · <a href="/articles/content-driven-ui-swiftui/">Server-driven UI on iOS</a>.</p>
+        <div class="share-row">
+            <a class="share-btn linkedin"
+               href="https://www.linkedin.com/sharing/share-offsite/?url=https://yesferal.com/articles/agent-skills-content-ops/"
+               target="_blank" rel="noopener">Share on LinkedIn</a>
+            <a class="share-btn" href="/articles/">More articles</a>
+        </div>
+    </div>
+</article>
+
+<footer>
+    <div class="footer-links">
+        <a href="https://www.linkedin.com/in/yesferal-cueva" rel="me">LinkedIn</a>
+        <a href="https://github.com/Yesferal" rel="me">GitHub</a>
+        <a href="/#about">About</a>
+    </div>
+    © 2026 Yesferal · All rights reserved.
+</footer>
+
+<script src="../../theme.js"></script>
+
+</body>
+</html>

@@ -7,15 +7,15 @@ Living list of topics for yesferal.com. One article per week when possible.
 Do not hand-edit article cards in `index.html` / `articles/index.html` / `sitemap.xml` — those marker regions stay empty in git. CI fills them on deploy.
 
 ```bash
-python3 scripts/sync-articles.py          # local preview
-python3 scripts/sync-articles.py --clean  # clear markers before commit
+python3 scripts/articles/sync.py          # local preview
+python3 scripts/articles/sync.py --clean  # clear markers before commit
 ```
 
 ## Published
 
-See `catalog.json` → `published` (and the pages under `articles/<slug>/`).
+See `articles/catalog.json` → `published` (and the pages under `articles/<slug>/`).
 
-Latest: CI/CD for a static site on GitHub Pages (`github-pages-actions-cicd`).
+Latest: AI agent skills as playbooks for recurring work (`agent-skills-content-ops`).
 
 ## Series — HornsApp architecture (next)
 

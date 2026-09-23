@@ -1,0 +1,6615 @@
+{
+  "title": "Best albums",
+  "brand": "HornsApp",
+  "sourceNote": "Personal ranking by year. Top 6 are the main list; 7+ and B are bonus.",
+  "years": [
+    {
+      "year": 1956,
+      "count": 3,
+      "top": [
+        {
+          "id": "195601",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Saxophone Colossus",
+          "artist": "Sonny Rollins",
+          "track": "Moritat",
+          "genre": "Jazz",
+          "debut": "1956",
+          "instrument": ""
+        },
+        {
+          "id": "195602",
+          "rank": "2",
+          "haveIt": false,
+          "title": "The Jazz Messengers",
+          "artist": "Art Blakey",
+          "track": "?",
+          "genre": "Jazz",
+          "debut": "1953",
+          "instrument": ""
+        },
+        {
+          "id": "195603",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Tenor Madness",
+          "artist": "Sonny Rollins",
+          "track": "?",
+          "genre": "Jazz",
+          "debut": "1956",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1957,
+      "count": 3,
+      "top": [
+        {
+          "id": "195701",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Brilliant Corners",
+          "artist": "Thelonious Monk",
+          "track": "Ba-Lue Bolivar Ba-Lues-Are",
+          "genre": "Jazz",
+          "debut": "1951",
+          "instrument": ""
+        },
+        {
+          "id": "195702",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Round About Midnight",
+          "artist": "Miles Davis",
+          "track": "Dear All Stockholm",
+          "genre": "Jazz",
+          "debut": "1951",
+          "instrument": ""
+        },
+        {
+          "id": "195703",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Birth Of The Cool",
+          "artist": "Miles Davis",
+          "track": "Budo",
+          "genre": "Jazz",
+          "debut": "1951",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1958,
+      "count": 3,
+      "top": [
+        {
+          "id": "195801",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Somethin' Else",
+          "artist": "Cannonball Adderley",
+          "track": "Autumn Leaves",
+          "genre": "Jazz",
+          "debut": "1955",
+          "instrument": ""
+        },
+        {
+          "id": "195802",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Blue Train",
+          "artist": "John Coltrane",
+          "track": "Blue Train",
+          "genre": "Jazz",
+          "debut": "1957",
+          "instrument": ""
+        },
+        {
+          "id": "195803",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Milestones",
+          "artist": "Miles Davis",
+          "track": "Two Bass Hit",
+          "genre": "Jazz",
+          "debut": "1951",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1959,
+      "count": 3,
+      "top": [
+        {
+          "id": "195901",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Moanin'",
+          "artist": "Art Blakey",
+          "track": "Moanin'",
+          "genre": "Jazz",
+          "debut": "1953",
+          "instrument": ""
+        },
+        {
+          "id": "195902",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Mingus Ah Um",
+          "artist": "Charles Mingus",
+          "track": "Pussy Cat Due",
+          "genre": "Jazz",
+          "debut": "1955",
+          "instrument": ""
+        },
+        {
+          "id": "195903",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Kind Of Blue",
+          "artist": "Miles Davis",
+          "track": "All Blues",
+          "genre": "Jazz",
+          "debut": "1951",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1960,
+      "count": 3,
+      "top": [
+        {
+          "id": "196001",
+          "rank": "1",
+          "haveIt": true,
+          "title": "Sketches Of Spain",
+          "artist": "Miles Davis",
+          "track": "Solea",
+          "genre": "Jazz",
+          "debut": "1951",
+          "instrument": ""
+        },
+        {
+          "id": "196002",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Giant Steps",
+          "artist": "John Coltrane",
+          "track": "?",
+          "genre": "Jazz",
+          "debut": "1957",
+          "instrument": ""
+        },
+        {
+          "id": "196003",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Blues & Roots",
+          "artist": "Charles Mingus",
+          "track": "?",
+          "genre": "Jazz",
+          "debut": "1955",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1961,
+      "count": 3,
+      "top": [
+        {
+          "id": "196101",
+          "rank": "1",
+          "haveIt": true,
+          "title": "My Favorite Things",
+          "artist": "John Coltrane",
+          "track": "My Favorite Things",
+          "genre": "Jazz",
+          "debut": "1957",
+          "instrument": ""
+        },
+        {
+          "id": "196102",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Ole Coltrane",
+          "artist": "John Coltrane",
+          "track": "?",
+          "genre": "Jazz",
+          "debut": "1957",
+          "instrument": ""
+        },
+        {
+          "id": "196103",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Thelonious Monk With John Coltrane",
+          "artist": "Thelonious Monk",
+          "track": "?",
+          "genre": "Jazz",
+          "debut": "1951",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1962,
+      "count": 3,
+      "top": [
+        {
+          "id": "196201",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Takin' Off",
+          "artist": "Herbie Hancock",
+          "track": "Watermelon Man",
+          "genre": "Jazz",
+          "debut": "1962",
+          "instrument": ""
+        },
+        {
+          "id": "196202",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Full House",
+          "artist": "Wes Montgomery",
+          "track": "?",
+          "genre": "Jazz",
+          "debut": "1959",
+          "instrument": ""
+        },
+        {
+          "id": "196203",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Tijuana Moods",
+          "artist": "Charles Mingus",
+          "track": "?",
+          "genre": "Jazz",
+          "debut": "1955",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1963,
+      "count": 3,
+      "top": [
+        {
+          "id": "196301",
+          "rank": "1",
+          "haveIt": false,
+          "title": "The Black Saint And The Sinner Lady",
+          "artist": "Charles Mingus",
+          "track": "Group Dancers",
+          "genre": "Jazz",
+          "debut": "1955",
+          "instrument": ""
+        },
+        {
+          "id": "196302",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Monk's Dream",
+          "artist": "Thelonious Monk",
+          "track": "Blue Bolivar Blues",
+          "genre": "Jazz",
+          "debut": "1951",
+          "instrument": ""
+        },
+        {
+          "id": "196303",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Money Jungle",
+          "artist": "Duke Ellington",
+          "track": "Solitude",
+          "genre": "Jazz",
+          "debut": "1950",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1964,
+      "count": 3,
+      "top": [
+        {
+          "id": "196401",
+          "rank": "1",
+          "haveIt": false,
+          "title": "The Sidewinder",
+          "artist": "Lee Morgan",
+          "track": "Totem Pole",
+          "genre": "Jazz",
+          "debut": "1956",
+          "instrument": ""
+        },
+        {
+          "id": "196402",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Empyrean Isles",
+          "artist": "Herbie Hancock",
+          "track": "?",
+          "genre": "Jazz",
+          "debut": "1962",
+          "instrument": ""
+        },
+        {
+          "id": "196403",
+          "rank": "3",
+          "haveIt": false,
+          "title": "The Animals",
+          "artist": "The Animals",
+          "track": "The House of the Rising Sun",
+          "genre": "Rock",
+          "debut": "1964",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1965,
+      "count": 3,
+      "top": [
+        {
+          "id": "196501",
+          "rank": "1",
+          "haveIt": false,
+          "title": "A Love Supreme",
+          "artist": "John Coltrane",
+          "track": "Acknowledgement",
+          "genre": "Jazz",
+          "debut": "1957",
+          "instrument": ""
+        },
+        {
+          "id": "196502",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Maiden Voyage",
+          "artist": "Herbie Hancock",
+          "track": "The Eye Of The Hurricane",
+          "genre": "Jazz",
+          "debut": "1962",
+          "instrument": ""
+        },
+        {
+          "id": "196503",
+          "rank": "3",
+          "haveIt": false,
+          "title": "My Generation",
+          "artist": "The Who",
+          "track": "My Generation",
+          "genre": "Rock",
+          "debut": "1965",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1966,
+      "count": 3,
+      "top": [
+        {
+          "id": "196601",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Fresh Cream",
+          "artist": "Cream",
+          "track": "Spoonful",
+          "genre": "Rock",
+          "debut": "1966",
+          "instrument": "Guitar"
+        },
+        {
+          "id": "196602",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Search For The New Land",
+          "artist": "Lee Morgan",
+          "track": "Search For The New Land",
+          "genre": "Jazz",
+          "debut": "1956",
+          "instrument": ""
+        },
+        {
+          "id": "196603",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Ascension",
+          "artist": "John Coltrane",
+          "track": "Ascension",
+          "genre": "Jazz",
+          "debut": "1957",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1967,
+      "count": 6,
+      "top": [
+        {
+          "id": "196701",
+          "rank": "1",
+          "haveIt": true,
+          "title": "The Doors",
+          "artist": "The Doors",
+          "track": "The End",
+          "genre": "Rock",
+          "debut": "1967",
+          "instrument": "Keyboard"
+        },
+        {
+          "id": "196702",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Strange Days",
+          "artist": "The Doors",
+          "track": "When the Music's Over",
+          "genre": "Rock",
+          "debut": "1967",
+          "instrument": "Keyboard"
+        },
+        {
+          "id": "196703",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Heavy Sounds",
+          "artist": "Elvin Jones, Richard Davis",
+          "track": "Raunchy Rita",
+          "genre": "Jazz",
+          "debut": "1958",
+          "instrument": "Keyboard"
+        },
+        {
+          "id": "196704",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Are You Experienced",
+          "artist": "The Jimi Hendrix Experience",
+          "track": "Foxey Lady",
+          "genre": "Rock",
+          "debut": "1967",
+          "instrument": "Guitar Riff"
+        },
+        {
+          "id": "196705",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Born Under a Bad Sign",
+          "artist": "Albert King",
+          "track": "Born Under a Bad Sign",
+          "genre": "Blues",
+          "debut": "1963",
+          "instrument": "Guitar Solo"
+        },
+        {
+          "id": "196706",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Disraeli Gears",
+          "artist": "Cream",
+          "track": "Sunshine Of Your Love",
+          "genre": "Rock",
+          "debut": "1966",
+          "instrument": "Guitar Riff"
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1968,
+      "count": 6,
+      "top": [
+        {
+          "id": "196801",
+          "rank": "1",
+          "haveIt": true,
+          "title": "Wheels Of Fire",
+          "artist": "Cream",
+          "track": "Crossroads",
+          "genre": "Rock",
+          "debut": "1966",
+          "instrument": ""
+        },
+        {
+          "id": "196802",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Electric Ladyland",
+          "artist": "Jimi Hendrix",
+          "track": "Voodoo Child",
+          "genre": "Rock",
+          "debut": "1967",
+          "instrument": ""
+        },
+        {
+          "id": "196803",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Anthem of the Sun",
+          "artist": "Grateful Dead",
+          "track": "New Potato Caboose",
+          "genre": "Southern Rock",
+          "debut": "1967",
+          "instrument": ""
+        },
+        {
+          "id": "196804",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Creedence Clearwater Revival",
+          "artist": "Creedence Clearwater Revival",
+          "track": "I Put A Speel On You",
+          "genre": "Rock",
+          "debut": "1968",
+          "instrument": "Vocals"
+        },
+        {
+          "id": "196805",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Beggars Banquet",
+          "artist": "Rolling Stones",
+          "track": "Sympathy for the Devil",
+          "genre": "Rock",
+          "debut": "1964",
+          "instrument": ""
+        },
+        {
+          "id": "196806",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Lady Soul",
+          "artist": "Aretha Franklin",
+          "track": "Niki Hoeky",
+          "genre": "Rock",
+          "debut": "1961",
+          "instrument": "Vocals"
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1969,
+      "count": 6,
+      "top": [
+        {
+          "id": "196901",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Tommy",
+          "artist": "The Who",
+          "track": "We're Not Gonna Take It",
+          "genre": "Rock",
+          "debut": "1965",
+          "instrument": ""
+        },
+        {
+          "id": "196902",
+          "rank": "2",
+          "haveIt": false,
+          "title": "In The Court Of The Crimson King",
+          "artist": "King Crimson",
+          "track": "21st Century Schizoid Man",
+          "genre": "Progressive Rock",
+          "debut": "1969",
+          "instrument": ""
+        },
+        {
+          "id": "196903",
+          "rank": "3",
+          "haveIt": true,
+          "title": "Led Zeppelin",
+          "artist": "Led Zeppelin",
+          "track": "You Shock Me",
+          "genre": "Rock",
+          "debut": "1969",
+          "instrument": ""
+        },
+        {
+          "id": "196904",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Led Zeppelin II",
+          "artist": "Led Zeppelin",
+          "track": "The Lemon Song",
+          "genre": "Rock",
+          "debut": "1969",
+          "instrument": ""
+        },
+        {
+          "id": "196905",
+          "rank": "5",
+          "haveIt": false,
+          "title": "The Stooges",
+          "artist": "The Stooges",
+          "track": "No Fun",
+          "genre": "Rock",
+          "debut": "1969",
+          "instrument": "Guitar Riff"
+        },
+        {
+          "id": "196906",
+          "rank": "6",
+          "haveIt": false,
+          "title": "The Allman Brothers Band",
+          "artist": "The Allman Brothers Band",
+          "track": "Whipping Post",
+          "genre": "Southern Rock",
+          "debut": "1969",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1970,
+      "count": 6,
+      "top": [
+        {
+          "id": "197001",
+          "rank": "1",
+          "haveIt": true,
+          "title": "Paranoid",
+          "artist": "Black Sabbath",
+          "track": "War Pigs",
+          "genre": "Doom Metal",
+          "debut": "1970",
+          "instrument": ""
+        },
+        {
+          "id": "197002",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Black Sabbath",
+          "artist": "Black Sabbath",
+          "track": "N.I.B.",
+          "genre": "Doom Metal",
+          "debut": "1970",
+          "instrument": ""
+        },
+        {
+          "id": "197003",
+          "rank": "3",
+          "haveIt": true,
+          "title": "Funhouse",
+          "artist": "The Stooges",
+          "track": "Fun House",
+          "genre": "Rock",
+          "debut": "1969",
+          "instrument": ""
+        },
+        {
+          "id": "197004",
+          "rank": "4",
+          "haveIt": false,
+          "title": "In Rock",
+          "artist": "Deep Purple",
+          "track": "Child In Time",
+          "genre": "Rock",
+          "debut": "1968",
+          "instrument": ""
+        },
+        {
+          "id": "197005",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Led Zeppelin III",
+          "artist": "Led Zeppelin",
+          "track": "Since I've Been Loving You",
+          "genre": "Rock",
+          "debut": "1969",
+          "instrument": ""
+        },
+        {
+          "id": "197006",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Morrison Hotel",
+          "artist": "The Doors",
+          "track": "Roadhouse Blues",
+          "genre": "Rock",
+          "debut": "1967",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1971,
+      "count": 8,
+      "top": [
+        {
+          "id": "197101",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Aqualung",
+          "artist": "Jethro Tull",
+          "track": "My God",
+          "genre": "Progressive Rock",
+          "debut": "1968",
+          "instrument": ""
+        },
+        {
+          "id": "197102",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Who's Next",
+          "artist": "The Who",
+          "track": "Won't Get Fooled Again",
+          "genre": "Rock",
+          "debut": "1965",
+          "instrument": ""
+        },
+        {
+          "id": "197103",
+          "rank": "3",
+          "haveIt": true,
+          "title": "Meddle",
+          "artist": "Pink Floyd",
+          "track": "Echoes",
+          "genre": "Progressive Rock",
+          "debut": "1967",
+          "instrument": ""
+        },
+        {
+          "id": "197104",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Fragile",
+          "artist": "Yes",
+          "track": "Roundabout",
+          "genre": "Progressive Rock",
+          "debut": "1969",
+          "instrument": ""
+        },
+        {
+          "id": "197105",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Sticky Fingers",
+          "artist": "Rolling Stones",
+          "track": "Sister Morphine",
+          "genre": "Rock",
+          "debut": "1964",
+          "instrument": ""
+        },
+        {
+          "id": "197106",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Led Zeppelin IV",
+          "artist": "Led Zeppelin",
+          "track": "",
+          "genre": "Rock",
+          "debut": "1969",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "1971B",
+          "rank": "B",
+          "haveIt": false,
+          "title": "",
+          "artist": "Emerson, Lake & Palmer",
+          "track": "",
+          "genre": "",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "1971B",
+          "rank": "B",
+          "haveIt": false,
+          "title": "",
+          "artist": "Black Sabbath",
+          "track": "",
+          "genre": "",
+          "debut": "",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 1972,
+      "count": 6,
+      "top": [
+        {
+          "id": "197201",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Machine Head",
+          "artist": "Deep Purple",
+          "track": "Pictures Of Home",
+          "genre": "Rock",
+          "debut": "1968",
+          "instrument": ""
+        },
+        {
+          "id": "197202",
+          "rank": "2",
+          "haveIt": true,
+          "title": "Thick As A Brick",
+          "artist": "Jethro Tull",
+          "track": "Thick As A Brick Pt. 1",
+          "genre": "Progressive Rock",
+          "debut": "1968",
+          "instrument": ""
+        },
+        {
+          "id": "197203",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Close To The Edge",
+          "artist": "Yes",
+          "track": "Close To The Edge",
+          "genre": "Progressive Rock",
+          "debut": "1969",
+          "instrument": ""
+        },
+        {
+          "id": "197204",
+          "rank": "4",
+          "haveIt": false,
+          "title": "School's Out",
+          "artist": "Alice Cooper",
+          "track": "Blue Turk",
+          "genre": "Rock",
+          "debut": "1969",
+          "instrument": "Guitar"
+        },
+        {
+          "id": "197205",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Trilogy",
+          "artist": "Emerson, Lake & Palmer",
+          "track": "The Endless Enigma",
+          "genre": "Progressive Rock",
+          "debut": "1970",
+          "instrument": ""
+        },
+        {
+          "id": "197206",
+          "rank": "6",
+          "haveIt": true,
+          "title": "Foxtrot",
+          "artist": "Genesis",
+          "track": "Get 'Em Out by Friday",
+          "genre": "Progressive Rock",
+          "debut": "1969",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1973,
+      "count": 7,
+      "top": [
+        {
+          "id": "197301",
+          "rank": "1",
+          "haveIt": false,
+          "title": "The Dark Side of the Moon",
+          "artist": "Pink Floyd",
+          "track": "Money",
+          "genre": "Progressive Rock",
+          "debut": "1967",
+          "instrument": ""
+        },
+        {
+          "id": "197302",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Brain Salad Surgery",
+          "artist": "Emerson, Lake & Palmer",
+          "track": "Karn Evil 9",
+          "genre": "Progressive Rock",
+          "debut": "1970",
+          "instrument": ""
+        },
+        {
+          "id": "197303",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Larks' Tongues in Aspic",
+          "artist": "King Crimson",
+          "track": "Larks' Tongues In Aspic (Part II)",
+          "genre": "Progressive Rock",
+          "debut": "1969",
+          "instrument": "Bass"
+        },
+        {
+          "id": "197304",
+          "rank": "4",
+          "haveIt": true,
+          "title": "Quadrophenia",
+          "artist": "The Who",
+          "track": "Love Reign O'er Me",
+          "genre": "Rock",
+          "debut": "1965",
+          "instrument": ""
+        },
+        {
+          "id": "197305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Never Turn Your Back on a Friend",
+          "artist": "Budgie",
+          "track": "Breadfan",
+          "genre": "Progressive Rock",
+          "debut": "1971",
+          "instrument": ""
+        },
+        {
+          "id": "197306",
+          "rank": "6",
+          "haveIt": false,
+          "title": "(Pronounced 'Lĕh-'nérd 'Skin-'nérd)",
+          "artist": "Lynyrd Skynyrd",
+          "track": "Free Bird",
+          "genre": "Southern Rock",
+          "debut": "1973",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "1973B",
+          "rank": "B",
+          "haveIt": false,
+          "title": "",
+          "artist": "Allman Brothers Band",
+          "track": "",
+          "genre": "",
+          "debut": "",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 1974,
+      "count": 6,
+      "top": [
+        {
+          "id": "197401",
+          "rank": "1",
+          "haveIt": true,
+          "title": "Red",
+          "artist": "King Crimson",
+          "track": "Starless",
+          "genre": "Progressive Rock",
+          "debut": "1969",
+          "instrument": "Guitar Riff"
+        },
+        {
+          "id": "197402",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Sheer Heart Attack",
+          "artist": "Queen",
+          "track": "Flick of the Wrist",
+          "genre": "Rock",
+          "debut": "1973",
+          "instrument": ""
+        },
+        {
+          "id": "197403",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Rush",
+          "artist": "Rush",
+          "track": "Here Again",
+          "genre": "Rock",
+          "debut": "1974",
+          "instrument": "Bass"
+        },
+        {
+          "id": "197404",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Secret Treaties",
+          "artist": "Blue Öyster Cult",
+          "track": "Dominance And Submission",
+          "genre": "Rock",
+          "debut": "1972",
+          "instrument": "Guitar"
+        },
+        {
+          "id": "197405",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Second Helping",
+          "artist": "Lynyrd Skynyrd",
+          "track": "Workin' For MCA",
+          "genre": "Southern Rock",
+          "debut": "1973",
+          "instrument": "Guitar"
+        },
+        {
+          "id": "197406",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Burn",
+          "artist": "Deep Purple",
+          "track": "Burn",
+          "genre": "Rock",
+          "debut": "1968",
+          "instrument": "Vocals"
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1975,
+      "count": 6,
+      "top": [
+        {
+          "id": "197501",
+          "rank": "1",
+          "haveIt": false,
+          "title": "In Trance",
+          "artist": "Scorpions",
+          "track": "Life's Like A River",
+          "genre": "Rock",
+          "debut": "1972",
+          "instrument": "Guitar"
+        },
+        {
+          "id": "197502",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Wish You Were Here",
+          "artist": "Pink Floyd",
+          "track": "Shine On You Crazy Diamond",
+          "genre": "Progressive Rock",
+          "debut": "1967",
+          "instrument": "Guitar"
+        },
+        {
+          "id": "197503",
+          "rank": "3",
+          "haveIt": true,
+          "title": "A Night At The Opera",
+          "artist": "Queen",
+          "track": "Bohemian Rhapsody",
+          "genre": "Rock",
+          "debut": "1973",
+          "instrument": "Vocals"
+        },
+        {
+          "id": "197504",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Welcome to My Nightmare",
+          "artist": "Alice Cooper",
+          "track": "Steven",
+          "genre": "Rock",
+          "debut": "1969",
+          "instrument": ""
+        },
+        {
+          "id": "197505",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Ritchie Blackmore's Rainbow",
+          "artist": "Rainbow",
+          "track": "Man On The Silver Mountain",
+          "genre": "Rock",
+          "debut": "1975",
+          "instrument": ""
+        },
+        {
+          "id": "197506",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Toys In The Attic",
+          "artist": "Aerosmith",
+          "track": "Walk This Way",
+          "genre": "Rock",
+          "debut": "1973",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1976,
+      "count": 6,
+      "top": [
+        {
+          "id": "197601",
+          "rank": "1",
+          "haveIt": true,
+          "title": "Rising",
+          "artist": "Rainbow",
+          "track": "Stargazer",
+          "genre": "Rock",
+          "debut": "1975",
+          "instrument": ""
+        },
+        {
+          "id": "197602",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Virgin Killer",
+          "artist": "Scorpions",
+          "track": "Virgin Killer",
+          "genre": "Rock",
+          "debut": "1972",
+          "instrument": ""
+        },
+        {
+          "id": "197603",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Rocks",
+          "artist": "Aerosmith",
+          "track": "Nobody's Fault",
+          "genre": "Rock",
+          "debut": "1973",
+          "instrument": ""
+        },
+        {
+          "id": "197604",
+          "rank": "4",
+          "haveIt": false,
+          "title": "2112",
+          "artist": "Rush",
+          "track": "2112",
+          "genre": "Progressive Rock",
+          "debut": "1974",
+          "instrument": ""
+        },
+        {
+          "id": "197605",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Sad Wings of Destiny",
+          "artist": "Judas Priest",
+          "track": "Genocide",
+          "genre": "Rock",
+          "debut": "1974",
+          "instrument": ""
+        },
+        {
+          "id": "197606",
+          "rank": "6",
+          "haveIt": false,
+          "title": "A Day At The Races",
+          "artist": "Queen",
+          "track": "Somebody To Love",
+          "genre": "Rock",
+          "debut": "1973",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1977,
+      "count": 6,
+      "top": [
+        {
+          "id": "197701",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Animals",
+          "artist": "Pink Floyd",
+          "track": "Dogs",
+          "genre": "Progressive Rock",
+          "debut": "1967",
+          "instrument": ""
+        },
+        {
+          "id": "197702",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Taken By Force",
+          "artist": "Scorpions",
+          "track": "The Sails of Charon",
+          "genre": "Rock",
+          "debut": "1972",
+          "instrument": ""
+        },
+        {
+          "id": "197703",
+          "rank": "3",
+          "haveIt": false,
+          "title": "A Farewell To King",
+          "artist": "Rush",
+          "track": "Cignus X-1",
+          "genre": "Progressive Rock",
+          "debut": "1974",
+          "instrument": ""
+        },
+        {
+          "id": "197704",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Let There Be Rock",
+          "artist": "AC/DC",
+          "track": "Whole Lotta Rosie",
+          "genre": "Rock",
+          "debut": "1975",
+          "instrument": "Guitar"
+        },
+        {
+          "id": "197705",
+          "rank": "5",
+          "haveIt": true,
+          "title": "Never Mind The Bollocks",
+          "artist": "Sex Pistols",
+          "track": "God Save The Queen",
+          "genre": "Punk",
+          "debut": "1977",
+          "instrument": ""
+        },
+        {
+          "id": "197706",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Love Gun",
+          "artist": "KISS",
+          "track": "Almost Human",
+          "genre": "Rock",
+          "debut": "1974",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1978,
+      "count": 6,
+      "top": [
+        {
+          "id": "197801",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Hemispheres",
+          "artist": "Rush",
+          "track": "La Villa Stragianto",
+          "genre": "Progressive Rock",
+          "debut": "1974",
+          "instrument": ""
+        },
+        {
+          "id": "197802",
+          "rank": "2",
+          "haveIt": true,
+          "title": "Van Halen",
+          "artist": "Van Halen",
+          "track": "Ice Cream Man",
+          "genre": "Hard Rock",
+          "debut": "1978",
+          "instrument": "Guitar Riff"
+        },
+        {
+          "id": "197803",
+          "rank": "3",
+          "haveIt": false,
+          "title": "U.K.",
+          "artist": "U.K.",
+          "track": "Nevermore",
+          "genre": "Rock",
+          "debut": "1978",
+          "instrument": ""
+        },
+        {
+          "id": "197804",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Stained Class",
+          "artist": "Judas Priest",
+          "track": "Saints in Hell",
+          "genre": "Heavy Metal",
+          "debut": "1974",
+          "instrument": "Guitar"
+        },
+        {
+          "id": "197805",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Dire Straits",
+          "artist": "Dire Straits",
+          "track": "In the Gallery",
+          "genre": "Rock",
+          "debut": "1978",
+          "instrument": ""
+        },
+        {
+          "id": "197806",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Long Live Rock 'n' Roll",
+          "artist": "Rainbow",
+          "track": "Gates Of Babylon",
+          "genre": "Hard Rock",
+          "debut": "1975",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1979,
+      "count": 6,
+      "top": [
+        {
+          "id": "197901",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Overkill",
+          "artist": "Motorhead",
+          "track": "I'll Be Your Sister",
+          "genre": "Rock",
+          "debut": "1977",
+          "instrument": ""
+        },
+        {
+          "id": "197902",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Danger Money",
+          "artist": "U.K.",
+          "track": "The Only Thing She Needs",
+          "genre": "Progressive Rock",
+          "debut": "1978",
+          "instrument": ""
+        },
+        {
+          "id": "197903",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Spectral Mornings",
+          "artist": "Steve Hackett",
+          "track": "Every Day",
+          "genre": "Rock",
+          "debut": "1975",
+          "instrument": ""
+        },
+        {
+          "id": "197904",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Black Rose",
+          "artist": "Thin Lizzy",
+          "track": "Toughest Street In Town",
+          "genre": "Rock",
+          "debut": "1971",
+          "instrument": ""
+        },
+        {
+          "id": "197905",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Bomber",
+          "artist": "Motorhead",
+          "track": "Stone Dead Forever",
+          "genre": "Rock",
+          "debut": "1977",
+          "instrument": ""
+        },
+        {
+          "id": "197906",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Highway To Hell",
+          "artist": "AC/DC",
+          "track": "Highway To Hell",
+          "genre": "Hard Rock",
+          "debut": "1975",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1980,
+      "count": 6,
+      "top": [
+        {
+          "id": "198001",
+          "rank": "1",
+          "haveIt": true,
+          "title": "Heaven And Hell",
+          "artist": "Black Sabbath",
+          "track": "Heaven And Hell",
+          "genre": "Heavy Metal",
+          "debut": "1970",
+          "instrument": ""
+        },
+        {
+          "id": "198002",
+          "rank": "2",
+          "haveIt": true,
+          "title": "Blizzard Of Ozz",
+          "artist": "Ozzy Osbourne",
+          "track": "Mr. Crowley",
+          "genre": "Heavy Metal",
+          "debut": "1980",
+          "instrument": ""
+        },
+        {
+          "id": "198003",
+          "rank": "3",
+          "haveIt": true,
+          "title": "Iron Maiden",
+          "artist": "Iron Maiden",
+          "track": "Phantom of the Opera",
+          "genre": "Heavy Metal",
+          "debut": "1980",
+          "instrument": ""
+        },
+        {
+          "id": "198004",
+          "rank": "4",
+          "haveIt": false,
+          "title": "British Steel",
+          "artist": "Judas Priest",
+          "track": "Grinder",
+          "genre": "Heavy Metal",
+          "debut": "1974",
+          "instrument": ""
+        },
+        {
+          "id": "198005",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Back In Black",
+          "artist": "AC/DC",
+          "track": "Hells Bells",
+          "genre": "Hard Rock",
+          "debut": "1975",
+          "instrument": ""
+        },
+        {
+          "id": "198006",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Ace Of Spades",
+          "artist": "Motorhead",
+          "track": "Shoot You in the Back",
+          "genre": "Rock",
+          "debut": "1977",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1981,
+      "count": 6,
+      "top": [
+        {
+          "id": "198101",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Moving Pictures",
+          "artist": "Rush",
+          "track": "The Camera Eyes",
+          "genre": "Progressive Rock",
+          "debut": "1974",
+          "instrument": ""
+        },
+        {
+          "id": "198102",
+          "rank": "2",
+          "haveIt": true,
+          "title": "Diary Of A Madman",
+          "artist": "Ozzy Osbourne",
+          "track": "Diary Of A Madman",
+          "genre": "Heavy Metal",
+          "debut": "1980",
+          "instrument": ""
+        },
+        {
+          "id": "198103",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Denim and Leather",
+          "artist": "Saxon",
+          "track": "Never Surrender",
+          "genre": "Hard Rock",
+          "debut": "1981",
+          "instrument": ""
+        },
+        {
+          "id": "198104",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Fair Warning",
+          "artist": "Van Halen",
+          "track": "Sinner's Swing!",
+          "genre": "Hard Rock",
+          "debut": "1978",
+          "instrument": "Guitar"
+        },
+        {
+          "id": "198105",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Welcome To Hell",
+          "artist": "Venom",
+          "track": "Poison",
+          "genre": "Heavy Metal",
+          "debut": "1981",
+          "instrument": ""
+        },
+        {
+          "id": "198106",
+          "rank": "6",
+          "haveIt": true,
+          "title": "Killers",
+          "artist": "Iron Maiden",
+          "track": "Wrathchild",
+          "genre": "Heavy Metal",
+          "debut": "1980",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1982,
+      "count": 6,
+      "top": [
+        {
+          "id": "198201",
+          "rank": "1",
+          "haveIt": true,
+          "title": "The Number Of The Beast",
+          "artist": "Iron Maiden",
+          "track": "Hallowed Be Thy Name",
+          "genre": "Heavy Metal",
+          "debut": "1980",
+          "instrument": ""
+        },
+        {
+          "id": "198202",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Screaming For Vengeance",
+          "artist": "Judas Priest",
+          "track": "Bloodstone",
+          "genre": "Heavy Metal",
+          "debut": "1974",
+          "instrument": ""
+        },
+        {
+          "id": "198203",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Restless And Wild",
+          "artist": "Accept",
+          "track": "Restless And Wild",
+          "genre": "Heavy Metal",
+          "debut": "1979",
+          "instrument": ""
+        },
+        {
+          "id": "198204",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Black Metal",
+          "artist": "Venom",
+          "track": "Teacher's Pet",
+          "genre": "Heavy Metal",
+          "debut": "1981",
+          "instrument": ""
+        },
+        {
+          "id": "198205",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Battle Hymns",
+          "artist": "Manowar",
+          "track": "Shell Shock",
+          "genre": "Heavy Metal",
+          "debut": "1982",
+          "instrument": ""
+        },
+        {
+          "id": "198206",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Chase The Dragon",
+          "artist": "Magnum",
+          "track": "The Teacher",
+          "genre": "Heavy Metal",
+          "debut": "1978",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 1983,
+      "count": 8,
+      "top": [
+        {
+          "id": "198301",
+          "rank": "1",
+          "haveIt": true,
+          "title": "Holy Diver",
+          "artist": "Dio",
+          "track": "Rainbow in the Dark",
+          "genre": "Heavy Metal",
+          "debut": "1983",
+          "instrument": ""
+        },
+        {
+          "id": "198302",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Melissa",
+          "artist": "Mercyful Fate",
+          "track": "Into the Coven",
+          "genre": "Heavy Metal",
+          "debut": "1983",
+          "instrument": "Guitar"
+        },
+        {
+          "id": "198303",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Piece of Mind",
+          "artist": "Iron Maiden",
+          "track": "Revelations",
+          "genre": "Heavy Metal",
+          "debut": "1980",
+          "instrument": ""
+        },
+        {
+          "id": "198304",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Script For A Jester’s Tear",
+          "artist": "Marillion",
+          "track": "Garden Party",
+          "genre": "Progressive Rock",
+          "debut": "1983",
+          "instrument": ""
+        },
+        {
+          "id": "198305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Kill 'Em All",
+          "artist": "Metallica",
+          "track": "Seek & Destroy",
+          "genre": "Thrash Metal",
+          "debut": "1983",
+          "instrument": ""
+        },
+        {
+          "id": "198306",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Balls to the Wall",
+          "artist": "Accept",
+          "track": "Balls to the Wall",
+          "genre": "Heavy Metal",
+          "debut": "1979",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "198307",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Shout At The Devil",
+          "artist": "Mötley Crüe",
+          "track": "Looks That Kill",
+          "genre": "Hard Rock",
+          "debut": "1981",
+          "instrument": ""
+        },
+        {
+          "id": "198309",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Pyromania",
+          "artist": "Def Leppard",
+          "track": "Rock Rock",
+          "genre": "Hard Rock",
+          "debut": "1980",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 1984,
+      "count": 9,
+      "top": [
+        {
+          "id": "198401",
+          "rank": "1",
+          "haveIt": true,
+          "title": "Ride The Lightning",
+          "artist": "Metallica",
+          "track": "The Call of Ktulu",
+          "genre": "Thrash Metal",
+          "debut": "1983",
+          "instrument": ""
+        },
+        {
+          "id": "198402",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Powerslave",
+          "artist": "Iron Maiden",
+          "track": "2 Minutes To Midnight",
+          "genre": "Heavy Metal",
+          "debut": "1980",
+          "instrument": ""
+        },
+        {
+          "id": "198403",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Defenders Of The Faith",
+          "artist": "Judas Priest",
+          "track": "The Sentinel",
+          "genre": "Heavy Metal",
+          "debut": "1974",
+          "instrument": "Guitar"
+        },
+        {
+          "id": "198404",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Don't Break The Oath",
+          "artist": "Mercyful Fate",
+          "track": "Come to the Sabbath",
+          "genre": "Heavy Metal",
+          "debut": "1983",
+          "instrument": "Guitar"
+        },
+        {
+          "id": "198405",
+          "rank": "5",
+          "haveIt": false,
+          "title": "The Last In Line",
+          "artist": "Dio",
+          "track": "Egypt",
+          "genre": "Heavy Metal",
+          "debut": "1983",
+          "instrument": ""
+        },
+        {
+          "id": "198406",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Metal Church",
+          "artist": "Metal Church",
+          "track": "Gods Of Wrath",
+          "genre": "Heavy Metal",
+          "debut": "1984",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "198407",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Fugazy",
+          "artist": "Marillion",
+          "track": "Assassing",
+          "genre": "Progressive Rock",
+          "debut": "1983",
+          "instrument": "Drum"
+        },
+        {
+          "id": "198408",
+          "rank": "8",
+          "haveIt": false,
+          "title": "1984",
+          "artist": "Van Halen",
+          "track": "Hot For Teacher",
+          "genre": "Hard Rock",
+          "debut": "1978",
+          "instrument": ""
+        },
+        {
+          "id": "198409",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Slide It In",
+          "artist": "Whitesnake",
+          "track": "Slow An' Easy",
+          "genre": "Hard Rock",
+          "debut": "1978",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 1985,
+      "count": 10,
+      "top": [
+        {
+          "id": "198501",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Misplaced Childhood",
+          "artist": "Marillion",
+          "track": "Blind Curve",
+          "genre": "Progressive Rock",
+          "debut": "1983",
+          "instrument": ""
+        },
+        {
+          "id": "198502",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Bonded By Blood",
+          "artist": "Exodus",
+          "track": "No Love",
+          "genre": "Thrash Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198503",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Walls Of Jericho",
+          "artist": "Helloween",
+          "track": "Phantoms of Death",
+          "genre": "Speed Metal",
+          "debut": "1985",
+          "instrument": "Guitar"
+        },
+        {
+          "id": "198504",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Spreading The Disease",
+          "artist": "Anthrax",
+          "track": "Madhouse",
+          "genre": "Thrash Metal",
+          "debut": "1984",
+          "instrument": ""
+        },
+        {
+          "id": "198505",
+          "rank": "5",
+          "haveIt": false,
+          "title": "To Mega Therion",
+          "artist": "Celtic Frost",
+          "track": "Jewel Throne",
+          "genre": "Thrash Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198506",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Killing Is My Business... and Business Is Good!",
+          "artist": "Megadeth",
+          "track": "Last Rites/Loved to Deth",
+          "genre": "Thrash Metal",
+          "debut": "1985",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "198507",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Pentagram",
+          "artist": "Pentagram",
+          "track": "Relentless",
+          "genre": "Doom Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198508",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Hell Awaits",
+          "artist": "Slayer",
+          "track": "At Dawn They Sleep",
+          "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198509",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Love",
+          "artist": "The Cult",
+          "track": "The Phoenix",
+          "genre": "Hard Rock",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198510",
+          "rank": "10",
+          "haveIt": false,
+          "title": "On A Storyteller's Night",
+          "artist": "Magnum vs Accept vs Supertramp",
+          "track": "On A Storyteller's Night",
+          "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 1986,
+      "count": 10,
+      "top": [
+        {
+          "id": "198601",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Reign In Blood",
+          "artist": "Slayer",
+          "track": "Angel Of Death",
+          "genre": "Thrash Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198602",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Master Of Puppets",
+          "artist": "Metallica",
+          "track": "Master Of Puppets",
+          "genre": "Thrash Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198603",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Peace Sells",
+          "artist": "Megadeth",
+          "track": "My Last Words",
+          "genre": "Thrash Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198604",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Epicus Doomicus Metallicus",
+          "artist": "Candlemass",
+          "track": "Solitude",
+          "genre": "Doom Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198605",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Somewhere In Time",
+          "artist": "Iron Maiden",
+          "track": "Stranger In a Strange Land",
+          "genre": "Heavy Metal",
+          "debut": "1980",
+          "instrument": ""
+        },
+        {
+          "id": "198606",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Rage For Order",
+          "artist": "Queensrÿche",
+          "track": "The Killing Words",
+          "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "198607",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Slippery When Wet",
+          "artist": "Bon Jovi",
+          "track": "Wanted Dead Or Alive",
+          "genre": "Hard Rock",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198608",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Fatal Portrait",
+          "artist": "King Diamond",
+          "track": "The Jonah",
+          "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198609",
+          "rank": "9",
+          "haveIt": false,
+          "title": "The Final Countdown",
+          "artist": "Europe",
+          "track": "The Final Countdown",
+          "genre": "Hard Rock",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198610",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Awaken The Guardian",
+          "artist": "Fates Warning vs Motorhead",
+          "track": "Valley Of The Dolls",
+          "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 1987,
+      "count": 10,
+      "top": [
+        {
+          "id": "198701",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Keeper Of The Seven Keys I",
+          "artist": "Helloween",
+          "track": "Halloween",
+          "genre": "Power Metal",
+          "debut": "1985",
+          "instrument": ""
+        },
+        {
+          "id": "198702",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Appetite For Destruction",
+          "artist": "Guns N' Roses",
+          "track": "Paradise City",
+          "genre": "Hard Rock",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198703",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Abigail",
+          "artist": "King Diamond",
+          "track": "Black Horsemen",
+          "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198704",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Among The Living",
+          "artist": "Anthrax",
+          "track": "Caught In A Mosh",
+          "genre": "Thrash Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198705",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Whitesnake",
+          "artist": "Whitesnake",
+          "track": "Still Of The Night",
+          "genre": "Hard Rock",
+          "debut": "1978",
+          "instrument": ""
+        },
+        {
+          "id": "198706",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Electric",
+          "artist": "The Cult",
+          "track": "Love Removal Machine",
+          "genre": "Hard Rock",
+          "debut": "",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "198707",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Clutching At Straws",
+          "artist": "Marillion",
+          "track": "White Russian",
+          "genre": "Progressive Rock",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198708",
+          "rank": "8",
+          "haveIt": false,
+          "title": "The Ultra-Violence",
+          "artist": "Death Angel",
+          "track": "The Ultra-Violence",
+          "genre": "Thrash Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198709",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Hysteria",
+          "artist": "Def Leppard",
+          "track": "Animal",
+          "genre": "Hard Rock",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198710",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Nightfall",
+          "artist": "Candlemass",
+          "track": "At The Gallows End",
+          "genre": "Doom Metal",
+          "debut": "",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 1988,
+      "count": 10,
+      "top": [
+        {
+          "id": "198801",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Operation Mindcrime",
+          "artist": "Queensryche",
+          "track": "Suit Sister Mary",
+          "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198802",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Seventh Son Of A Seventh Son",
+          "artist": "Iron Maiden",
+          "track": "Infinite Dreams",
+          "genre": "Heavy Metal",
+          "debut": "1980",
+          "instrument": ""
+        },
+        {
+          "id": "198803",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Keeper Of The Seven Keys II",
+          "artist": "Helloween",
+          "track": "Keeper of the Seven Keys",
+          "genre": "Power Metal",
+          "debut": "1985",
+          "instrument": ""
+        },
+        {
+          "id": "198804",
+          "rank": "4",
+          "haveIt": false,
+          "title": "South Of Heaven",
+          "artist": "Slayer",
+          "track": "South Of Heaven",
+          "genre": "Thrash Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198805",
+          "rank": "5",
+          "haveIt": false,
+          "title": "The New Order",
+          "artist": "Testament",
+          "track": "Disciples Of The Watch",
+          "genre": "Thrash Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198806",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Danzig",
+          "artist": "Danzig",
+          "track": "Mother",
+          "genre": "Hard Rock",
+          "debut": "",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "198807",
+          "rank": "7",
+          "haveIt": false,
+          "title": "...And Justice For All",
+          "artist": "Metallica",
+          "track": "...And Justice For All",
+          "genre": "Thrash Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198808",
+          "rank": "8",
+          "haveIt": false,
+          "title": "New Jersey",
+          "artist": "Bon Jovi",
+          "track": "Blood On Blood",
+          "genre": "Hard Rock",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198809",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Them",
+          "artist": "King Diamond",
+          "track": "The Invisible Guests",
+          "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198810",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Open Up And Say ... Ahh!",
+          "artist": "Poison vs It Bites vs Cardiacs",
+          "track": "Nothin' But A Good Time",
+          "genre": "Hard Rock",
+          "debut": "",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 1989,
+      "count": 10,
+      "top": [
+        {
+          "id": "198901",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Conspiracy",
+          "artist": "King Diamond",
+          "track": "A Visit From The Dead",
+          "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198902",
+          "rank": "2",
+          "haveIt": false,
+          "title": "The Years Of Decay",
+          "artist": "Overkill",
+          "track": "Elimination",
+          "genre": "Thrash Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198903",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Nothing Face",
+          "artist": "Voivod",
+          "track": "The Unknown Knows",
+          "genre": "Progressive Rock",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198904",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Perfect Symmetry",
+          "artist": "Fates Warning",
+          "track": "A Fates Hands",
+          "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198905",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Seasons End",
+          "artist": "Marillion",
+          "track": "Easter",
+          "genre": "Progressive Rock",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198906",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Piece Of Time",
+          "artist": "Atheist",
+          "track": "Room With A View",
+          "genre": "Death Metal",
+          "debut": "",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "198907",
+          "rank": "7",
+          "haveIt": false,
+          "title": "The Headless Children",
+          "artist": "WASP",
+          "track": "Thunderhead",
+          "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198908",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Skid Row",
+          "artist": "Skid Row",
+          "track": "I Remember You",
+          "genre": "Hard Rock",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198909",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Follow The Blind",
+          "artist": "Blind Guardian",
+          "track": "Valhalla",
+          "genre": "Speed Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198910",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Louder Than Love",
+          "artist": "Soundgarden vs Nirvana vs World Trade",
+          "track": "Hands All Over",
+          "genre": "Grunge",
+          "debut": "",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 1990,
+      "count": 9,
+      "top": [
+        {
+          "id": "199001",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Rust In Peace",
+          "artist": "Megadeth",
+          "track": "Holy Wars",
+          "genre": "Thrash Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199002",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Left Hand Path",
+          "artist": "Entombed",
+          "track": "Left Hand Path",
+          "genre": "Death Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199003",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Seasons In The Abyss",
+          "artist": "Slayer",
+          "track": "Spirit In Black",
+          "genre": "Thrash Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199004",
+          "rank": "4",
+          "haveIt": false,
+          "title": "The Eye",
+          "artist": "King Diamond",
+          "track": "Burn",
+          "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199005",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Tales From The Twilight World",
+          "artist": "Blind Guardian",
+          "track": "The Last Candle",
+          "genre": "Speed Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199006",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Shake Your Money Maker",
+          "artist": "The Black Crowes",
+          "track": "Hard To Handle",
+          "genre": "Rock",
+          "debut": "",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "199007",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Facelift",
+          "artist": "Alice In Chains",
+          "track": "Love, Hate, Love",
+          "genre": "Grunge",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199008",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Cowboys From Hell",
+          "artist": "Pantera",
+          "track": "Cowboys From Hell",
+          "genre": "Groove Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199009",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Act III",
+          "artist": "Death Angel",
+          "track": "The Organization",
+          "genre": "Thrash Metal",
+          "debut": "",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 1991,
+      "count": 10,
+      "top": [
+        {
+          "id": "199101",
+          "rank": "1",
+          "haveIt": true,
+          "title": "Human",
+          "artist": "Death",
+          "track": "Lack Of Comprehension",
+          "genre": "Death Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199102",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Clandestine",
+          "artist": "Entombed",
+          "track": "Evilyn",
+          "genre": "Death Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199103",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Parallels",
+          "artist": "Fates Warning",
+          "track": "The Eleventh Hour",
+          "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199104",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Unquestionable Presence",
+          "artist": "Atheist",
+          "track": "An Incarnation's Dream",
+          "genre": "Death Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199105",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Horrorscope",
+          "artist": "Overkill",
+          "track": "Horrorscope",
+          "genre": "Thrash Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199106",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Badmotorfinger",
+          "artist": "Soundgarden",
+          "track": "Jesus Christ Pose",
+          "genre": "Grunge",
+          "debut": "",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "199107",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Ten",
+          "artist": "Pearl Jam",
+          "track": "Jeremy",
+          "genre": "Grunge",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199108",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Metallica",
+          "artist": "Metallica",
+          "track": "Enter Sandman",
+          "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199109",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Slave To The Grind",
+          "artist": "Skid Row",
+          "track": "Quicksand Jesus",
+          "genre": "Hard Rock",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199110",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Use Your Illusion I & II",
+          "artist": "Guns N' Roses",
+          "track": "November Rain",
+          "genre": "Hard Rock",
+          "debut": "",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 1992,
+      "count": 10,
+      "top": [
+        {
+          "id": "199201",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Images And Words",
+          "artist": "Dream Theater",
+          "track": "Take The Time",
+          "genre": "Progressive Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199202",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Somewhere Far Beyond",
+          "artist": "Blind Guardian",
+          "track": "The Bard's Song",
+          "genre": "Speed Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199203",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Blues For The Red Sun",
+          "artist": "Kyuss",
+          "track": "Freedom Run",
+          "genre": "Stoner Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199204",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Vulgar Display of Power",
+          "artist": "Pantera",
+          "track": "This Love",
+          "genre": "Groove Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199205",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Rage Against The Machine",
+          "artist": "Rage Against The Machine",
+          "track": "Bombtrack",
+          "genre": "Alternative Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199206",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Countdown To Extinction",
+          "artist": "Megadeth",
+          "track": "Skin O' My Teeth",
+          "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": "Guitar"
+        }
+      ],
+      "bonus": [
+        {
+          "id": "199207",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Dirt",
+          "artist": "Alice In Chains",
+          "track": "Rain When I Die",
+          "genre": "Grunge",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199208",
+          "rank": "8",
+          "haveIt": false,
+          "title": "The Southern Harmony And Musical Companion",
+          "artist": "The Black Crowes",
+          "track": "Remedy",
+          "genre": "Rock",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199209",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Caffeine",
+          "artist": "Faith No More",
+          "track": "Smaller And Smaller",
+          "genre": "Industrial Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199210",
+          "rank": "10",
+          "haveIt": false,
+          "title": "The Crimson Idol",
+          "artist": "WASP",
+          "track": "The Idol",
+          "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 1993,
+      "count": 9,
+      "top": [
+        {
+          "id": "199301",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Focus",
+          "artist": "Cynic",
+          "track": "I'm But a Wave To",
+          "genre": "Progressive Metal",
+          "debut": "1993",
+          "instrument": ""
+        },
+        {
+          "id": "199302",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Undertow",
+          "artist": "Tool",
+          "track": "Bottom",
+          "genre": "Progressive Rock",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199303",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Icon",
+          "artist": "Paradise Lost",
+          "track": "Forging Symphaty",
+          "genre": "Doom Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199304",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Heartwork",
+          "artist": "Carcass",
+          "track": "Heartwork",
+          "genre": "Death Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "The Outer Limits",
+          "artist": "Voivod",
+          "track": "Jack Luminous",
+          "genre": "Hard Rock",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199306",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Individual Thought Patterns",
+          "artist": "Death",
+          "track": "Trapped In A Corner",
+          "genre": "Progressive Metal",
+          "debut": "",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "199307",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Bloody Kisses",
+          "artist": "Type O Negative",
+          "track": "Black No. 1",
+          "genre": "Doom Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199308",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Angels Cry",
+          "artist": "Angra",
+          "track": "Carry On",
+          "genre": "Power Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199309",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Turn Loose The Swans",
+          "artist": "My Dying Bride",
+          "track": "Your River",
+          "genre": "Doom Metal",
+          "debut": "",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 1994,
+      "count": 10,
+      "top": [
+        {
+          "id": "199401",
+          "rank": "1",
+          "haveIt": true,
+          "title": "Welcome To Sky Valley",
+          "artist": "Kyuss",
+          "track": "Space Cadet",
+          "genre": "Stoner Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199402",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Awake",
+          "artist": "Dream Theater",
+          "track": "Scarred",
+          "genre": "Progressive Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199403",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Burn My Eyes",
+          "artist": "Machine Head",
+          "track": "Death Church",
+          "genre": "Thrash Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199404",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Superunknown",
+          "artist": "Soundgarden",
+          "track": "4th Of July",
+          "genre": "Grunge",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199405",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Smash",
+          "artist": "The Offspring",
+          "track": "It'll be a Long Time",
+          "genre": "Alternative Metal",
+          "debut": "",
+          "instrument": "Guitar"
+        },
+        {
+          "id": "199406",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Vitalogy",
+          "artist": "Pearl Jam",
+          "track": "Tremor Christ",
+          "genre": "Grunge",
+          "debut": "",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "199407",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Far Beyond Driven",
+          "artist": "Pantera",
+          "track": "I'm Broken",
+          "genre": "Groove Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199408",
+          "rank": "8",
+          "haveIt": false,
+          "title": "In The Nightside Eclipse",
+          "artist": "Emperor",
+          "track": "Towards The Pantheon",
+          "genre": "Black Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199409",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Tales From The Thousand Lakes",
+          "artist": "Amorphis",
+          "track": "The Castaway",
+          "genre": "Death Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199410",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Wildhoney",
+          "artist": "Tiamat vs Mayhem",
+          "track": "Do You Dream Of Me?",
+          "genre": "Doom Metal",
+          "debut": "",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 1995,
+      "count": 10,
+      "top": [
+        {
+          "id": "199501",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Symbolic",
+          "artist": "Death",
+          "track": "Symbolic",
+          "genre": "Progressive Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199502",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Storm of the Light's Bane",
+          "artist": "Dissection",
+          "track": "Unhallowed",
+          "genre": "Death Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199503",
+          "rank": "3",
+          "haveIt": false,
+          "title": "The Sky Moves Sideways",
+          "artist": "Porcupine Tree",
+          "track": "The Sky Moves Sideways II",
+          "genre": "Progressive Rock",
+          "debut": "1992",
+          "instrument": "Bass"
+        },
+        {
+          "id": "199504",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Imagination From The Other Side",
+          "artist": "Blind Guardian",
+          "track": "Imaginations From the Other Side",
+          "genre": "Speed Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199505",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Wolfheart",
+          "artist": "Moonspell",
+          "track": "An Erotic Alchemy",
+          "genre": "Gothic Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199506",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Draconian Times",
+          "artist": "Paradise Lost",
+          "track": "Hallowed Land",
+          "genre": "Doom Metal",
+          "debut": "",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "199507",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Orchid",
+          "artist": "Opeth",
+          "track": "Forest Of October",
+          "genre": "Progressive Metal",
+          "debut": "1995",
+          "instrument": ""
+        },
+        {
+          "id": "199508",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Slaughter Of The Soul",
+          "artist": "At The Gates",
+          "track": "Suicide Nation",
+          "genre": "Progressive Rock",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199509",
+          "rank": "9",
+          "haveIt": false,
+          "title": "(What's The Story) Morning Glory?",
+          "artist": "Oasis vs White Zombie",
+          "track": "",
+          "genre": "Rock",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199510",
+          "rank": "10",
+          "haveIt": false,
+          "title": "",
+          "artist": "Dark Tranquillity vs My Dying Bride",
+          "track": "",
+          "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 1996,
+      "count": 10,
+      "top": [
+        {
+          "id": "199601",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Crimson",
+          "artist": "Edge of Sanity",
+          "track": "Crimson",
+          "genre": "Progressive Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199602",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Morningrise",
+          "artist": "Opeth",
+          "track": "Black Rose Immortal",
+          "genre": "Progressive Metal",
+          "debut": "1995",
+          "instrument": ""
+        },
+        {
+          "id": "199603",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Ænima",
+          "artist": "Tool",
+          "track": "Pushit",
+          "genre": "Progressive Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199604",
+          "rank": "4",
+          "haveIt": false,
+          "title": "The Jester Race",
+          "artist": "In Flames",
+          "track": "Moonshield",
+          "genre": "Death Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199605",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Brave Murder Day",
+          "artist": "Katatonia",
+          "track": "Brave",
+          "genre": "Doom Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199606",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Theli",
+          "artist": "Therion",
+          "track": "Cults of the Shadow",
+          "genre": "Symphonic Metal",
+          "debut": "1991",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "199607",
+          "rank": "7",
+          "haveIt": false,
+          "title": "A Wintersunset ...",
+          "artist": "Empyrium",
+          "track": "Under Dreamskies",
+          "genre": "Doom Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199608",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Episode",
+          "artist": "Stratovarius",
+          "track": "Eternity",
+          "genre": "Power Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199609",
+          "rank": "9",
+          "haveIt": false,
+          "title": "October Rust",
+          "artist": "Type O Negative",
+          "track": "Red Water",
+          "genre": "Doom Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199610",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Through Silver in Blood",
+          "artist": "Neurosis",
+          "track": "Purify",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 1997,
+      "count": 10,
+      "top": [
+        {
+          "id": "199701",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Songs Of Moors And Misty Fields",
+          "artist": "Empyrium",
+          "track": "Ode to Melancholy",
+          "genre": "Doom Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199702",
+          "rank": "2",
+          "haveIt": false,
+          "title": "La Masquerade Infernale",
+          "artist": "Acturus",
+          "track": "Ad Astra",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199703",
+          "rank": "3",
+          "haveIt": false,
+          "title": "A Pleasant Shade Of Gray",
+          "artist": "Fates Warning",
+          "track": "A Pleasant Shade Of Gray",
+          "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199704",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Anthems To The Welkin At Dusk",
+          "artist": "Emperor",
+          "track": "The Loss & Curse of Reverence",
+          "genre": "Black Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199705",
+          "rank": "5",
+          "haveIt": false,
+          "title": "The Divine Wings of Tragedy",
+          "artist": "Symphony X",
+          "track": "The Divine Wings of Tragedy",
+          "genre": "Power Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199706",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Whoracle",
+          "artist": "In Flames",
+          "track": "Jester Script Transfigured",
+          "genre": "Death Metal",
+          "debut": "",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "199707",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Vision",
+          "artist": "Stratovarius",
+          "track": "The Abyss Of Your Eyes",
+          "genre": "Progressive Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199708",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Enthrone Darkness Triumphant",
+          "artist": "Dimmu Borgir",
+          "track": "Mourning Palace",
+          "genre": "Black Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199709",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Sehnsucht",
+          "artist": "Rammstein",
+          "track": "Spiel Mit Mir",
+          "genre": "Alternative Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199710",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Come My Fanatics",
+          "artist": "Electric Wizard",
+          "track": "Wizard In Black",
+          "genre": "Doom Metal",
+          "debut": "",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 1998,
+      "count": 10,
+      "top": [
+        {
+          "id": "199801",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Nightfall in Middle Earth",
+          "artist": "Blind Guardian",
+          "track": "Thorn",
+          "genre": "Speed Metal",
+          "debut": "1988",
+          "instrument": ""
+        },
+        {
+          "id": "199802",
+          "rank": "2",
+          "haveIt": false,
+          "title": "My Arms, Your Hearse",
+          "artist": "Opeth",
+          "track": "The Amen Corner",
+          "genre": "Progressive Metal",
+          "debut": "1995",
+          "instrument": ""
+        },
+        {
+          "id": "199803",
+          "rank": "3",
+          "haveIt": true,
+          "title": "The Sound Of Perseverance",
+          "artist": "Death",
+          "track": "Spirit Crusher",
+          "genre": "Death Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199804",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Amplifier Worship",
+          "artist": "Boris",
+          "track": "Kuruimizu",
+          "genre": "Drone Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199805",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Volvin",
+          "artist": "Therion",
+          "track": "Clavicula Nox",
+          "genre": "Symphonic Metal",
+          "debut": "1991",
+          "instrument": ""
+        },
+        {
+          "id": "199806",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Into The Electric Castle",
+          "artist": "Ayreon",
+          "track": "Amazing Flight",
+          "genre": "Progressive Metal",
+          "debut": "1995",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "199807",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Alternative 4",
+          "artist": "Anathema",
+          "track": "Fragile Dreams",
+          "genre": "Doom Metal",
+          "debut": "1993",
+          "instrument": ""
+        },
+        {
+          "id": "199808",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Something Wicked This Way Comes",
+          "artist": "Iced Earth",
+          "track": "Consequences",
+          "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199809",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Symphony Of Enchanted Lands",
+          "artist": "Rhapsody",
+          "track": "Symphony Of Enchanted Lands",
+          "genre": "Symphonic Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199810",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Liquid Tension Experiment",
+          "artist": "Liquid Tension Experiment",
+          "track": "Universal Mind",
+          "genre": "Progressive Metal",
+          "debut": "1998",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 1999,
+      "count": 10,
+      "top": [
+        {
+          "id": "199901",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Still Life",
+          "artist": "Opeth",
+          "track": "Moonlapse Vertigo",
+          "genre": "Progressive Metal",
+          "debut": "1995",
+          "instrument": ""
+        },
+        {
+          "id": "199902",
+          "rank": "2",
+          "haveIt": false,
+          "title": "At The Heart Of Winter",
+          "artist": "Immortal",
+          "track": "Solarfall",
+          "genre": "Black Metal",
+          "debut": "1992",
+          "instrument": ""
+        },
+        {
+          "id": "199903",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Pale Folklore",
+          "artist": "Agalloch",
+          "track": "She Painted Fire Across The Skyline",
+          "genre": "Folk Metal",
+          "debut": "1999",
+          "instrument": ""
+        },
+        {
+          "id": "199904",
+          "rank": "4",
+          "haveIt": false,
+          "title": "A Sombre Dance",
+          "artist": "Estatic Fear",
+          "track": "Chapter IV",
+          "genre": "Doom Metal",
+          "debut": "1996",
+          "instrument": ""
+        },
+        {
+          "id": "199905",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Judgement",
+          "artist": "Anathema",
+          "track": "Forgotten Hopes",
+          "genre": "Doom Metal",
+          "debut": "1993",
+          "instrument": ""
+        },
+        {
+          "id": "199906",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Metropolis Part 2",
+          "artist": "Dream Theater",
+          "track": "Beyond This Life",
+          "genre": "Progressive Metal",
+          "debut": "1989",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "199907",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Hatebreeder",
+          "artist": "Children Of Bodom",
+          "track": "Black Widow",
+          "genre": "Power Metal",
+          "debut": "1997",
+          "instrument": ""
+        },
+        {
+          "id": "199908",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Ecliptica",
+          "artist": "Sonata Arctica",
+          "track": "Fullmoon",
+          "genre": "Power Metal",
+          "debut": "1999",
+          "instrument": ""
+        },
+        {
+          "id": "199909",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Liquid Tension Experiment 2",
+          "artist": "Liquid Tension Experiment",
+          "track": "Acid Rain",
+          "genre": "Progressive Metal",
+          "debut": "1998",
+          "instrument": ""
+        },
+        {
+          "id": "199910",
+          "rank": "10",
+          "haveIt": false,
+          "title": "IX Equilibrium",
+          "artist": "Emperor",
+          "track": "The Warriors Of Modern Death",
+          "genre": "Black Metal",
+          "debut": "1994",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 2000,
+      "count": 10,
+      "top": [
+        {
+          "id": "200001",
+          "rank": "1",
+          "haveIt": false,
+          "title": "The Perfect Element",
+          "artist": "Pain Of Salvation",
+          "track": "In the Flesh",
+          "genre": "Progressive Rock",
+          "debut": "1997",
+          "instrument": ""
+        },
+        {
+          "id": "200002",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Awaking The Centuries",
+          "artist": "Haggard",
+          "track": "Awaking The Centuries",
+          "genre": "Symphonic Metal",
+          "debut": "1997",
+          "instrument": ""
+        },
+        {
+          "id": "200003",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Dead Heart In A Dead World",
+          "artist": "Nevermore",
+          "track": "The River Dragon Has Come",
+          "genre": "Heavy Metal",
+          "debut": "1995",
+          "instrument": ""
+        },
+        {
+          "id": "200004",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Follow The Reaper",
+          "artist": "Children Of Bodom",
+          "track": "Everytime I Die",
+          "genre": "Power Metal",
+          "debut": "1997",
+          "instrument": ""
+        },
+        {
+          "id": "200005",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Flood",
+          "artist": "Boris",
+          "track": "Flood",
+          "genre": "Drone Metal",
+          "debut": "1996",
+          "instrument": ""
+        },
+        {
+          "id": "200006",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Wishmaster",
+          "artist": "Nightwish",
+          "track": "Wishmaster",
+          "genre": "Symphonic Metal",
+          "debut": "1997",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "200007",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Lightbulb Sun",
+          "artist": "Porcupine Tree",
+          "track": "Shesmovedon",
+          "genre": "Progressive Rock",
+          "debut": "1992",
+          "instrument": ""
+        },
+        {
+          "id": "200008",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Dopethrone",
+          "artist": "Electric Wizard",
+          "track": "I, The Witchfinder",
+          "genre": "Doom Metal",
+          "debut": "1994",
+          "instrument": ""
+        },
+        {
+          "id": "200009",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Swamplord",
+          "artist": "Kalmah",
+          "track": "Dance Of The Water",
+          "genre": "Power Metal",
+          "debut": "2000",
+          "instrument": ""
+        },
+        {
+          "id": "200010",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Dawn Of Victory",
+          "artist": "Rhapsody",
+          "track": "Triumph For My Magic Steel",
+          "genre": "Power Metal",
+          "debut": "1997",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 2001,
+      "count": 10,
+      "top": [
+        {
+          "id": "200101",
+          "rank": "1",
+          "haveIt": true,
+          "title": "Blackwater Park",
+          "artist": "Opeth",
+          "track": "Blackwater Park",
+          "genre": "Progressive Metal",
+          "debut": "1995",
+          "instrument": "Guitar Riff"
+        },
+        {
+          "id": "200102",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Terria",
+          "artist": "Devin Townsend",
+          "track": "Earth Day",
+          "genre": "Progressive Metal",
+          "debut": "1996",
+          "instrument": ""
+        },
+        {
+          "id": "200103",
+          "rank": "3",
+          "haveIt": true,
+          "title": "Lateralus",
+          "artist": "Tool",
+          "track": "Parabola",
+          "genre": "Progressive Rock",
+          "debut": "1993",
+          "instrument": "Drums"
+        },
+        {
+          "id": "200104",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Last Fair Deal Gone Down",
+          "artist": "Katatonia",
+          "track": "I Transpire",
+          "genre": "Doom Metal",
+          "debut": "1993",
+          "instrument": ""
+        },
+        {
+          "id": "200105",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Karma",
+          "artist": "Kamelot",
+          "track": "Elizabeth",
+          "genre": "Power Metal",
+          "debut": "1995",
+          "instrument": ""
+        },
+        {
+          "id": "200106",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Voimasta Ja Kunniasta",
+          "artist": "Moonsorrow",
+          "track": "Kylan Paassa",
+          "genre": "Folk Metal",
+          "debut": "2001",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "200107",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Secret of the Runes",
+          "artist": "Therion",
+          "track": "Midgard",
+          "genre": "Symphonic Metal",
+          "debut": "1991",
+          "instrument": ""
+        },
+        {
+          "id": "200108",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Puritanical Euphoric Misanthropia",
+          "artist": "Dimmu Borgir",
+          "track": "King Of The Carnival Creation",
+          "genre": "Black Metal",
+          "debut": "1995",
+          "instrument": ""
+        },
+        {
+          "id": "200109",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Muttter",
+          "artist": "Rammstein",
+          "track": "Mein Herz Brennt",
+          "genre": "Folk Metal",
+          "debut": "1995",
+          "instrument": ""
+        },
+        {
+          "id": "200110",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Silence",
+          "artist": "Sonata Arctica",
+          "track": "False News Travel Fast",
+          "genre": "Power Metal",
+          "debut": "1999",
+          "instrument": "Vocals"
+        }
+      ]
+    },
+    {
+      "year": 2002,
+      "count": 10,
+      "top": [
+        {
+          "id": "200201",
+          "rank": "1",
+          "haveIt": false,
+          "title": "The Mantle",
+          "artist": "Agalloch",
+          "track": "In The Shadow Of Our Pale Companion",
+          "genre": "Doom Metal",
+          "debut": "1999",
+          "instrument": ""
+        },
+        {
+          "id": "200202",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Sons Of Northern Darkness",
+          "artist": "Immortal",
+          "track": "Beyond the North Waves",
+          "genre": "Black Metal",
+          "debut": "1992",
+          "instrument": ""
+        },
+        {
+          "id": "200203",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Deliverance",
+          "artist": "Opeth",
+          "track": "Deliverance",
+          "genre": "Progressive Metal",
+          "debut": "1995",
+          "instrument": ""
+        },
+        {
+          "id": "200204",
+          "rank": "4",
+          "haveIt": true,
+          "title": "Remission",
+          "artist": "Mastodon",
+          "track": "Trilobite",
+          "genre": "Sludge Metal",
+          "debut": "2002",
+          "instrument": "Drums"
+        },
+        {
+          "id": "200205",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Remedy Lane",
+          "artist": "Pain Of Salvation",
+          "track": "A Trace of Blood",
+          "genre": "Progressive Rock",
+          "debut": "1997",
+          "instrument": ""
+        },
+        {
+          "id": "200206",
+          "rank": "6",
+          "haveIt": false,
+          "title": "In Absentia",
+          "artist": "Porcupine Tree",
+          "track": "Wedding Nails",
+          "genre": "Progressive Rock",
+          "debut": "1992",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "200207",
+          "rank": "7",
+          "haveIt": false,
+          "title": "The Sham Mirrors",
+          "artist": "Arcturus",
+          "track": "Nightmare Heaven",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "1996",
+          "instrument": ""
+        },
+        {
+          "id": "200208",
+          "rank": "8",
+          "haveIt": false,
+          "title": "The Odyssey",
+          "artist": "Symphony X",
+          "track": "Acollade II",
+          "genre": "Progressive Metal",
+          "debut": "1994",
+          "instrument": ""
+        },
+        {
+          "id": "200209",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Oceanic",
+          "artist": "ISIS",
+          "track": "Carry",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2000",
+          "instrument": ""
+        },
+        {
+          "id": "200210",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Century Child",
+          "artist": "Nightwish vs Behemoth",
+          "track": "Bless The Child",
+          "genre": "Symphonic Metal",
+          "debut": "1997",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 2003,
+      "count": 10,
+      "top": [
+        {
+          "id": "200301",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Out Of Myself",
+          "artist": "Riverside",
+          "track": "The Same River",
+          "genre": "Progressive Metal",
+          "debut": "2003",
+          "instrument": ""
+        },
+        {
+          "id": "200302",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Damnation",
+          "artist": "Opeth",
+          "track": "To Rid The Desease",
+          "genre": "Progressive Rock",
+          "debut": "1995",
+          "instrument": ""
+        },
+        {
+          "id": "200303",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Viva Emptiness",
+          "artist": "Katatonia",
+          "track": "Burn the Remembrance",
+          "genre": "Doom Metal",
+          "debut": "1993",
+          "instrument": ""
+        },
+        {
+          "id": "200304",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Sumerian Daemons",
+          "artist": "Septicflesh",
+          "track": "Virtues Of The Beast",
+          "genre": "Death Metal",
+          "debut": "1994",
+          "instrument": ""
+        },
+        {
+          "id": "200305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Boris At Last",
+          "artist": "Boris",
+          "track": "Feedbacker, Pt. 2",
+          "genre": "Drone Metal",
+          "debut": "1996",
+          "instrument": ""
+        },
+        {
+          "id": "200306",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Below The Lights",
+          "artist": "Enslaved",
+          "track": "The Crossing",
+          "genre": "Progressive Metal",
+          "debut": "1994",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "200307",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Deloused In The Comatorium",
+          "artist": "The Mars Volta",
+          "track": "Cicatriz Esp",
+          "genre": "Progressive Metal",
+          "debut": "2003",
+          "instrument": ""
+        },
+        {
+          "id": "200308",
+          "rank": "8",
+          "haveIt": false,
+          "title": "The Phantom Agony",
+          "artist": "Epica",
+          "track": "The Phantom Agony",
+          "genre": "Symphonic Metal",
+          "debut": "2003",
+          "instrument": ""
+        },
+        {
+          "id": "200309",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Epica",
+          "artist": "Kamelot",
+          "track": "The Edge Of Paradise",
+          "genre": "Power Metal",
+          "debut": "1995",
+          "instrument": ""
+        },
+        {
+          "id": "200310",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Kivenkantaja",
+          "artist": "Moonsorrow",
+          "track": "Raunioilla",
+          "genre": "Folk Metal",
+          "debut": "2001",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 2004,
+      "count": 10,
+      "top": [
+        {
+          "id": "200401",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Leviathan",
+          "artist": "Mastodon",
+          "track": "Hearts Alive",
+          "genre": "Sludge Metal",
+          "debut": "2002",
+          "instrument": ""
+        },
+        {
+          "id": "200402",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Panopticon",
+          "artist": "ISIS",
+          "track": "In Fiction",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2000",
+          "instrument": ""
+        },
+        {
+          "id": "200403",
+          "rank": "3",
+          "haveIt": true,
+          "title": "Once",
+          "artist": "Nightwish",
+          "track": "Ghost Love Score",
+          "genre": "Symphonic Metal",
+          "debut": "1997",
+          "instrument": ""
+        },
+        {
+          "id": "200404",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Eppur Si Muove",
+          "artist": "Haggard",
+          "track": "Eppur Si Muove",
+          "genre": "Symphonic Metal",
+          "debut": "1997",
+          "instrument": ""
+        },
+        {
+          "id": "200405",
+          "rank": "5",
+          "haveIt": false,
+          "title": "The Human Equation",
+          "artist": "Ayreon",
+          "track": "Voices",
+          "genre": "Progressive Metal",
+          "debut": "1995",
+          "instrument": ""
+        },
+        {
+          "id": "200406",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Demigod",
+          "artist": "Behemoth",
+          "track": "The Reign Ov Shemsu-Hor",
+          "genre": "Death Metal",
+          "debut": "1995",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "200407",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Isa",
+          "artist": "Enslaved",
+          "track": "Bounded By Allegiance",
+          "genre": "Black Metal",
+          "debut": "1994",
+          "instrument": ""
+        },
+        {
+          "id": "200408",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Be",
+          "artist": "Pain Of Salvation",
+          "track": "Dea Pecuniae",
+          "genre": "Progressive Rock",
+          "debut": "1997",
+          "instrument": ""
+        },
+        {
+          "id": "200409",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Mabool",
+          "artist": "Orphaned Land",
+          "track": "The Storm Still Rage Inside",
+          "genre": "Folk Metal",
+          "debut": "1994",
+          "instrument": ""
+        },
+        {
+          "id": "200410",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Wintersun",
+          "artist": "Wintersun",
+          "track": "Death And The Healing",
+          "genre": "Power Metal",
+          "debut": "2004",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 2005,
+      "count": 10,
+      "top": [
+        {
+          "id": "200501",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Pink",
+          "artist": "Boris",
+          "track": "Blackout",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "1996",
+          "instrument": ""
+        },
+        {
+          "id": "200502",
+          "rank": "2",
+          "haveIt": false,
+          "title": "The Gathering Wilderness",
+          "artist": "Primordial",
+          "track": "The Coffin Ships",
+          "genre": "Black Metal",
+          "debut": "1995",
+          "instrument": ""
+        },
+        {
+          "id": "200503",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Frances The Mute",
+          "artist": "The Mars Volta",
+          "track": "Cygnus...Vismund Cygnus",
+          "genre": "Progressive Rock",
+          "debut": "2003",
+          "instrument": ""
+        },
+        {
+          "id": "200504",
+          "rank": "4",
+          "haveIt": false,
+          "title": "From Mars To Sirius",
+          "artist": "Gojira",
+          "track": "Flying Whales",
+          "genre": "Death Metal",
+          "debut": "2001",
+          "instrument": ""
+        },
+        {
+          "id": "200505",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Blessed Black Wings",
+          "artist": "High On Fire",
+          "track": "The Face Of Oblivion",
+          "genre": "Stoner Metal",
+          "debut": "2000",
+          "instrument": ""
+        },
+        {
+          "id": "200506",
+          "rank": "6",
+          "haveIt": false,
+          "title": "The Fire In Our Throats Will Beckon The Thaw",
+          "artist": "Pelican",
+          "track": "Last Day Of Winter",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2003",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "200507",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Second Life Syndrome",
+          "artist": "Riverside",
+          "track": "Volte-Face",
+          "genre": "Progressive Rock",
+          "debut": "2003",
+          "instrument": ""
+        },
+        {
+          "id": "200508",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Arcane Rain Fell",
+          "artist": "Draconian",
+          "track": "Death, Come Near Me",
+          "genre": "Doom Metal",
+          "debut": "2003",
+          "instrument": ""
+        },
+        {
+          "id": "200509",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Ghost Reveries",
+          "artist": "Opeth",
+          "track": "The Grand Conjuration",
+          "genre": "Progressive Metal",
+          "debut": "1995",
+          "instrument": ""
+        },
+        {
+          "id": "200510",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Deadwing",
+          "artist": "Porcupine Tree vs Karnivool",
+          "track": "Deadwing",
+          "genre": "Progressive Rock",
+          "debut": "1992",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 2006,
+      "count": 10,
+      "top": [
+        {
+          "id": "200601",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Blood Mountain",
+          "artist": "Mastodon",
+          "track": "Sleeping Giant",
+          "genre": "Progressive Metal",
+          "debut": "2002",
+          "instrument": ""
+        },
+        {
+          "id": "200602",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Ashes Against The Grain",
+          "artist": "Agalloch",
+          "track": "Fire Above, Ice Below",
+          "genre": "Doom Metal",
+          "debut": "1999",
+          "instrument": ""
+        },
+        {
+          "id": "200603",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Diadem Of 12 Stars",
+          "artist": "Wolves in the Throne Room",
+          "track": "Face In A Night Time Mirror",
+          "genre": "Black Metal",
+          "debut": "2006",
+          "instrument": ""
+        },
+        {
+          "id": "200604",
+          "rank": "4",
+          "haveIt": false,
+          "title": "The Butcher's Ballroom",
+          "artist": "Diablo Swing Orchestra",
+          "track": "Velvet Embracer",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2006",
+          "instrument": ""
+        },
+        {
+          "id": "200605",
+          "rank": "5",
+          "haveIt": false,
+          "title": "In The Abcense Of Truth",
+          "artist": "ISIS",
+          "track": "Over Root And Thorn",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2000",
+          "instrument": ""
+        },
+        {
+          "id": "200606",
+          "rank": "6",
+          "haveIt": false,
+          "title": "The Great Cold Distance",
+          "artist": "Katatonia",
+          "track": "In the White",
+          "genre": "Doom Metal",
+          "debut": "1993",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "200607",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Milliontown",
+          "artist": "Frost*",
+          "track": "Black Light Machine",
+          "genre": "Progressive Rock",
+          "debut": "2006",
+          "instrument": ""
+        },
+        {
+          "id": "200608",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Void",
+          "artist": "Intronaut",
+          "track": "Teledildonic",
+          "genre": "Sludge Metal",
+          "debut": "2006",
+          "instrument": ""
+        },
+        {
+          "id": "200609",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Ruun",
+          "artist": "Enslaved",
+          "track": "Entroper",
+          "genre": "Black Metal",
+          "debut": "1994",
+          "instrument": ""
+        },
+        {
+          "id": "200610",
+          "rank": "10",
+          "haveIt": false,
+          "title": "10,000 Days",
+          "artist": "Tool",
+          "track": "The Pot",
+          "genre": "Progressive Rock",
+          "debut": "1993",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 2007,
+      "count": 10,
+      "top": [
+        {
+          "id": "200701",
+          "rank": "1",
+          "haveIt": true,
+          "title": "The Red Album",
+          "artist": "Baroness",
+          "track": "Wailing Wintry Wind",
+          "genre": "Stoner Metal",
+          "debut": "2007",
+          "instrument": ""
+        },
+        {
+          "id": "200702",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Souvenirs D'un Autre Monde",
+          "artist": "Alcest",
+          "track": "Ciel Errant",
+          "genre": "Black Metal",
+          "debut": "2007",
+          "instrument": ""
+        },
+        {
+          "id": "200703",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Precambrain",
+          "artist": "The Ocean",
+          "track": "Rhyacian",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2004",
+          "instrument": ""
+        },
+        {
+          "id": "200704",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Two Hunters",
+          "artist": "Wolves In The Throne Room",
+          "track": "Cleansing",
+          "genre": "Black Metal",
+          "debut": "2006",
+          "instrument": ""
+        },
+        {
+          "id": "200705",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Death Is This Communion",
+          "artist": "High on Fire",
+          "track": "Death Is This Communion",
+          "genre": "Stoner Metal",
+          "debut": "2000",
+          "instrument": "Drums"
+        },
+        {
+          "id": "200706",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Satellite Bay",
+          "artist": "Long Distance Calling",
+          "track": "The Very Last Day",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2007",
+          "instrument": "Atmosphere"
+        }
+      ],
+      "bonus": [
+        {
+          "id": "200707",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Ziltoid The Omniscient",
+          "artist": "Devin Townsend",
+          "track": "By Your Command",
+          "genre": "Progressive Metal",
+          "debut": "1996",
+          "instrument": ""
+        },
+        {
+          "id": "200708",
+          "rank": "8",
+          "haveIt": false,
+          "title": "To the Nameless Dead",
+          "artist": "Primordial",
+          "track": "As Rome Burns",
+          "genre": "Black Metal",
+          "debut": "1995",
+          "instrument": ""
+        },
+        {
+          "id": "200709",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Sola Scriptura",
+          "artist": "Neal Morse",
+          "track": "The Door",
+          "genre": "Progressive Rock",
+          "debut": "1999",
+          "instrument": ""
+        },
+        {
+          "id": "200710",
+          "rank": "10",
+          "haveIt": true,
+          "title": "Fear Of A Blank Planet",
+          "artist": "Porcupine Tree",
+          "track": "Anesthetize",
+          "genre": "Progressive Metal",
+          "debut": "1992",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 2008,
+      "count": 9,
+      "top": [
+        {
+          "id": "200801",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Assassins: Black Meddle",
+          "artist": "Nachtmystium",
+          "track": "Seasick",
+          "genre": "Black Metal",
+          "debut": "2002",
+          "instrument": ""
+        },
+        {
+          "id": "200802",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Insurgentes",
+          "artist": "Steven Wilson",
+          "track": "No Twilight Within The Courts Of The Sun",
+          "genre": "Progressive Rock",
+          "debut": "2008",
+          "instrument": ""
+        },
+        {
+          "id": "200803",
+          "rank": "3",
+          "haveIt": false,
+          "title": "The Way Of All Flesh",
+          "artist": "Gojira",
+          "track": "The Art Of Dying",
+          "genre": "Death Metal",
+          "debut": "2001",
+          "instrument": ""
+        },
+        {
+          "id": "200804",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Mercy Falls",
+          "artist": "Seventh Wonder",
+          "track": "Unbreakable",
+          "genre": "Progressive Metal",
+          "debut": "2005",
+          "instrument": "Vocals"
+        },
+        {
+          "id": "200805",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Gods Of The Earth",
+          "artist": "The Sword",
+          "track": "The Black River",
+          "genre": "Stoner Metal",
+          "debut": "2006",
+          "instrument": ""
+        },
+        {
+          "id": "200806",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Watershed",
+          "artist": "Opeth",
+          "track": "Heir Apparent",
+          "genre": "Progressive Metal",
+          "debut": "1995",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "200807",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Communion",
+          "artist": "Septicflesh",
+          "track": "Persepolis",
+          "genre": "Death Metal",
+          "debut": "1994",
+          "instrument": ""
+        },
+        {
+          "id": "200808",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Station",
+          "artist": "Russian Circles",
+          "track": "Harper Lewis",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2006",
+          "instrument": "Atmosphere"
+        },
+        {
+          "id": "200809",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Board Up the House",
+          "artist": "Genghis Tron",
+          "track": "Relief",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2006",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 2009,
+      "count": 10,
+      "top": [
+        {
+          "id": "200901",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Tall Poppy Syndrome",
+          "artist": "Leprous",
+          "track": "White",
+          "genre": "Progressive Metal",
+          "debut": "2009",
+          "instrument": ""
+        },
+        {
+          "id": "200902",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Anno Domini High Definition",
+          "artist": "Riverside",
+          "track": "Left Out",
+          "genre": "Progressive Rock",
+          "debut": "2003",
+          "instrument": ""
+        },
+        {
+          "id": "200903",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Blue Record",
+          "artist": "Baroness",
+          "track": "Swollen and Halo",
+          "genre": "Sludge Metal",
+          "debut": "2007",
+          "instrument": ""
+        },
+        {
+          "id": "200904",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Cosmogenesis",
+          "artist": "Obscura",
+          "track": "Orbital Elements",
+          "genre": "Death Metal",
+          "debut": "2006",
+          "instrument": ""
+        },
+        {
+          "id": "200905",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Avoid The Light",
+          "artist": "Long Distance Calling",
+          "track": "Black Paper Planes",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2007",
+          "instrument": ""
+        },
+        {
+          "id": "200906",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Sound Awake",
+          "artist": "Karnivool",
+          "track": "New Day",
+          "genre": "Progressive Rock",
+          "debut": "2005",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "200907",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Black Future",
+          "artist": "Vektor",
+          "track": "Forests Of Legend",
+          "genre": "Thrash Metal",
+          "debut": "2009",
+          "instrument": ""
+        },
+        {
+          "id": "200908",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Aava Tuulen Maa",
+          "artist": "Kauan",
+          "track": "Föhn",
+          "genre": "Folk Metal",
+          "debut": "2007",
+          "instrument": ""
+        },
+        {
+          "id": "200909",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Sing-Along Songs For The Damned & Delirious",
+          "artist": "Diablo Swing Orchestra",
+          "track": "Stratosphere Serenade",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2006",
+          "instrument": ""
+        },
+        {
+          "id": "200910",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Kold",
+          "artist": "Solstafir vs Thy Catafalque vs Architects vs Red Fang",
+          "track": "",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2002",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 2010,
+      "count": 9,
+      "top": [
+        {
+          "id": "201001",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Écailles de lune",
+          "artist": "Alcest",
+          "track": "Sur l'ocean couleur de fer",
+          "genre": "Black Metal",
+          "debut": "2007",
+          "instrument": ""
+        },
+        {
+          "id": "201002",
+          "rank": "2",
+          "haveIt": false,
+          "title": "After",
+          "artist": "Ihsahn",
+          "track": "Austere",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2006",
+          "instrument": ""
+        },
+        {
+          "id": "201003",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Legacy",
+          "artist": "Hypnos 69",
+          "track": "An Aerial Architect",
+          "genre": "Progressive Rock",
+          "debut": "2002",
+          "instrument": ""
+        },
+        {
+          "id": "201004",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Aquarius",
+          "artist": "Haken",
+          "track": "Streams",
+          "genre": "Progressive Metal",
+          "debut": "2010",
+          "instrument": ""
+        },
+        {
+          "id": "201005",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Addicts: Black Meddle",
+          "artist": "Nachtmystium",
+          "track": "Th End Is Eternal",
+          "genre": "Black Metal",
+          "debut": "2002",
+          "instrument": ""
+        },
+        {
+          "id": "201006",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Spiral Shadow",
+          "artist": "Kylesa",
+          "track": "Spiral Shadow",
+          "genre": "Stoner Metal",
+          "debut": "2002",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "201007",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Kvelertak",
+          "artist": "Kvelertak",
+          "track": "Offernat",
+          "genre": "Hard Rock",
+          "debut": "2010",
+          "instrument": ""
+        },
+        {
+          "id": "201008",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Opus Eponymous",
+          "artist": "Ghost",
+          "track": "Stand By Him",
+          "genre": "Heavy Metal",
+          "debut": "2010",
+          "instrument": ""
+        },
+        {
+          "id": "201009",
+          "rank": "9",
+          "haveIt": false,
+          "title": "The Great Scape",
+          "artist": "Seventh Wonder",
+          "track": "Alley Cat",
+          "genre": "Progressive Metal",
+          "debut": "2005",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 2011,
+      "count": 10,
+      "top": [
+        {
+          "id": "201101",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Dead Roots Stirring",
+          "artist": "Elder",
+          "track": "The End",
+          "genre": "Stoner Metal",
+          "debut": "2008",
+          "instrument": ""
+        },
+        {
+          "id": "201102",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Bilateral",
+          "artist": "Leprous",
+          "track": "Forced Entry",
+          "genre": "Progressive Metal",
+          "debut": "2009",
+          "instrument": ""
+        },
+        {
+          "id": "201103",
+          "rank": "3",
+          "haveIt": false,
+          "title": "No Help For The Mighty Ones",
+          "artist": "SubRosa",
+          "track": "Beneath The Crown",
+          "genre": "Doom Metal",
+          "debut": "2008",
+          "instrument": "Atmosphere"
+        },
+        {
+          "id": "201104",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Celestial Lineage",
+          "artist": "Wolves In The Throne Room",
+          "track": "Astral Blood",
+          "genre": "Black Metal",
+          "debut": "2006",
+          "instrument": ""
+        },
+        {
+          "id": "201105",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Agony",
+          "artist": "Fleshgod",
+          "track": "The Egoism",
+          "genre": "Symphonic Metal",
+          "debut": "2009",
+          "instrument": ""
+        },
+        {
+          "id": "201106",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Omnivium",
+          "artist": "Obscura",
+          "track": "Prismal Dawn",
+          "genre": "Progressive Metal",
+          "debut": "2006",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "201107",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Svartir Sandar",
+          "artist": "Solstafir",
+          "track": "Fjara",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2002",
+          "instrument": ""
+        },
+        {
+          "id": "201108",
+          "rank": "8",
+          "haveIt": false,
+          "title": "The World; The Flesh: The Devil",
+          "artist": "In Solitude",
+          "track": "Demons",
+          "genre": "Heavy Metal",
+          "debut": "2008",
+          "instrument": ""
+        },
+        {
+          "id": "201109",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Visions",
+          "artist": "Haken",
+          "track": "Visions",
+          "genre": "Progressive Metal",
+          "debut": "2010",
+          "instrument": ""
+        },
+        {
+          "id": "201110",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Long Distance Calling",
+          "artist": "Long Distance Calling vs Red Fang",
+          "track": "Timebends",
+          "genre": "Progressive Rock",
+          "debut": "2006",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 2012,
+      "count": 9,
+      "top": [
+        {
+          "id": "201201",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Portal Of I",
+          "artist": "Ne Obliviscaris",
+          "track": "And Plague Flowers the Kaleidoscope",
+          "genre": "Progressive Metal",
+          "debut": "2012",
+          "instrument": ""
+        },
+        {
+          "id": "201202",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Sorrow And Extinction",
+          "artist": "Pallbearer",
+          "track": "Foreigner",
+          "genre": "Progressive Rock",
+          "debut": "2012",
+          "instrument": ""
+        },
+        {
+          "id": "201203",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Les Voyages de l'ame",
+          "artist": "Alcest",
+          "track": "La ou naissent les couleurs nouvelles",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2007",
+          "instrument": ""
+        },
+        {
+          "id": "201204",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Kentucky",
+          "artist": "Panopticon",
+          "track": "Black Soot And Red Blood",
+          "genre": "Folk Metal",
+          "debut": "2008",
+          "instrument": ""
+        },
+        {
+          "id": "201205",
+          "rank": "5",
+          "haveIt": false,
+          "title": "With Hearts Toward None",
+          "artist": "Mgla",
+          "track": "II",
+          "genre": "Black Metal",
+          "debut": "2008",
+          "instrument": ""
+        },
+        {
+          "id": "201206",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Skylight",
+          "artist": "Atoma",
+          "track": "Resonance",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2012",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "201207",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Yellow & Green",
+          "artist": "Baroness",
+          "track": "March To The Sea",
+          "genre": "Stoner Metal",
+          "debut": "2007",
+          "instrument": ""
+        },
+        {
+          "id": "201208",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Woods 5",
+          "artist": "Woods of Ypres",
+          "track": "Modern Life Architecture",
+          "genre": "Gothic Metal",
+          "debut": "2004",
+          "instrument": ""
+        },
+        {
+          "id": "201210",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Lights Out",
+          "artist": "Graveyard",
+          "track": "Hard Times Lovin'",
+          "genre": "Rock",
+          "debut": "2007",
+          "instrument": "Vocals"
+        }
+      ]
+    },
+    {
+      "year": 2013,
+      "count": 10,
+      "top": [
+        {
+          "id": "201301",
+          "rank": "1",
+          "haveIt": false,
+          "title": "The Mountain",
+          "artist": "Haken",
+          "track": "Falling Back to Earth",
+          "genre": "Progressive Metal",
+          "debut": "2010",
+          "instrument": ""
+        },
+        {
+          "id": "201302",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Sunbather",
+          "artist": "Deafheaven",
+          "track": "Vertigo",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2011",
+          "instrument": ""
+        },
+        {
+          "id": "201303",
+          "rank": "3",
+          "haveIt": false,
+          "title": "The Raven That Refused to Sing",
+          "artist": "Steven Wilson",
+          "track": "Luminol",
+          "genre": "Progressive Rock",
+          "debut": "2008",
+          "instrument": ""
+        },
+        {
+          "id": "201304",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Pelagial",
+          "artist": "The Ocean",
+          "track": "Bathyalpelagic",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2004",
+          "instrument": ""
+        },
+        {
+          "id": "201305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "The Formulas Of Death",
+          "artist": "Tribulation",
+          "track": "Suspiria",
+          "genre": "Gothic Metal",
+          "debut": "2009",
+          "instrument": ""
+        },
+        {
+          "id": "201306",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Sister",
+          "artist": "In Solitude",
+          "track": "A Buried Sun",
+          "genre": "Heavy Metal",
+          "debut": "2008",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "201307",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Coal",
+          "artist": "Leprous",
+          "track": "The Valley",
+          "genre": "Progressive Metal",
+          "debut": "2009",
+          "instrument": ""
+        },
+        {
+          "id": "201308",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Runaljod - Yggdrasil",
+          "artist": "Wardruna",
+          "track": "NaudiR",
+          "genre": "Folk Metal",
+          "debut": "2009",
+          "instrument": ""
+        },
+        {
+          "id": "201309",
+          "rank": "9",
+          "haveIt": false,
+          "title": "More Constant Than The Gods",
+          "artist": "SubRosa",
+          "track": "Fat Of The Ram",
+          "genre": "Doom Metal",
+          "debut": "2008",
+          "instrument": ""
+        },
+        {
+          "id": "201310",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Rites of Separation",
+          "artist": "Agrimonia vs Oranssi Pazuzu",
+          "track": "Talion",
+          "genre": "Black Metal",
+          "debut": "2010",
+          "instrument": "Guitar Riff"
+        }
+      ]
+    },
+    {
+      "year": 2014,
+      "count": 9,
+      "top": [
+        {
+          "id": "201401",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Foundations Of Burden",
+          "artist": "Pallbearer",
+          "track": "Watcher in the Dark",
+          "genre": "Doom Metal",
+          "debut": "2012",
+          "instrument": ""
+        },
+        {
+          "id": "201402",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Citadel",
+          "artist": "Ne Obliviscaris",
+          "track": "Devourme Colossus",
+          "genre": "Progressive Metal",
+          "debut": "2012",
+          "instrument": ""
+        },
+        {
+          "id": "201403",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Savage Gold",
+          "artist": "Tombs",
+          "track": "Portraits",
+          "genre": "Sludge Metal",
+          "debut": "2009",
+          "instrument": ""
+        },
+        {
+          "id": "201404",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Melana Chasmata",
+          "artist": "Triptykon",
+          "track": "Altar of Deceit",
+          "genre": "Gothic Metal",
+          "debut": "2010",
+          "instrument": ""
+        },
+        {
+          "id": "201405",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Roads To The North",
+          "artist": "Panopticon",
+          "track": "Capricious Miles",
+          "genre": "Black Metal",
+          "debut": "2008",
+          "instrument": ""
+        },
+        {
+          "id": "201406",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Nux Vomica",
+          "artist": "Nux Vomica",
+          "track": "Reeling",
+          "genre": "Death Metal",
+          "debut": "2007",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "201407",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Otta",
+          "artist": "Solstafir",
+          "track": "Otta",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2002",
+          "instrument": ""
+        },
+        {
+          "id": "201408",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Ecdysis",
+          "artist": "Horrendous",
+          "track": "The Stranger",
+          "genre": "Death Metal",
+          "debut": "2012",
+          "instrument": ""
+        },
+        {
+          "id": "201409",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Emergence",
+          "artist": "Shylmagoghnar",
+          "track": "Edin In Ashes",
+          "genre": "Death Metal",
+          "debut": "2014",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 2015,
+      "count": 10,
+      "top": [
+        {
+          "id": "201501",
+          "rank": "1",
+          "haveIt": false,
+          "title": "New Bermuda",
+          "artist": "Deafheaven",
+          "track": "Baby Blue",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2011",
+          "instrument": ""
+        },
+        {
+          "id": "201502",
+          "rank": "2",
+          "haveIt": false,
+          "title": "The Children Of The Night",
+          "artist": "Tribulation",
+          "track": "Winds",
+          "genre": "Gothic Metal",
+          "debut": "2009",
+          "instrument": ""
+        },
+        {
+          "id": "201503",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Hand. Cannot. Erase.",
+          "artist": "Steven Wilson",
+          "track": "Home Invasion",
+          "genre": "Progressive Metal",
+          "debut": "2008",
+          "instrument": ""
+        },
+        {
+          "id": "201504",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Lore",
+          "artist": "Elder",
+          "track": "Legend",
+          "genre": "Stoner Metal",
+          "debut": "2008",
+          "instrument": ""
+        },
+        {
+          "id": "201505",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Sorni Nai",
+          "artist": "Kauan",
+          "track": "Akva",
+          "genre": "Folk Metal",
+          "debut": "2007",
+          "instrument": ""
+        },
+        {
+          "id": "201506",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Exercises In Futility",
+          "artist": "Mgla",
+          "track": "IV",
+          "genre": "Black Metal",
+          "debut": "2008",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "201507",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Bloom",
+          "artist": "Caligula's Horse",
+          "track": "Marigold",
+          "genre": "Progressive Metal",
+          "debut": "2011",
+          "instrument": ""
+        },
+        {
+          "id": "201508",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Sleep at the Edge of the Earth",
+          "artist": "Wilderun",
+          "track": "Ash Memory",
+          "genre": "Progressive Metal",
+          "debut": "2012",
+          "instrument": ""
+        },
+        {
+          "id": "201509",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Deeper Than Sky",
+          "artist": "VHOL",
+          "track": "Deeper Than Sky",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2013",
+          "instrument": ""
+        },
+        {
+          "id": "201510",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Purple",
+          "artist": "Baroness vs Rivers of Nihil",
+          "track": "?",
+          "genre": "Stoner Metal",
+          "debut": "2007",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 2016,
+      "count": 10,
+      "top": [
+        {
+          "id": "201601",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Hour of the Nightingale",
+          "artist": "Trees of Eternity",
+          "track": "Gallows Bird",
+          "genre": "Gothic Metal",
+          "debut": "2016",
+          "instrument": ""
+        },
+        {
+          "id": "201602",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Devil Is Fine",
+          "artist": "Zeal & Ardor",
+          "track": "Devil Is Fine",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2016",
+          "instrument": ""
+        },
+        {
+          "id": "201603",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Chained To Oblivion",
+          "artist": "Spirit Adrift",
+          "track": "Marzanna",
+          "genre": "Stoner Metal",
+          "debut": "2016",
+          "instrument": ""
+        },
+        {
+          "id": "201604",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Kodama",
+          "artist": "Alcest",
+          "track": "Kodama",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2007",
+          "instrument": ""
+        },
+        {
+          "id": "201605",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Sumerlands",
+          "artist": "Sumerlands",
+          "track": "Haunted Forever",
+          "genre": "Heavy Metal",
+          "debut": "2016",
+          "instrument": ""
+        },
+        {
+          "id": "201606",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Varahtelija",
+          "artist": "Oranssi Pazuzu",
+          "track": "Saturaatio",
+          "genre": "Black Metal",
+          "debut": "2009",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "201607",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Terminal Redux",
+          "artist": "Vektor",
+          "track": "LCD",
+          "genre": "Thrash Metal",
+          "debut": "2009",
+          "instrument": ""
+        },
+        {
+          "id": "201608",
+          "rank": "8",
+          "haveIt": false,
+          "title": "King",
+          "artist": "Fleshgod",
+          "track": "The Fool",
+          "genre": "Symphonic Metal",
+          "debut": "2009",
+          "instrument": ""
+        },
+        {
+          "id": "201609",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Akróasis",
+          "artist": "Obscura",
+          "track": "Ten Sepiroth",
+          "genre": "Progressive Metal",
+          "debut": "2006",
+          "instrument": ""
+        },
+        {
+          "id": "201610",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Arktis.",
+          "artist": "Ihsahn vs Khemmis",
+          "track": "My Heart Is Of The North",
+          "genre": "Progressive Metal",
+          "debut": "2006",
+          "instrument": "Keyboard"
+        }
+      ]
+    },
+    {
+      "year": 2017,
+      "count": 10,
+      "top": [
+        {
+          "id": "201701",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Mareridt",
+          "artist": "Myrkur",
+          "track": "The Serpent",
+          "genre": "Black Metal",
+          "debut": "2015",
+          "instrument": ""
+        },
+        {
+          "id": "201702",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Reflections of a Floationd World",
+          "artist": "Elder",
+          "track": "Blind",
+          "genre": "Stoner Metal",
+          "debut": "2008",
+          "instrument": ""
+        },
+        {
+          "id": "201703",
+          "rank": "3",
+          "haveIt": false,
+          "title": "In Contact",
+          "artist": "Caligula's Horse",
+          "track": "Graves",
+          "genre": "Progressive Metal",
+          "debut": "2011",
+          "instrument": ""
+        },
+        {
+          "id": "201704",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Curse Of Conception",
+          "artist": "Spirit Adrift",
+          "track": "Onward, Inward",
+          "genre": "Stoner Metal",
+          "debut": "2016",
+          "instrument": ""
+        },
+        {
+          "id": "201705",
+          "rank": "5",
+          "haveIt": true,
+          "title": "Kaiho",
+          "artist": "Kauan",
+          "track": "Siville Nousu",
+          "genre": "Folk Metal",
+          "debut": "2007",
+          "instrument": ""
+        },
+        {
+          "id": "201706",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Heartless",
+          "artist": "Pallbearer",
+          "track": "Dancing in Madness",
+          "genre": "Doom Metal",
+          "debut": "2012",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "201707",
+          "rank": "7",
+          "haveIt": false,
+          "title": "From Silence To Somewhere",
+          "artist": "Wobbler",
+          "track": "From Silence To Somewhere",
+          "genre": "Progressive Rock",
+          "debut": "2005",
+          "instrument": "Keyboard"
+        },
+        {
+          "id": "201708",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Urn",
+          "artist": "Ne Obliviscaris",
+          "track": "Libera",
+          "genre": "Progressive Metal",
+          "debut": "2012",
+          "instrument": ""
+        },
+        {
+          "id": "201709",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Ex Eye",
+          "artist": "Ex Eye",
+          "track": "Opposition Perihelion",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2017",
+          "instrument": ""
+        },
+        {
+          "id": "201710",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Nightmare Logic",
+          "artist": "Power Trip",
+          "track": "Crucifixation",
+          "genre": "Thrash Metal",
+          "debut": "2013",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "count": 10,
+      "top": [
+        {
+          "id": "201801",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Where Owls Know My Name",
+          "artist": "Rivers of Nihil",
+          "track": "Subtle Change",
+          "genre": "Death Metal",
+          "debut": "2013",
+          "instrument": ""
+        },
+        {
+          "id": "201802",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Stranger Fruit",
+          "artist": "Zeal & Ardor",
+          "track": "Don't You Dare",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2016",
+          "instrument": ""
+        },
+        {
+          "id": "201803",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Time Will Die and Love Will Bury It",
+          "artist": "Rolo Tomassi",
+          "track": "The Hollow Hour",
+          "genre": "Math Metal",
+          "debut": "2008",
+          "instrument": ""
+        },
+        {
+          "id": "201804",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Awaken",
+          "artist": "Agrimonia",
+          "track": "Astray",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2010",
+          "instrument": ""
+        },
+        {
+          "id": "201805",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Love in Shadow",
+          "artist": "Sumac",
+          "track": "?",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2015",
+          "instrument": ""
+        },
+        {
+          "id": "201806",
+          "rank": "6",
+          "haveIt": false,
+          "title": "The Sciences",
+          "artist": "Sleep",
+          "track": "Marijuanaut's Theme",
+          "genre": "Stoner Metal",
+          "debut": "1991",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "201807",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Ordinary Corrupt Human Love",
+          "artist": "Deafheaven",
+          "track": "Honeycomb",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2011",
+          "instrument": ""
+        },
+        {
+          "id": "201808",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Down Below",
+          "artist": "Tribulation",
+          "track": "Lacrimosa",
+          "genre": "Heavy Metal",
+          "debut": "2009",
+          "instrument": ""
+        },
+        {
+          "id": "201809",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Idol",
+          "artist": "Horrendous",
+          "track": "Golgothan Tongues",
+          "genre": "Progressive Metal",
+          "debut": "2012",
+          "instrument": ""
+        },
+        {
+          "id": "201810",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Esoteric Malacology",
+          "artist": "Slugdge vs Psychonaut",
+          "track": "Crop Killer",
+          "genre": "Progressive Metal",
+          "debut": "2013",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 2019,
+      "count": 10,
+      "top": [
+        {
+          "id": "201901",
+          "rank": "1",
+          "haveIt": false,
+          "title": "A Gaze Among Them",
+          "artist": "Big Brave",
+          "track": "Holding Pattern",
+          "genre": "Post Rock",
+          "debut": "2014",
+          "instrument": ""
+        },
+        {
+          "id": "201902",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Syntheosis",
+          "artist": "Waste of Space Orchestra",
+          "track": "Journey to the Center of Mass",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2019",
+          "instrument": ""
+        },
+        {
+          "id": "201903",
+          "rank": "3",
+          "haveIt": false,
+          "title": "The Ruins of Fading Light",
+          "artist": "Crypt Sermon",
+          "track": "Our Reverend's Grave",
+          "genre": "Heavy Metal",
+          "debut": "2015",
+          "instrument": ""
+        },
+        {
+          "id": "201904",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Hidden History of the Human Race",
+          "artist": "Blood Incantation",
+          "track": "The Giza Power Plant",
+          "genre": "Death Metal",
+          "debut": "2016",
+          "instrument": ""
+        },
+        {
+          "id": "201905",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Thrive On Neglect",
+          "artist": "Immortal Bird",
+          "track": "Avolition",
+          "genre": "Death Metal",
+          "debut": "2015",
+          "instrument": ""
+        },
+        {
+          "id": "201906",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Crux",
+          "artist": "Moon Tooth",
+          "track": "Through Ash",
+          "genre": "Progressive Metal",
+          "debut": "2016",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "201907",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Divided By Darkness",
+          "artist": "Spirit Adrift",
+          "track": "Born Into Fire",
+          "genre": "Stoner Metal",
+          "debut": "2016",
+          "instrument": ""
+        },
+        {
+          "id": "201908",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Woodland Rites",
+          "artist": "Green Lung",
+          "track": "The Ritual Tree",
+          "genre": "Stoner Metal",
+          "debut": "2019",
+          "instrument": ""
+        },
+        {
+          "id": "201909",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Planetary Clairvoyance",
+          "artist": "Tomb Mold",
+          "track": "Accelerative Phenomenae",
+          "genre": "Death Metal",
+          "debut": "2017",
+          "instrument": ""
+        },
+        {
+          "id": "201910",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Veil Of Imagination",
+          "artist": "Wilderun vs Cattle Decapitation vs Soen",
+          "track": "The Tyranny of Imagination",
+          "genre": "Progressive Metal",
+          "debut": "2012",
+          "instrument": ""
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "count": 10,
+      "top": [
+        {
+          "id": "202001",
+          "rank": "1",
+          "haveIt": false,
+          "title": "May Our Chambers Be Full",
+          "artist": "Emma Ruth Rundle & Thou",
+          "track": "Ancestral Recall",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2011",
+          "instrument": "Vocals"
+        },
+        {
+          "id": "202002",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Lucid Planet II",
+          "artist": "Lucid Planet",
+          "track": "Anamnesis",
+          "genre": "Progressive Rock",
+          "debut": "2015",
+          "instrument": "Drums"
+        },
+        {
+          "id": "202003",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Violent Portraits of Doomed Escape",
+          "artist": "Black Crown Initiate",
+          "track": "Son of War",
+          "genre": "Progressive Metal",
+          "debut": "2014",
+          "instrument": "Guitar Riff"
+        },
+        {
+          "id": "202004",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Alphaville",
+          "artist": "Imperial Triumphant",
+          "track": "City Swine",
+          "genre": "Progressive Metal",
+          "debut": "2012",
+          "instrument": "Drums"
+        },
+        {
+          "id": "202005",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Glory, Glory! Apathy Took Helm!",
+          "artist": "Vile Creature",
+          "track": "Harbinger of Nothing",
+          "genre": "Sludge Metal",
+          "debut": "2015",
+          "instrument": "Guitar Riff"
+        },
+        {
+          "id": "202006",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Bloem",
+          "artist": "Fluisteraars",
+          "track": "Nasleep",
+          "genre": "Black Metal",
+          "debut": "2014",
+          "instrument": "Guitar Riff"
+        }
+      ],
+      "bonus": [
+        {
+          "id": "202007",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Providence",
+          "artist": "Ulthar",
+          "track": "?",
+          "genre": "Black Metal",
+          "debut": "2018",
+          "instrument": "Guitar Riff"
+        },
+        {
+          "id": "202008",
+          "rank": "8",
+          "haveIt": false,
+          "title": "A Romance With Violence",
+          "artist": "Wayfarer",
+          "track": "The Crimson Rider",
+          "genre": "Black Metal",
+          "debut": "2014",
+          "instrument": "Guitar Riff"
+        },
+        {
+          "id": "202009",
+          "rank": "9",
+          "haveIt": false,
+          "title": "Skeleton",
+          "artist": "Skeleton",
+          "track": "Turned to Stone",
+          "genre": "Heavy Metal",
+          "debut": "2020",
+          "instrument": "Guitar Riff"
+        },
+        {
+          "id": "202010",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Rise Radiant",
+          "artist": "Caligula's Horse",
+          "track": "Slow Violence",
+          "genre": "Progressive Rock",
+          "debut": "2011",
+          "instrument": "Atmosphere"
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "count": 10,
+      "top": [
+        {
+          "id": "202101",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Gas Lit",
+          "artist": "Divide And Dissolve",
+          "track": "Denial",
+          "genre": "Doom Metal",
+          "debut": "2017",
+          "instrument": "Atmosphere"
+        },
+        {
+          "id": "202102",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Har",
+          "artist": "Dordeduh",
+          "track": "Timpul Intailor",
+          "genre": "Black Metal",
+          "debut": "2012",
+          "instrument": "Atmosphere"
+        },
+        {
+          "id": "202103",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Odyssey",
+          "artist": "Vokonis",
+          "track": "Through the Depths",
+          "genre": "Stoner Metal",
+          "debut": "2016",
+          "instrument": "Guitar Solo"
+        },
+        {
+          "id": "202104",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Black Harvest",
+          "artist": "Green Lung",
+          "track": "Graveyard Sun",
+          "genre": "Stoner Metal",
+          "debut": "2019",
+          "instrument": "Guitar Riff"
+        },
+        {
+          "id": "202105",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Access All Worlds",
+          "artist": "Iotunn",
+          "track": "Access All Worlds",
+          "genre": "Death Metal",
+          "debut": "2021",
+          "instrument": "Guitar Riff"
+        },
+        {
+          "id": "202106",
+          "rank": "6",
+          "haveIt": false,
+          "title": "This Place Will Become Your Tomb",
+          "artist": "Sleep Token",
+          "track": "Alkaline",
+          "genre": "Post Rock",
+          "debut": "2019",
+          "instrument": "Vocals"
+        }
+      ],
+      "bonus": [
+        {
+          "id": "202107",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Witness",
+          "artist": "VOLA",
+          "track": "Straight Lines",
+          "genre": "Progressive Rock",
+          "debut": "2015",
+          "instrument": "Vocals"
+        },
+        {
+          "id": "202108",
+          "rank": "8",
+          "haveIt": false,
+          "title": "The Work",
+          "artist": "Rivers of Nihil",
+          "track": "Episode",
+          "genre": "Death Metal",
+          "debut": "2013",
+          "instrument": "Guitar Riff"
+        },
+        {
+          "id": "202109",
+          "rank": "9",
+          "haveIt": false,
+          "title": "",
+          "artist": "Archspire",
+          "track": "",
+          "genre": "Death Metal",
+          "debut": "",
+          "instrument": "Guitar Riff"
+        },
+        {
+          "id": "202110",
+          "rank": "10",
+          "haveIt": false,
+          "title": "Diorama",
+          "artist": "Møl",
+          "track": "Photophobic",
+          "genre": "Shoegaze",
+          "debut": "2018",
+          "instrument": "Drums"
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "count": 11,
+      "top": [
+        {
+          "id": "202201",
+          "rank": "1",
+          "haveIt": false,
+          "title": "Hellfire",
+          "artist": "Black Midi",
+          "track": "Welcome To Hell",
+          "genre": "Rock",
+          "debut": "2019",
+          "instrument": "Drums"
+        },
+        {
+          "id": "202202",
+          "rank": "2",
+          "haveIt": false,
+          "title": "Zeal & Ardor",
+          "artist": "Zeal & Ardor",
+          "track": "Death to the Holy",
+          "genre": "Avant-garde/Post Metal",
+          "debut": "2016",
+          "instrument": ""
+        },
+        {
+          "id": "202203",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Violate Consensus Reality",
+          "artist": "Psychonaut",
+          "track": "All Your Gods Have Gone",
+          "genre": "Post Rock",
+          "debut": "2018",
+          "instrument": "Drums"
+        },
+        {
+          "id": "202204",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Jubian",
+          "artist": "Ripped to Shreds",
+          "track": "In Solitude",
+          "genre": "Death Metal",
+          "debut": "2018",
+          "instrument": "Guitar Riff"
+        },
+        {
+          "id": "202205",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Liminal Rite",
+          "artist": "Kardashev",
+          "track": "Silvered Shadows",
+          "genre": "Death Metal",
+          "debut": "2015",
+          "instrument": ""
+        },
+        {
+          "id": "202206",
+          "rank": "6",
+          "haveIt": false,
+          "title": "Isle Of Wisdom",
+          "artist": "Hällas",
+          "track": "Earl's Theme",
+          "genre": "Rock",
+          "debut": "2017",
+          "instrument": ""
+        }
+      ],
+      "bonus": [
+        {
+          "id": "202207",
+          "rank": "7",
+          "haveIt": false,
+          "title": "Alt Blir Verre",
+          "artist": "Knekklectric",
+          "track": "Muknado",
+          "genre": "Progressive Rock",
+          "debut": "2014",
+          "instrument": ""
+        },
+        {
+          "id": "202208",
+          "rank": "8",
+          "haveIt": false,
+          "title": "Dreamkiller",
+          "artist": "Sumerlands",
+          "track": "Edge of the Knife",
+          "genre": "Heavy Metal",
+          "debut": "2016",
+          "instrument": ""
+        },
+        {
+          "id": "202209",
+          "rank": "9",
+          "haveIt": false,
+          "title": "As The Moon Rests",
+          "artist": "A.A. Williams",
+          "track": "Evaporate",
+          "genre": "Post Rock",
+          "debut": "2020",
+          "instrument": "Vocals"
+        },
+        {
+          "id": "202210",
+          "rank": "10",
+          "haveIt": false,
+          "title": "God's Country",
+          "artist": "Chat Pile",
+          "track": "Anywhere",
+          "genre": "Sludge Metal",
+          "debut": "2022",
+          "instrument": ""
+        },
+        {
+          "id": "202211",
+          "rank": "11",
+          "haveIt": false,
+          "title": "Erebos",
+          "artist": "Venom Prison",
+          "track": "Pain of Oizys",
+          "genre": "Death Metal",
+          "debut": "2021",
+          "instrument": "Guitar Riff"
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "count": 26,
+      "top": [
+        {
+          "id": "202301",
+          "rank": "1",
+          "haveIt": false,
+          "title": "",
+          "artist": "",
+          "track": "",
+          "genre": "",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "202302",
+          "rank": "2",
+          "haveIt": false,
+          "title": "",
+          "artist": "",
+          "track": "",
+          "genre": "",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "202303",
+          "rank": "3",
+          "haveIt": false,
+          "title": "Odyssey 9999",
+          "artist": "tRKproject",
+          "track": "",
+          "genre": "",
+          "debut": "2017",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Body Void",
+          "track": "",
+          "genre": "",
+          "debut": "2016",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Green Lung",
+          "track": "",
+          "genre": "",
+          "debut": "2019",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Anti-God Hand",
+          "track": "",
+          "genre": "",
+          "debut": "2021",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Svalbard",
+          "track": "",
+          "genre": "",
+          "debut": "2015",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Seven Impale",
+          "track": "",
+          "genre": "",
+          "debut": "2014",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Crown Lands",
+          "track": "",
+          "genre": "",
+          "debut": "2020",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Dawn of the Ouroboros",
+          "track": "",
+          "genre": "",
+          "debut": "2020",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Fall of the Albatross",
+          "track": "",
+          "genre": "",
+          "debut": "2014",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Mutoid Man",
+          "track": "",
+          "genre": "",
+          "debut": "2015",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Kostnatění",
+          "track": "",
+          "genre": "",
+          "debut": "2019",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Sea Mosquito",
+          "track": "",
+          "genre": "",
+          "debut": "2023",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Crypta",
+          "track": "",
+          "genre": "",
+          "debut": "2021",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Thantifaxath",
+          "track": "",
+          "genre": "",
+          "debut": "2014",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Big|Brave",
+          "track": "",
+          "genre": "",
+          "debut": "2014",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Tomb Mold",
+          "track": "",
+          "genre": "",
+          "debut": "2017",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Sanguisugabogg",
+          "track": "",
+          "genre": "",
+          "debut": "2021",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Voice of Baceprot",
+          "track": "",
+          "genre": "",
+          "debut": "2023",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Moonlight Sorcery",
+          "track": "",
+          "genre": "",
+          "debut": "2023",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Sacred Outcry",
+          "track": "",
+          "genre": "",
+          "debut": "2020",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Blackbraid",
+          "track": "",
+          "genre": "",
+          "debut": "2022",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Hellripper",
+          "track": "",
+          "genre": "",
+          "debut": "2017",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "",
+          "artist": "Monika Roscher Bigband",
+          "track": "",
+          "genre": "",
+          "debut": "2012",
+          "instrument": ""
+        },
+        {
+          "id": "202305",
+          "rank": "5",
+          "haveIt": false,
+          "title": "Terrasite",
+          "artist": "Cattle Decapitation",
+          "track": "Scourge of the Offspring",
+          "genre": "",
+          "debut": "2002",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    },
+    {
+      "year": 2024,
+      "count": 3,
+      "top": [
+        {
+          "id": "202401",
+          "rank": "1",
+          "haveIt": false,
+          "title": "",
+          "artist": "",
+          "track": "",
+          "genre": "",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "202402",
+          "rank": "2",
+          "haveIt": false,
+          "title": "",
+          "artist": "",
+          "track": "",
+          "genre": "",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "202403",
+          "rank": "3",
+          "haveIt": false,
+          "title": "",
+          "artist": "",
+          "track": "",
+          "genre": "",
+          "debut": "",
+          "instrument": ""
+        }
+      ],
+      "bonus": []
+    }
+  ]
+}

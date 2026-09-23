@@ -8,15 +8,14 @@ Hosted on **GitHub Pages** via **GitHub Actions**.
 | Path | Role |
 |------|------|
 | `index.html` | Homepage (apps, articles carousel, about) |
-| `articles/<slug>/index.html` | Full article pages |
-| `articles/catalog.json` | **Source of truth** for article lists + coming soon |
-| `articles/index.html` | Articles listing (markers filled at deploy) |
-| `articles/ROADMAP.md` | Internal topic ideas |
-| `scripts/sync-articles.py` | Fills homepage / articles index / sitemap from the catalog |
+| `articles/` | Articles (catalog, listing, each slug) |
+| `hornsapp/` | HornsApp microsites (e.g. best albums) |
+| `tumatch/` | TuMatch landing |
+| `scripts/articles/` | Article sync tools |
+| `scripts/hornsapp/` | HornsApp sync / CSV import |
+| `styles.css`, `theme.js`, `images/` | Shared site chrome |
 | `sitemap.xml` | Sitemap (article URLs filled at deploy) |
-| `styles.css`, `theme.js` | Shared styles and light/dark theme |
 | `CNAME` | Custom domain (`yesferal.com`) |
-| `app-ads.txt` | AdMob / authorized sellers file |
 | `.github/workflows/deploy-pages.yml` | Build + deploy |
 
 ## Articles
@@ -61,35 +60,62 @@ Coming-soon items use `title`, `summary`, `meta`, and `tags` (no `slug` until pu
 4. Commit **the article page + `catalog.json`** (keep markers empty).
 5. Push to `main` — Actions syncs lists and deploys.
 
+**Also read links:** only point to **older** articles (or peers already published). Do **not** edit an old article’s footer when a newer one ships — that creates noise diffs. The new article links back; older pages stay frozen.
+
 ### Sync script
 
 ```bash
 # Local preview — fills markers in your working tree (do not commit)
-python3 scripts/sync-articles.py
+python3 scripts/articles/sync.py
 
 # Clear markers before commit
-python3 scripts/sync-articles.py --clean
+python3 scripts/articles/sync.py --clean
 
 # Fail if generated content was left in the repo
-python3 scripts/sync-articles.py --check
+python3 scripts/articles/sync.py --check
 ```
 
 ### Local preview
 
 ```bash
-python3 scripts/sync-articles.py
-python3 -m http.server 8765
-# open http://127.0.0.1:8765/
-python3 scripts/sync-articles.py --clean   # before committing
+python3 scripts/articles/sync.py
+python3 -m http.server 8766
+# open http://127.0.0.1:8766/
+python3 scripts/articles/sync.py --clean   # before committing
 ```
+
+## HornsApp · Best albums
+
+Personal year rankings at `/hornsapp/best/album/` (e.g. `/hornsapp/best/album/1980/`).
+
+**How to update:** see [`hornsapp/best/README.md`](hornsapp/best/README.md).
+
+| Path | Role |
+|------|------|
+| `hornsapp/best/album/catalog.json` | **Source of truth** (commit this) |
+| `scripts/hornsapp/data/best-albums.csv` | Optional Sheet export (gitignored; not required) |
+| `scripts/hornsapp/import-best-albums-csv.py` | CSV → catalog.json |
+| `scripts/hornsapp/sync-best-albums.py` | catalog → year pages (**gitignored**; CI regenerates) |
+
+Full steps: [`hornsapp/best/README.md`](hornsapp/best/README.md).
+
+```bash
+# After downloading the Sheet CSV into scripts/hornsapp/data/best-albums.csv
+python3 scripts/hornsapp/import-best-albums-csv.py scripts/hornsapp/data/best-albums.csv
+python3 scripts/hornsapp/sync-best-albums.py
+# commit catalog.json only, then push
+```
+
+Later, `hornsapp.yesferal.com` can point at the same Pages site (DNS CNAME); paths can stay under `/hornsapp/…` or be redirected.
 
 ## Deploy (GitHub Pages + Actions)
 
 On every push to `main` (and via **workflow_dispatch**), `.github/workflows/deploy-pages.yml`:
 
-1. Runs `python3 scripts/sync-articles.py`
-2. Uploads the built site
-3. Deploys to GitHub Pages
+1. Runs `python3 scripts/articles/sync.py`
+2. Runs `python3 scripts/hornsapp/sync-best-albums.py`
+3. Packages the repo into a deploy artifact (excludes `scripts/`)
+4. Deploys to GitHub Pages
 
 ### One-time Pages setting
 

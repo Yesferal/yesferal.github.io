@@ -27,7 +27,10 @@ jobs:
           python-version: "3.12"
 
       - name: Sync article lists from catalog
-        run: python3 scripts/sync-articles.py
+        run: python3 scripts/articles/sync.py
+
+      - name: Sync HornsApp best-album pages
+        run: python3 scripts/hornsapp/sync-best-albums.py
 
       - name: Prepare site
         run: |
