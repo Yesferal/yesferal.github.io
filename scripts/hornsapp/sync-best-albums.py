@@ -4,6 +4,13 @@
 Usage:
   python3 scripts/hornsapp/sync-best-albums.py
   python3 scripts/hornsapp/import-best-albums-csv.py path/to.csv
+
+Listen / cover helpers (keep sync focused on page structure):
+  scripts/hornsapp/spotify.py  — Spotify search links (build time only)
+  scripts/hornsapp/itunes.py   — cover slots + Apple Music placeholders (build time)
+  hornsapp/best/album/itunes.js — fetches covers + Apple Music URLs (browser)
+
+Generated HTML (index + year folders) is gitignored; CI regenerates on deploy.
 """
 
 from __future__ import annotations
@@ -11,6 +18,8 @@ from __future__ import annotations
 import html
 import json
 from pathlib import Path
+
+import itunes
 
 ROOT = Path(__file__).resolve().parents[2]
 ALBUM_ROOT = ROOT / "hornsapp" / "best" / "album"
@@ -22,8 +31,10 @@ def esc(s: str) -> str:
 
 
 def album_row(a: dict, *, bonus: bool = False) -> str:
-    title = esc(a.get("title") or "")
-    artist = esc(a.get("artist") or "")
+    raw_title = a.get("title") or ""
+    raw_artist = a.get("artist") or ""
+    title = esc(raw_title)
+    artist = esc(raw_artist)
     track = (a.get("track") or "").strip()
     genre = (a.get("genre") or "").strip()
     meta_bits = []
@@ -46,7 +57,9 @@ def album_row(a: dict, *, bonus: bool = False) -> str:
               <p class="album-title">{title}</p>
               <p class="album-artist">{artist}</p>
               {f'<p class="album-meta">{meta}</p>' if meta else ''}
+{itunes.listen_row(raw_artist, raw_title)}
             </div>
+            {itunes.cover_anchor(artist=raw_artist, title=raw_title, size=96, loading="lazy")}
           </li>"""
 
 
@@ -82,7 +95,7 @@ def page_shell(
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/hornsapp/best/album/albums.css?v=12">
+    <link rel="stylesheet" href="/hornsapp/best/album/albums.css?v=17">
 </head>
 <body class="albums-page">
 <nav class="nav">
@@ -96,6 +109,7 @@ def page_shell(
     © 2026 Yesferal · HornsApp
 </footer>
 <script src="/theme.js"></script>
+{itunes.script_tag()}
 <script>
 (function () {{
   function centerActiveYear() {{
@@ -146,7 +160,7 @@ def build_index(data: dict) -> None:
 """
     html_out = page_shell(
         title="Best albums",
-        description="Personal best albums by year — top picks and bonus records.",
+        description="Personal best albums by year — ranked picks and honorable mentions.",
         canonical="https://yesferal.com/hornsapp/best/album/",
         body=body,
     )
@@ -177,7 +191,7 @@ def build_year(data: dict, year_block: dict) -> None:
         bonus_html = "\n".join(album_row(a, bonus=True) for a in bonus)
         bonus_section = f"""
   <section class="album-section album-section-bonus">
-    <h2>Bonus</h2>
+    <h2>Honorable mentions</h2>
     <p class="section-note">Albums we love just as much — kept here as favorites beyond the ranked list.</p>
     <ul class="album-list album-list-bonus">
 {bonus_html}
@@ -196,20 +210,20 @@ def build_year(data: dict, year_block: dict) -> None:
         pager.append('<span></span>')
     pager.append("</div>")
 
-    # Hero: stats only — #1 is shown in the Album of the year card
     ranked_n = len(top)
     bonus_n = len(bonus)
     if bonus_n:
-        stats = f"{ranked_n} ranked · {bonus_n} bonus"
+        stats = f"{ranked_n} ranked · {bonus_n} mentions"
     else:
         stats = f"{ranked_n} ranked" if ranked_n != 1 else "1 ranked"
 
-    # Featured #1 block (visual anchor)
     featured = ""
     if top:
         first = top[0]
-        f_title = esc(first.get("title") or "")
-        f_artist = esc(first.get("artist") or "")
+        raw_title = first.get("title") or ""
+        raw_artist = first.get("artist") or ""
+        f_title = esc(raw_title)
+        f_artist = esc(raw_artist)
         f_genre = (first.get("genre") or "").strip()
         f_track = (first.get("track") or "").strip()
         featured_meta = []
@@ -218,12 +232,24 @@ def build_year(data: dict, year_block: dict) -> None:
         if f_track and f_track != "?":
             featured_meta.append(f'Pick: <em>{esc(f_track)}</em>')
         featured_meta_html = f'<p class="year-featured-meta">{" · ".join(featured_meta)}</p>' if featured_meta else ""
+        featured_listen = itunes.listen_row(raw_artist, raw_title, indent="      ")
+        featured_cover = itunes.cover_anchor(
+            artist=raw_artist,
+            title=raw_title,
+            size=280,
+            loading="eager",
+            extra_class="year-featured-cover",
+        )
         featured = f"""
   <div class="year-featured">
-    <p class="year-featured-label">Album of the year</p>
-    <p class="year-featured-title">{f_title}</p>
-    <p class="year-featured-artist">{f_artist}</p>
-    {featured_meta_html}
+    <div class="year-featured-copy">
+      <p class="year-featured-label">Album of the year</p>
+      <p class="year-featured-title">{f_title}</p>
+      <p class="year-featured-artist">{f_artist}</p>
+      {featured_meta_html}
+{featured_listen}
+    </div>
+    {featured_cover}
   </div>"""
 
     body = f"""
@@ -263,7 +289,6 @@ def build_year(data: dict, year_block: dict) -> None:
 
 def main() -> None:
     data = json.loads(CATALOG.read_text(encoding="utf-8"))
-    # prune old year folders that are no longer in catalog
     known = {str(y["year"]) for y in data["years"]}
     for child in ALBUM_ROOT.iterdir():
         if child.is_dir() and child.name.isdigit() and child.name not in known:
