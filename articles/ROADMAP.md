@@ -15,7 +15,7 @@ python3 scripts/articles/sync.py --clean  # clear markers before commit
 
 See `articles/catalog.json` → `published` (and the pages under `articles/<slug>/`).
 
-Latest: AI agent skills as playbooks for recurring work (`agent-skills-content-ops`).
+Latest: AI agent skills as playbooks for recurring work (`ai-agent-skills-playbooks`).
 
 ## Series — HornsApp architecture (next)
 
