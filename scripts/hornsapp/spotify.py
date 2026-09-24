@@ -27,6 +27,22 @@ def search_url(artist: str, title: str) -> str:
     return "https://open.spotify.com/search/" + quote(f"{artist} {title}")
 
 
+def track_search_url(artist: str, track: str) -> str:
+    """Open Spotify search for artist + song (pick track)."""
+    return "https://open.spotify.com/search/" + quote(f"{artist} {track}")
+
+
+def pick_html(artist: str, track: str) -> str:
+    """'Pick: {track}' with the song name linked to Spotify search."""
+    href = esc(track_search_url(artist, track))
+    label = esc(track)
+    return (
+        f'<span class="album-pick">Pick: '
+        f'<a class="album-pick-link" href="{href}" '
+        f'target="_blank" rel="noopener noreferrer" '
+        f'title="Search on Spotify">{label}</a></span>'
+    )
+
 def link_html(artist: str, title: str) -> str:
     """Icon link that opens Spotify search in a new tab."""
     href = esc(search_url(artist, title))

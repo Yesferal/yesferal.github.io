@@ -393,7 +393,20 @@
   color: var(--text-subtle);
 }
 
-.album-pick em,
+.album-pick-link {
+  font-style: italic;
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.15em;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.album-pick-link:hover {
+  color: #1db954;
+  text-decoration-color: currentColor;
+}
+
 .year-featured-meta em {
   font-style: italic;
   color: var(--text-muted);
