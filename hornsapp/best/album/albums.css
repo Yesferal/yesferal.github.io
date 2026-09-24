@@ -1,10 +1,14 @@
-/* HornsApp best albums */
+/* HornsApp best albums — accent = HornsApp brand red (same as landing) */
 
 .albums-page {
+  /* Brand red — same as HornsApp landing (#dc2626). Avoid coral/orange tints. */
+  --horns-red: #dc2626;
+  --horns-red-bright: #dc2626;
+  --horns-red-rgb: 220, 38, 38;
   min-height: 100vh;
   background:
-    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(220, 38, 38, 0.18), transparent 55%),
-    radial-gradient(ellipse 60% 40% at 90% 0%, rgba(14, 165, 233, 0.12), transparent 50%),
+    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(var(--horns-red-rgb), 0.2), transparent 55%),
+    radial-gradient(ellipse 55% 40% at 95% 5%, rgba(var(--horns-red-rgb), 0.08), transparent 50%),
     linear-gradient(180deg, var(--bg-start), var(--bg-end));
   color: var(--text);
 }
@@ -113,8 +117,8 @@
 
 .year-rail a.is-active {
   color: var(--text);
-  border-color: rgba(248, 113, 113, 0.45);
-  background: rgba(220, 38, 38, 0.12);
+  border-color: rgba(var(--horns-red-rgb), 0.45);
+  background: rgba(var(--horns-red-rgb), 0.12);
 }
 
 .year-grid {
@@ -138,7 +142,7 @@
 
 .year-card:hover {
   background: var(--card-hover);
-  border-color: rgba(248, 113, 113, 0.35);
+  border-color: rgba(var(--horns-red-rgb), 0.35);
 }
 
 .year-card-year {
@@ -180,10 +184,10 @@
   align-items: stretch;
   margin: 0 0 2rem;
   border-radius: 16px;
-  border: 1px solid rgba(248, 113, 113, 0.35);
+  border: 1px solid rgba(var(--horns-red-rgb), 0.35);
   background:
-    radial-gradient(ellipse 80% 120% at 0% 0%, rgba(220, 38, 38, 0.22), transparent 55%),
-    radial-gradient(ellipse 60% 80% at 100% 100%, rgba(14, 165, 233, 0.1), transparent 50%),
+    radial-gradient(ellipse 80% 120% at 0% 0%, rgba(var(--horns-red-rgb), 0.22), transparent 55%),
+    radial-gradient(ellipse 60% 80% at 100% 100%, rgba(var(--horns-red-rgb), 0.08), transparent 50%),
     var(--card-bg);
   overflow: hidden;
   animation: albums-rise 0.7s ease both;
@@ -204,7 +208,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #f87171;
+  color: var(--horns-red);
 }
 
 .year-featured-title {
@@ -284,20 +288,20 @@
 
 .album-item:hover {
   background: var(--card-hover);
-  border-color: rgba(248, 113, 113, 0.28);
+  border-color: rgba(var(--horns-red-rgb), 0.28);
 }
 
 .album-list-top .album-item:first-child {
-  border-color: rgba(248, 113, 113, 0.4);
+  border-color: rgba(var(--horns-red-rgb), 0.4);
   background:
-    linear-gradient(135deg, rgba(220, 38, 38, 0.1), transparent 55%),
+    linear-gradient(135deg, rgba(var(--horns-red-rgb), 0.1), transparent 55%),
     var(--card-bg);
 }
 
 .album-rank {
   font-size: 1.45rem;
   font-weight: 700;
-  color: #f87171;
+  color: var(--horns-red);
   line-height: 1.2;
   padding-top: 0.1rem;
 }
@@ -437,8 +441,9 @@
   opacity: 0.92;
 }
 
-[data-theme="light"] .year-featured-label {
-  color: #dc2626;
+[data-theme="light"] .year-featured-label,
+[data-theme="light"] .album-rank {
+  color: var(--horns-red);
 }
 
 .year-pager {
