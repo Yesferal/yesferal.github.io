@@ -5,6 +5,7 @@ call the iTunes API itself.
 
 Responsibilities:
   - Emit cover <img> slots with data-cover-artist / data-cover-album
+    (optional data-cover-year for the browser lookup)
   - Emit a hidden Apple Music <a> placeholder (class album-listen-apple)
   - Compose the listen row (Spotify link from spotify.py + Apple placeholder)
   - Point pages at the client script: hornsapp/best/album/itunes.js
@@ -20,7 +21,7 @@ import html
 import spotify
 
 FALLBACK_COVER = "/images/hornsapp.png"
-SCRIPT_SRC = "/hornsapp/best/album/itunes.js?v=1"
+SCRIPT_SRC = "/hornsapp/best/album/itunes.js?v=4"
 
 
 def esc(s: str) -> str:
@@ -52,15 +53,19 @@ def cover_anchor(
     size: int = 96,
     loading: str = "lazy",
     extra_class: str = "",
+    year: str | int | None = None,
 ) -> str:
     """Cover slot; itunes.js loads artwork (or HornsApp fallback)."""
     a = esc(artist)
     t = esc(title)
     cls = f"album-cover {extra_class}".strip()
+    year_attr = ""
+    if year not in (None, "", "?"):
+        year_attr = f' data-cover-year="{esc(str(year))}"'
     return (
         f'<a class="{cls}" aria-hidden="true" tabindex="-1">'
         f'<img alt="" loading="{loading}" decoding="async" '
-        f'data-cover-artist="{a}" data-cover-album="{t}" '
+        f'data-cover-artist="{a}" data-cover-album="{t}"{year_attr} '
         f'width="{size}" height="{size}">'
         f"</a>"
     )

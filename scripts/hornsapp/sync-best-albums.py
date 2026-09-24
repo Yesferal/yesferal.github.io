@@ -30,13 +30,14 @@ def esc(s: str) -> str:
     return html.escape(s or "", quote=True)
 
 
-def album_row(a: dict, *, bonus: bool = False) -> str:
+def album_row(a: dict, *, bonus: bool = False, year: int | None = None) -> str:
     raw_title = a.get("title") or ""
     raw_artist = a.get("artist") or ""
     title = esc(raw_title)
     artist = esc(raw_artist)
     track = (a.get("track") or "").strip()
     genre = (a.get("genre") or "").strip()
+    cover_year = a.get("debut") or year
     meta_bits = []
     if genre:
         meta_bits.append(f'<span class="album-genre">{esc(genre)}</span>')
@@ -59,7 +60,7 @@ def album_row(a: dict, *, bonus: bool = False) -> str:
               {f'<p class="album-meta">{meta}</p>' if meta else ''}
 {itunes.listen_row(raw_artist, raw_title)}
             </div>
-            {itunes.cover_anchor(artist=raw_artist, title=raw_title, size=96, loading="lazy")}
+            {itunes.cover_anchor(artist=raw_artist, title=raw_title, size=96, loading="lazy", year=cover_year)}
           </li>"""
 
 
@@ -185,10 +186,10 @@ def build_year(data: dict, year_block: dict) -> None:
     prev_y = years[idx - 1]["year"] if idx > 0 else None
     next_y = years[idx + 1]["year"] if idx < len(years) - 1 else None
 
-    top_html = "\n".join(album_row(a) for a in top) or "          <li class=\"album-empty\">No top albums listed.</li>"
+    top_html = "\n".join(album_row(a, year=year) for a in top) or "          <li class=\"album-empty\">No top albums listed.</li>"
     bonus_section = ""
     if bonus:
-        bonus_html = "\n".join(album_row(a, bonus=True) for a in bonus)
+        bonus_html = "\n".join(album_row(a, bonus=True, year=year) for a in bonus)
         bonus_section = f"""
   <section class="album-section album-section-bonus">
     <h2>Honorable mentions</h2>
@@ -239,6 +240,7 @@ def build_year(data: dict, year_block: dict) -> None:
             size=280,
             loading="eager",
             extra_class="year-featured-cover",
+            year=first.get("debut") or year,
         )
         featured = f"""
   <div class="year-featured">
