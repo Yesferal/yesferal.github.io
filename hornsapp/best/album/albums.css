@@ -230,6 +230,10 @@
   margin: 0.75rem 0 0;
   font-size: 0.9rem;
   color: var(--text-subtle);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.55rem;
+  align-items: center;
 }
 
 .year-featured-cover {
@@ -521,23 +525,64 @@
 
 @media (max-width: 560px) {
   .album-item {
-    grid-template-columns: 2.25rem 1fr 3.5rem;
-    padding: 0.55rem 0.55rem 0.55rem 0.8rem;
-    gap: 0.65rem;
+    grid-template-columns: 2.1rem minmax(0, 1fr) 5.75rem;
+    align-items: start;
+    padding: 0.7rem 0.65rem 0.7rem 0.8rem;
+    gap: 0.7rem;
+  }
+
+  .album-rank,
+  .album-rank-bonus {
+    padding-top: 0.05rem;
   }
 
   .album-cover {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 6px;
+    width: 5.75rem;
+    height: 5.75rem;
+    border-radius: 8px;
   }
 
+  .album-meta,
+  .year-featured-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .album-listen {
+    gap: 0.1rem;
+  }
+
+  .album-title {
+    font-size: 1.02rem;
+  }
+
+  /* Keep featured side-by-side like desktop — cover stays on the right. */
   .year-featured {
-    grid-template-columns: 1fr minmax(5.5rem, 34%);
-    min-height: 8.5rem;
+    grid-template-columns: minmax(0, 1fr) minmax(7.5rem, 42%);
+    min-height: 10rem;
+  }
+
+  .year-featured-cover {
+    order: 0;
+    min-height: 100%;
+    aspect-ratio: auto;
+    width: auto;
+  }
+
+  .year-featured-cover img {
+    aspect-ratio: auto;
   }
 
   .year-featured-copy {
-    padding: 1.15rem 0.75rem 1.2rem 1.1rem;
+    padding: 1.1rem 0.75rem 1.15rem 1rem;
+  }
+
+  .year-featured-title {
+    font-size: clamp(1.35rem, 6vw, 1.75rem);
+  }
+
+  .year-featured .album-listen {
+    flex-direction: row;
   }
 }

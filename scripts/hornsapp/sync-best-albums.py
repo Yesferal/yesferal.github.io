@@ -97,7 +97,7 @@ def page_shell(
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/hornsapp/best/album/albums.css?v=22">
+    <link rel="stylesheet" href="/hornsapp/best/album/albums.css?v=24">
 </head>
 <body class="albums-page">
 <nav class="nav">
@@ -230,10 +230,14 @@ def build_year(data: dict, year_block: dict) -> None:
         f_track = (first.get("track") or "").strip()
         featured_meta = []
         if f_genre:
-            featured_meta.append(esc(f_genre))
+            featured_meta.append(f'<span class="album-genre">{esc(f_genre)}</span>')
         if f_track and f_track != "?":
             featured_meta.append(spotify.pick_html(raw_artist, f_track))
-        featured_meta_html = f'<p class="year-featured-meta">{" · ".join(featured_meta)}</p>' if featured_meta else ""
+        featured_meta_html = (
+            f'<p class="year-featured-meta">{"".join(featured_meta)}</p>'
+            if featured_meta
+            else ""
+        )
         featured_listen = itunes.listen_row(raw_artist, raw_title, indent="      ")
         featured_cover = itunes.cover_anchor(
             artist=raw_artist,
