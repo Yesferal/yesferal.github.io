@@ -71,10 +71,23 @@ def main() -> None:
             }
         )
 
+    existing: dict = {}
+    if OUT.is_file():
+        try:
+            existing = json.loads(OUT.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            existing = {}
+
+    default_note = (
+        "HornsApp’s yearly ranking of albums we listen to and love. "
+        "Only some of what we play ends up here — nearly as many more never got a spot. "
+        "Mostly rock, metal, and jazz. We keep updating — this list is always a work in progress."
+    )
     payload = {
-        "title": "Best albums",
-        "brand": "HornsApp",
-        "sourceNote": "Personal ranking by year. Top 6 are the main list; 7+ and B are bonus.",
+        "title": existing.get("title") or "Best albums",
+        "brand": existing.get("brand") or "HornsApp",
+        # CSV has no copy fields — keep catalog prose across re-imports.
+        "sourceNote": existing.get("sourceNote") or default_note,
         "years": years,
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)

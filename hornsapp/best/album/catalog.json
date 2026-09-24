@@ -144,7 +144,7 @@
           "haveIt": false,
           "title": "Mingus Ah Um",
           "artist": "Charles Mingus",
-          "track": "Pussy Cat Due",
+          "track": "Pussy Cat Dues",
           "genre": "Jazz",
           "debut": "1955",
           "instrument": ""
@@ -233,7 +233,7 @@
           "id": "196103",
           "rank": "3",
           "haveIt": false,
-          "title": "Thelonious Monk With John Coltrane",
+          "title": "Thelonious Monk with John Coltrane",
           "artist": "Thelonious Monk",
           "track": "?",
           "genre": "Jazz",
@@ -291,7 +291,7 @@
           "id": "196301",
           "rank": "1",
           "haveIt": false,
-          "title": "The Black Saint And The Sinner Lady",
+          "title": "The Black Saint and the Sinner Lady",
           "artist": "Charles Mingus",
           "track": "Group Dancers",
           "genre": "Jazz",
@@ -422,7 +422,7 @@
           "id": "196602",
           "rank": "2",
           "haveIt": false,
-          "title": "Search For The New Land",
+          "title": "Search for the New Land",
           "artist": "Lee Morgan",
           "track": "Search For The New Land",
           "genre": "Jazz",
@@ -474,7 +474,7 @@
           "rank": "3",
           "haveIt": false,
           "title": "Heavy Sounds",
-          "artist": "Elvin Jones, Richard Davis",
+          "artist": "Elvin Jones",
           "track": "Raunchy Rita",
           "genre": "Jazz",
           "debut": "1958",
@@ -569,7 +569,7 @@
           "rank": "5",
           "haveIt": false,
           "title": "Beggars Banquet",
-          "artist": "Rolling Stones",
+          "artist": "The Rolling Stones",
           "track": "Sympathy for the Devil",
           "genre": "Rock",
           "debut": "1964",
@@ -692,7 +692,7 @@
           "id": "197003",
           "rank": "3",
           "haveIt": true,
-          "title": "Funhouse",
+          "title": "Fun House",
           "artist": "The Stooges",
           "track": "Fun House",
           "genre": "Rock",
@@ -788,7 +788,7 @@
           "rank": "5",
           "haveIt": false,
           "title": "Sticky Fingers",
-          "artist": "Rolling Stones",
+          "artist": "The Rolling Stones",
           "track": "Sister Morphine",
           "genre": "Rock",
           "debut": "1964",
@@ -1198,7 +1198,7 @@
           "id": "197606",
           "rank": "6",
           "haveIt": false,
-          "title": "A Day At The Races",
+          "title": "A Day at the Races",
           "artist": "Queen",
           "track": "Somebody To Love",
           "genre": "Rock",
@@ -1260,7 +1260,7 @@
           "id": "197705",
           "rank": "5",
           "haveIt": true,
-          "title": "Never Mind The Bollocks",
+          "title": "Never Mind the Bollocks, Here's the Sex Pistols",
           "artist": "Sex Pistols",
           "track": "God Save The Queen",
           "genre": "Punk",
@@ -1272,7 +1272,7 @@
           "rank": "6",
           "haveIt": false,
           "title": "Love Gun",
-          "artist": "KISS",
+          "artist": "Kiss",
           "track": "Almost Human",
           "genre": "Rock",
           "debut": "1974",
@@ -1363,7 +1363,7 @@
           "rank": "1",
           "haveIt": false,
           "title": "Overkill",
-          "artist": "Motorhead",
+          "artist": "Motörhead",
           "track": "I'll Be Your Sister",
           "genre": "Rock",
           "debut": "1977",
@@ -1407,7 +1407,7 @@
           "rank": "5",
           "haveIt": false,
           "title": "Bomber",
-          "artist": "Motorhead",
+          "artist": "Motörhead",
           "track": "Stone Dead Forever",
           "genre": "Rock",
           "debut": "1977",
@@ -1490,8 +1490,8 @@
           "id": "198006",
           "rank": "6",
           "haveIt": false,
-          "title": "Ace Of Spades",
-          "artist": "Motorhead",
+          "title": "Ace of Spades",
+          "artist": "Motörhead",
           "track": "Shoot You in the Back",
           "genre": "Rock",
           "debut": "1977",
@@ -1665,27 +1665,16 @@
           "id": "198302",
           "rank": "2",
           "haveIt": false,
-          "title": "Melissa",
-          "artist": "Mercyful Fate",
-          "track": "Into the Coven",
-          "genre": "Heavy Metal",
+          "title": "Kill 'Em All",
+          "artist": "Metallica",
+          "track": "Whiplash",
+          "genre": "Thrash Metal",
           "debut": "1983",
-          "instrument": "Guitar"
+          "instrument": ""
         },
         {
           "id": "198303",
           "rank": "3",
-          "haveIt": false,
-          "title": "Piece of Mind",
-          "artist": "Iron Maiden",
-          "track": "Revelations",
-          "genre": "Heavy Metal",
-          "debut": "1980",
-          "instrument": ""
-        },
-        {
-          "id": "198304",
-          "rank": "4",
           "haveIt": false,
           "title": "Script For A Jester’s Tear",
           "artist": "Marillion",
@@ -1695,14 +1684,25 @@
           "instrument": ""
         },
         {
+          "id": "198304",
+          "rank": "4",
+          "haveIt": false,
+          "title": "Melissa",
+          "artist": "Mercyful Fate",
+          "track": "Satan's Fall",
+          "genre": "Heavy Metal",
+          "debut": "1983",
+          "instrument": "Guitar"
+        },
+        {
           "id": "198305",
           "rank": "5",
           "haveIt": false,
-          "title": "Kill 'Em All",
-          "artist": "Metallica",
-          "track": "Seek & Destroy",
-          "genre": "Thrash Metal",
-          "debut": "1983",
+          "title": "Piece of Mind",
+          "artist": "Iron Maiden",
+          "track": "Revelations",
+          "genre": "Heavy Metal",
+          "debut": "1980",
           "instrument": ""
         },
         {
@@ -1719,8 +1719,8 @@
       ],
       "bonus": [
         {
-          "id": "198307",
-          "rank": "7",
+          "id": "1983B",
+          "rank": "B",
           "haveIt": false,
           "title": "Shout At The Devil",
           "artist": "Mötley Crüe",
@@ -1730,8 +1730,8 @@
           "instrument": ""
         },
         {
-          "id": "198309",
-          "rank": "9",
+          "id": "1983B",
+          "rank": "B",
           "haveIt": false,
           "title": "Pyromania",
           "artist": "Def Leppard",
@@ -1818,7 +1818,7 @@
           "id": "198407",
           "rank": "7",
           "haveIt": false,
-          "title": "Fugazy",
+          "title": "Fugazi",
           "artist": "Marillion",
           "track": "Assassing",
           "genre": "Progressive Rock",
@@ -1851,7 +1851,7 @@
     },
     {
       "year": 1985,
-      "count": 10,
+      "count": 12,
       "top": [
         {
           "id": "198501",
@@ -1959,9 +1959,31 @@
           "rank": "10",
           "haveIt": false,
           "title": "On A Storyteller's Night",
-          "artist": "Magnum vs Accept vs Supertramp",
+          "artist": "Magnum",
           "track": "On A Storyteller's Night",
           "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198511",
+          "rank": "11",
+          "haveIt": false,
+          "title": "",
+          "artist": "Accept",
+          "track": "",
+          "genre": "",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198512",
+          "rank": "12",
+          "haveIt": false,
+          "title": "",
+          "artist": "Supertramp",
+          "track": "",
+          "genre": "",
           "debut": "",
           "instrument": ""
         }
@@ -2077,7 +2099,7 @@
           "rank": "10",
           "haveIt": false,
           "title": "Awaken The Guardian",
-          "artist": "Fates Warning vs Motorhead",
+          "artist": "Fates Warning",
           "track": "Valley Of The Dolls",
           "genre": "Heavy Metal",
           "debut": "",
@@ -2093,7 +2115,7 @@
           "id": "198701",
           "rank": "1",
           "haveIt": false,
-          "title": "Keeper Of The Seven Keys I",
+          "title": "Keeper of the Seven Keys: Part I",
           "artist": "Helloween",
           "track": "Halloween",
           "genre": "Power Metal",
@@ -2211,8 +2233,8 @@
           "id": "198801",
           "rank": "1",
           "haveIt": false,
-          "title": "Operation Mindcrime",
-          "artist": "Queensryche",
+          "title": "Operation: Mindcrime",
+          "artist": "Queensrÿche",
           "track": "Suit Sister Mary",
           "genre": "Heavy Metal",
           "debut": "",
@@ -2233,7 +2255,7 @@
           "id": "198803",
           "rank": "3",
           "haveIt": false,
-          "title": "Keeper Of The Seven Keys II",
+          "title": "Keeper of the Seven Keys: Part II",
           "artist": "Helloween",
           "track": "Keeper of the Seven Keys",
           "genre": "Power Metal",
@@ -2313,7 +2335,7 @@
           "rank": "10",
           "haveIt": false,
           "title": "Open Up And Say ... Ahh!",
-          "artist": "Poison vs It Bites vs Cardiacs",
+          "artist": "Poison",
           "track": "Nothin' But A Good Time",
           "genre": "Hard Rock",
           "debut": "",
@@ -2323,7 +2345,7 @@
     },
     {
       "year": 1989,
-      "count": 10,
+      "count": 12,
       "top": [
         {
           "id": "198901",
@@ -2398,7 +2420,7 @@
           "rank": "7",
           "haveIt": false,
           "title": "The Headless Children",
-          "artist": "WASP",
+          "artist": "W.A.S.P.",
           "track": "Thunderhead",
           "genre": "Heavy Metal",
           "debut": "",
@@ -2431,9 +2453,31 @@
           "rank": "10",
           "haveIt": false,
           "title": "Louder Than Love",
-          "artist": "Soundgarden vs Nirvana vs World Trade",
+          "artist": "Soundgarden",
           "track": "Hands All Over",
           "genre": "Grunge",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198911",
+          "rank": "11",
+          "haveIt": false,
+          "title": "",
+          "artist": "Nirvana",
+          "track": "",
+          "genre": "",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "198912",
+          "rank": "12",
+          "haveIt": false,
+          "title": "",
+          "artist": "World Trade",
+          "track": "",
+          "genre": "",
           "debut": "",
           "instrument": ""
         }
@@ -2762,7 +2806,7 @@
           "id": "199209",
           "rank": "9",
           "haveIt": false,
-          "title": "Caffeine",
+          "title": "Angel Dust",
           "artist": "Faith No More",
           "track": "Smaller And Smaller",
           "genre": "Industrial Metal",
@@ -2774,7 +2818,7 @@
           "rank": "10",
           "haveIt": false,
           "title": "The Crimson Idol",
-          "artist": "WASP",
+          "artist": "W.A.S.P.",
           "track": "The Idol",
           "genre": "Heavy Metal",
           "debut": "",
@@ -2891,7 +2935,7 @@
     },
     {
       "year": 1994,
-      "count": 10,
+      "count": 11,
       "top": [
         {
           "id": "199401",
@@ -2999,9 +3043,20 @@
           "rank": "10",
           "haveIt": false,
           "title": "Wildhoney",
-          "artist": "Tiamat vs Mayhem",
+          "artist": "Tiamat",
           "track": "Do You Dream Of Me?",
           "genre": "Doom Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199411",
+          "rank": "11",
+          "haveIt": false,
+          "title": "",
+          "artist": "Mayhem",
+          "track": "",
+          "genre": "",
           "debut": "",
           "instrument": ""
         }
@@ -3009,7 +3064,7 @@
     },
     {
       "year": 1995,
-      "count": 10,
+      "count": 12,
       "top": [
         {
           "id": "199501",
@@ -3048,7 +3103,7 @@
           "id": "199504",
           "rank": "4",
           "haveIt": false,
-          "title": "Imagination From The Other Side",
+          "title": "Imaginations from the Other Side",
           "artist": "Blind Guardian",
           "track": "Imaginations From the Other Side",
           "genre": "Speed Metal",
@@ -3106,7 +3161,7 @@
           "rank": "9",
           "haveIt": false,
           "title": "(What's The Story) Morning Glory?",
-          "artist": "Oasis vs White Zombie",
+          "artist": "Oasis",
           "track": "",
           "genre": "Rock",
           "debut": "",
@@ -3117,9 +3172,31 @@
           "rank": "10",
           "haveIt": false,
           "title": "",
-          "artist": "Dark Tranquillity vs My Dying Bride",
+          "artist": "Dark Tranquillity",
           "track": "",
           "genre": "Heavy Metal",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199511",
+          "rank": "11",
+          "haveIt": false,
+          "title": "",
+          "artist": "White Zombie",
+          "track": "",
+          "genre": "",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "199512",
+          "rank": "12",
+          "haveIt": false,
+          "title": "",
+          "artist": "My Dying Bride",
+          "track": "",
+          "genre": "",
           "debut": "",
           "instrument": ""
         }
@@ -3263,7 +3340,7 @@
           "rank": "2",
           "haveIt": false,
           "title": "La Masquerade Infernale",
-          "artist": "Acturus",
+          "artist": "Arcturus",
           "track": "Ad Astra",
           "genre": "Avant-garde/Post Metal",
           "debut": "",
@@ -3413,7 +3490,7 @@
           "id": "199805",
           "rank": "5",
           "haveIt": false,
-          "title": "Volvin",
+          "title": "Vovin",
           "artist": "Therion",
           "track": "Clavicula Nox",
           "genre": "Symphonic Metal",
@@ -3542,7 +3619,7 @@
           "id": "199906",
           "rank": "6",
           "haveIt": false,
-          "title": "Metropolis Part 2",
+          "title": "Metropolis Pt. 2: Scenes from a Memory",
           "artist": "Dream Theater",
           "track": "Beyond This Life",
           "genre": "Progressive Metal",
@@ -3813,7 +3890,7 @@
           "id": "200109",
           "rank": "9",
           "haveIt": false,
-          "title": "Muttter",
+          "title": "Mutter",
           "artist": "Rammstein",
           "track": "Mein Herz Brennt",
           "genre": "Folk Metal",
@@ -3835,7 +3912,7 @@
     },
     {
       "year": 2002,
-      "count": 10,
+      "count": 11,
       "top": [
         {
           "id": "200201",
@@ -3943,10 +4020,21 @@
           "rank": "10",
           "haveIt": false,
           "title": "Century Child",
-          "artist": "Nightwish vs Behemoth",
+          "artist": "Nightwish",
           "track": "Bless The Child",
           "genre": "Symphonic Metal",
           "debut": "1997",
+          "instrument": ""
+        },
+        {
+          "id": "200211",
+          "rank": "11",
+          "haveIt": false,
+          "title": "",
+          "artist": "Behemoth",
+          "track": "",
+          "genre": "",
+          "debut": "",
           "instrument": ""
         }
       ]
@@ -4189,7 +4277,7 @@
     },
     {
       "year": 2005,
-      "count": 10,
+      "count": 11,
       "top": [
         {
           "id": "200501",
@@ -4297,10 +4385,21 @@
           "rank": "10",
           "haveIt": false,
           "title": "Deadwing",
-          "artist": "Porcupine Tree vs Karnivool",
+          "artist": "Porcupine Tree",
           "track": "Deadwing",
           "genre": "Progressive Rock",
           "debut": "1992",
+          "instrument": ""
+        },
+        {
+          "id": "200511",
+          "rank": "11",
+          "haveIt": false,
+          "title": "",
+          "artist": "Karnivool",
+          "track": "",
+          "genre": "",
+          "debut": "",
           "instrument": ""
         }
       ]
@@ -4357,7 +4456,7 @@
           "id": "200605",
           "rank": "5",
           "haveIt": false,
-          "title": "In The Abcense Of Truth",
+          "title": "In the Absence of Truth",
           "artist": "ISIS",
           "track": "Over Root And Thorn",
           "genre": "Avant-garde/Post Metal",
@@ -4453,7 +4552,7 @@
           "id": "200703",
           "rank": "3",
           "haveIt": false,
-          "title": "Precambrain",
+          "title": "Precambrian",
           "artist": "The Ocean",
           "track": "Rhyacian",
           "genre": "Avant-garde/Post Metal",
@@ -4650,7 +4749,7 @@
     },
     {
       "year": 2009,
-      "count": 10,
+      "count": 13,
       "top": [
         {
           "id": "200901",
@@ -4758,10 +4857,43 @@
           "rank": "10",
           "haveIt": false,
           "title": "Kold",
-          "artist": "Solstafir vs Thy Catafalque vs Architects vs Red Fang",
+          "artist": "Solstafir",
           "track": "",
           "genre": "Avant-garde/Post Metal",
           "debut": "2002",
+          "instrument": ""
+        },
+        {
+          "id": "200911",
+          "rank": "11",
+          "haveIt": false,
+          "title": "",
+          "artist": "Thy Catafalque",
+          "track": "",
+          "genre": "",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "200912",
+          "rank": "12",
+          "haveIt": false,
+          "title": "",
+          "artist": "Architects",
+          "track": "",
+          "genre": "",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "200913",
+          "rank": "13",
+          "haveIt": false,
+          "title": "",
+          "artist": "Red Fang",
+          "track": "",
+          "genre": "",
+          "debut": "",
           "instrument": ""
         }
       ]
@@ -4864,7 +4996,7 @@
           "id": "201009",
           "rank": "9",
           "haveIt": false,
-          "title": "The Great Scape",
+          "title": "The Great Escape",
           "artist": "Seventh Wonder",
           "track": "Alley Cat",
           "genre": "Progressive Metal",
@@ -4875,7 +5007,7 @@
     },
     {
       "year": 2011,
-      "count": 10,
+      "count": 11,
       "top": [
         {
           "id": "201101",
@@ -4983,10 +5115,21 @@
           "rank": "10",
           "haveIt": false,
           "title": "Long Distance Calling",
-          "artist": "Long Distance Calling vs Red Fang",
+          "artist": "Long Distance Calling",
           "track": "Timebends",
           "genre": "Progressive Rock",
           "debut": "2006",
+          "instrument": ""
+        },
+        {
+          "id": "201111",
+          "rank": "11",
+          "haveIt": false,
+          "title": "",
+          "artist": "Red Fang",
+          "track": "",
+          "genre": "",
+          "debut": "",
           "instrument": ""
         }
       ]
@@ -5021,7 +5164,7 @@
           "id": "201203",
           "rank": "3",
           "haveIt": false,
-          "title": "Les Voyages de l'ame",
+          "title": "Les voyages de l'âme",
           "artist": "Alcest",
           "track": "La ou naissent les couleurs nouvelles",
           "genre": "Avant-garde/Post Metal",
@@ -5044,7 +5187,7 @@
           "rank": "5",
           "haveIt": false,
           "title": "With Hearts Toward None",
-          "artist": "Mgla",
+          "artist": "Mgła",
           "track": "II",
           "genre": "Black Metal",
           "debut": "2008",
@@ -5100,7 +5243,7 @@
     },
     {
       "year": 2013,
-      "count": 10,
+      "count": 11,
       "top": [
         {
           "id": "201301",
@@ -5208,11 +5351,22 @@
           "rank": "10",
           "haveIt": false,
           "title": "Rites of Separation",
-          "artist": "Agrimonia vs Oranssi Pazuzu",
+          "artist": "Agrimonia",
           "track": "Talion",
           "genre": "Black Metal",
           "debut": "2010",
           "instrument": "Guitar Riff"
+        },
+        {
+          "id": "201311",
+          "rank": "11",
+          "haveIt": false,
+          "title": "",
+          "artist": "Oranssi Pazuzu",
+          "track": "",
+          "genre": "",
+          "debut": "",
+          "instrument": ""
         }
       ]
     },
@@ -5325,7 +5479,7 @@
     },
     {
       "year": 2015,
-      "count": 10,
+      "count": 11,
       "top": [
         {
           "id": "201501",
@@ -5387,7 +5541,7 @@
           "rank": "6",
           "haveIt": false,
           "title": "Exercises In Futility",
-          "artist": "Mgla",
+          "artist": "Mgła",
           "track": "IV",
           "genre": "Black Metal",
           "debut": "2008",
@@ -5433,17 +5587,28 @@
           "rank": "10",
           "haveIt": false,
           "title": "Purple",
-          "artist": "Baroness vs Rivers of Nihil",
+          "artist": "Baroness",
           "track": "?",
           "genre": "Stoner Metal",
           "debut": "2007",
+          "instrument": ""
+        },
+        {
+          "id": "201511",
+          "rank": "11",
+          "haveIt": false,
+          "title": "",
+          "artist": "Rivers of Nihil",
+          "track": "",
+          "genre": "",
+          "debut": "",
           "instrument": ""
         }
       ]
     },
     {
       "year": 2016,
-      "count": 10,
+      "count": 11,
       "top": [
         {
           "id": "201601",
@@ -5551,11 +5716,22 @@
           "rank": "10",
           "haveIt": false,
           "title": "Arktis.",
-          "artist": "Ihsahn vs Khemmis",
+          "artist": "Ihsahn",
           "track": "My Heart Is Of The North",
           "genre": "Progressive Metal",
           "debut": "2006",
           "instrument": "Keyboard"
+        },
+        {
+          "id": "201611",
+          "rank": "11",
+          "haveIt": false,
+          "title": "",
+          "artist": "Khemmis",
+          "track": "",
+          "genre": "",
+          "debut": "",
+          "instrument": ""
         }
       ]
     },
@@ -5679,7 +5855,7 @@
     },
     {
       "year": 2018,
-      "count": 10,
+      "count": 11,
       "top": [
         {
           "id": "201801",
@@ -5787,17 +5963,28 @@
           "rank": "10",
           "haveIt": false,
           "title": "Esoteric Malacology",
-          "artist": "Slugdge vs Psychonaut",
+          "artist": "Slugdge",
           "track": "Crop Killer",
           "genre": "Progressive Metal",
           "debut": "2013",
+          "instrument": ""
+        },
+        {
+          "id": "201811",
+          "rank": "11",
+          "haveIt": false,
+          "title": "",
+          "artist": "Psychonaut",
+          "track": "",
+          "genre": "",
+          "debut": "",
           "instrument": ""
         }
       ]
     },
     {
       "year": 2019,
-      "count": 10,
+      "count": 12,
       "top": [
         {
           "id": "201901",
@@ -5905,10 +6092,32 @@
           "rank": "10",
           "haveIt": false,
           "title": "Veil Of Imagination",
-          "artist": "Wilderun vs Cattle Decapitation vs Soen",
+          "artist": "Wilderun",
           "track": "The Tyranny of Imagination",
           "genre": "Progressive Metal",
           "debut": "2012",
+          "instrument": ""
+        },
+        {
+          "id": "201911",
+          "rank": "11",
+          "haveIt": false,
+          "title": "",
+          "artist": "Cattle Decapitation",
+          "track": "",
+          "genre": "",
+          "debut": "",
+          "instrument": ""
+        },
+        {
+          "id": "201912",
+          "rank": "12",
+          "haveIt": false,
+          "title": "",
+          "artist": "Soen",
+          "track": "",
+          "genre": "",
+          "debut": "",
           "instrument": ""
         }
       ]
@@ -6277,339 +6486,6 @@
           "instrument": "Guitar Riff"
         }
       ]
-    },
-    {
-      "year": 2023,
-      "count": 26,
-      "top": [
-        {
-          "id": "202301",
-          "rank": "1",
-          "haveIt": false,
-          "title": "",
-          "artist": "",
-          "track": "",
-          "genre": "",
-          "debut": "",
-          "instrument": ""
-        },
-        {
-          "id": "202302",
-          "rank": "2",
-          "haveIt": false,
-          "title": "",
-          "artist": "",
-          "track": "",
-          "genre": "",
-          "debut": "",
-          "instrument": ""
-        },
-        {
-          "id": "202303",
-          "rank": "3",
-          "haveIt": false,
-          "title": "Odyssey 9999",
-          "artist": "tRKproject",
-          "track": "",
-          "genre": "",
-          "debut": "2017",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Body Void",
-          "track": "",
-          "genre": "",
-          "debut": "2016",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Green Lung",
-          "track": "",
-          "genre": "",
-          "debut": "2019",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Anti-God Hand",
-          "track": "",
-          "genre": "",
-          "debut": "2021",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Svalbard",
-          "track": "",
-          "genre": "",
-          "debut": "2015",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Seven Impale",
-          "track": "",
-          "genre": "",
-          "debut": "2014",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Crown Lands",
-          "track": "",
-          "genre": "",
-          "debut": "2020",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Dawn of the Ouroboros",
-          "track": "",
-          "genre": "",
-          "debut": "2020",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Fall of the Albatross",
-          "track": "",
-          "genre": "",
-          "debut": "2014",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Mutoid Man",
-          "track": "",
-          "genre": "",
-          "debut": "2015",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Kostnatění",
-          "track": "",
-          "genre": "",
-          "debut": "2019",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Sea Mosquito",
-          "track": "",
-          "genre": "",
-          "debut": "2023",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Crypta",
-          "track": "",
-          "genre": "",
-          "debut": "2021",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Thantifaxath",
-          "track": "",
-          "genre": "",
-          "debut": "2014",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Big|Brave",
-          "track": "",
-          "genre": "",
-          "debut": "2014",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Tomb Mold",
-          "track": "",
-          "genre": "",
-          "debut": "2017",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Sanguisugabogg",
-          "track": "",
-          "genre": "",
-          "debut": "2021",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Voice of Baceprot",
-          "track": "",
-          "genre": "",
-          "debut": "2023",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Moonlight Sorcery",
-          "track": "",
-          "genre": "",
-          "debut": "2023",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Sacred Outcry",
-          "track": "",
-          "genre": "",
-          "debut": "2020",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Blackbraid",
-          "track": "",
-          "genre": "",
-          "debut": "2022",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Hellripper",
-          "track": "",
-          "genre": "",
-          "debut": "2017",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "",
-          "artist": "Monika Roscher Bigband",
-          "track": "",
-          "genre": "",
-          "debut": "2012",
-          "instrument": ""
-        },
-        {
-          "id": "202305",
-          "rank": "5",
-          "haveIt": false,
-          "title": "Terrasite",
-          "artist": "Cattle Decapitation",
-          "track": "Scourge of the Offspring",
-          "genre": "",
-          "debut": "2002",
-          "instrument": ""
-        }
-      ],
-      "bonus": []
-    },
-    {
-      "year": 2024,
-      "count": 3,
-      "top": [
-        {
-          "id": "202401",
-          "rank": "1",
-          "haveIt": false,
-          "title": "",
-          "artist": "",
-          "track": "",
-          "genre": "",
-          "debut": "",
-          "instrument": ""
-        },
-        {
-          "id": "202402",
-          "rank": "2",
-          "haveIt": false,
-          "title": "",
-          "artist": "",
-          "track": "",
-          "genre": "",
-          "debut": "",
-          "instrument": ""
-        },
-        {
-          "id": "202403",
-          "rank": "3",
-          "haveIt": false,
-          "title": "",
-          "artist": "",
-          "track": "",
-          "genre": "",
-          "debut": "",
-          "instrument": ""
-        }
-      ],
-      "bonus": []
     }
   ]
 }

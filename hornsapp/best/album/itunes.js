@@ -25,7 +25,7 @@
   var ARTIST_CACHE = {};
 
   function coverKey(artist, album) {
-    return "ha-cover-v5:" + artist + "|" + album;
+    return "ha-cover-v6:" + artist + "|" + album;
   }
 
   function norm(s) {
@@ -135,7 +135,7 @@
     };
   }
 
-  function resolveArtistId(artist) {
+  function resolveArtistCandidates(artist) {
     var key = norm(artist);
     if (Object.prototype.hasOwnProperty.call(ARTIST_CACHE, key)) {
       return Promise.resolve(ARTIST_CACHE[key]);
@@ -143,58 +143,77 @@
     return fetch(
       "https://itunes.apple.com/search?term=" +
         encodeURIComponent(artist) +
-        "&entity=musicArtist&limit=8"
+        "&entity=musicArtist&limit=15"
     )
       .then(function (r) {
         return r.json();
       })
       .then(function (data) {
         var want = norm(artist);
-        var bestId = null;
-        var bestScore = -1;
+        var exact = [];
+        var fuzzy = [];
+        var seen = {};
         (data.results || []).forEach(function (hit) {
           var got = norm(hit.artistName || "");
           var id = hit.artistId;
-          if (!id) return;
+          if (!id || seen[id]) return;
+          seen[id] = true;
           if (got === want) {
-            bestId = id;
-            bestScore = 1e9;
+            exact.push(id);
             return;
           }
-          var score = 0;
           if (got.indexOf(want) !== -1 || want.indexOf(got) !== -1) {
-            score = Math.min(want.length, got.length);
-          }
-          if (score > bestScore) {
-            bestScore = score;
-            bestId = id;
+            fuzzy.push({
+              id: id,
+              score: Math.min(want.length, got.length)
+            });
           }
         });
-        var id = bestScore > 0 ? bestId : null;
-        ARTIST_CACHE[key] = id;
-        return id;
+        fuzzy.sort(function (a, b) {
+          return b.score - a.score;
+        });
+        // Prefer first exact matches (order from Apple), then close names.
+        // Multiple artists share names like "Venom" — callers try until an album hits.
+        var ids = exact.concat(
+          fuzzy.map(function (f) {
+            return f.id;
+          })
+        );
+        ids = ids.slice(0, 6);
+        ARTIST_CACHE[key] = ids;
+        return ids;
       })
       .catch(function () {
-        ARTIST_CACHE[key] = null;
-        return null;
+        ARTIST_CACHE[key] = [];
+        return [];
+      });
+  }
+
+  function lookupArtistAlbums(aid, artist, title, year) {
+    return fetch(
+      "https://itunes.apple.com/lookup?id=" + aid + "&entity=album&limit=200"
+    )
+      .then(function (r) {
+        return r.json();
+      })
+      .then(function (data) {
+        var albums = (data.results || []).filter(function (h) {
+          return h.collectionType === "Album" || h.wrapperType === "collection";
+        });
+        return pickAlbum(albums, artist, title, year);
       });
   }
 
   function lookupViaArtist(artist, title, year) {
-    return resolveArtistId(artist).then(function (aid) {
-      if (!aid) return null;
-      return fetch(
-        "https://itunes.apple.com/lookup?id=" + aid + "&entity=album&limit=200"
-      )
-        .then(function (r) {
-          return r.json();
-        })
-        .then(function (data) {
-          var albums = (data.results || []).filter(function (h) {
-            return h.collectionType === "Album" || h.wrapperType === "collection";
-          });
-          return pickAlbum(albums, artist, title, year);
+    return resolveArtistCandidates(artist).then(function (ids) {
+      function tryNext(i) {
+        if (i >= ids.length) return Promise.resolve(null);
+        return lookupArtistAlbums(ids[i], artist, title, year).then(function (hit) {
+          if (hit) return hit;
+          return tryNext(i + 1);
         });
+      }
+      return tryNext(0);
     });
   }
 
@@ -213,20 +232,27 @@
   }
 
   function applyAppleLink(root, appleUrl) {
-    if (!root || !appleUrl) return;
+    if (!root) return;
     var apple = root.querySelector(".album-listen-apple");
     if (apple) {
-      apple.href = appleUrl;
-      apple.hidden = false;
+      if (appleUrl) {
+        apple.href = appleUrl;
+        apple.hidden = false;
+      } else {
+        apple.removeAttribute("href");
+        apple.hidden = true;
+      }
     }
     var cover = root.querySelector(".album-cover, .year-featured-cover");
     if (cover && cover.tagName === "A") {
-      cover.href = appleUrl;
-      cover.target = "_blank";
-      cover.rel = "noopener noreferrer";
-      cover.removeAttribute("aria-hidden");
-      cover.setAttribute("aria-label", "Open in Apple Music");
-      cover.removeAttribute("tabindex");
+      if (appleUrl) {
+        cover.href = appleUrl;
+        cover.target = "_blank";
+        cover.rel = "noopener noreferrer";
+        cover.removeAttribute("aria-hidden");
+        cover.setAttribute("aria-label", "Open in Apple Music");
+        cover.removeAttribute("tabindex");
+      }
     }
   }
 

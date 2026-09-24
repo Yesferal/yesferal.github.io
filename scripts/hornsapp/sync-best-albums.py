@@ -96,7 +96,7 @@ def page_shell(
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/hornsapp/best/album/albums.css?v=19">
+    <link rel="stylesheet" href="/hornsapp/best/album/albums.css?v=21">
 </head>
 <body class="albums-page">
 <nav class="nav">
